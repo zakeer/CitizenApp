@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/build/intermediates/bundles/debug/res/values-uk/values-uk.xml -->
+    <eat-comment/>
+    <string-array name="maps_compass_directions">
+        <item msgid="371990129502990442">"Пн"</item>
+        <item msgid="1723794399812139988">"Пн-Сх"</item>
+        <item msgid="8995696828344274905">"Сх"</item>
+        <item msgid="8971984494345895781">"Пд-Сх"</item>
+        <item msgid="7174645718252695865">"Пд"</item>
+        <item msgid="4863051572593926737">"Пд-Зх"</item>
+        <item msgid="6823513192569584945">"Зх"</item>
+        <item msgid="1255372719355902587">"Пд-Зх"</item>
+    </string-array>
+    <string-array name="maps_full_compass_directions">
+        <item msgid="4575528752583301752">на північ</item>
+        <item msgid="4350548105276290005">на північний схід</item>
+        <item msgid="2941955296001395559">на схід</item>
+        <item msgid="7564496420537720517">на південний схід</item>
+        <item msgid="7734963361324256142">на південь</item>
+        <item msgid="2308335477702894344">на південний захід</item>
+        <item msgid="1360397508757498197">на захід</item>
+        <item msgid="5107967783299132090">на північний захід</item>
+    </string-array>
+    <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"Для роботи додатка потрібно оновити Android Wear."</string>
+    <string msgid="3046420540094071256" name="common_android_wear_update_text">"Цей додаток запуститься, лише коли ви оновите Android Wear."</string>
+    <string msgid="1366439133145190222" name="common_android_wear_update_title">"Оновити Android Wear"</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"Увімкнути сервіси Google Play"</string>
+    <string msgid="7627896071867667758" name="common_google_play_services_enable_text">"Цей додаток не працюватиме, доки ви не ввімкнете сервіси Google Play."</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"Увімкніть сервіси Google Play"</string>
+    <string msgid="2443362625939284971" name="common_google_play_services_error_notification_requested_by_msg">"Запит від додатка <ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"Установити сервіси Google Play"</string>
+    <string msgid="8685301130651051380" name="common_google_play_services_install_text_phone">"Ця програма не запуститься без Google Play Послуг, яких немає у вашому телефоні."</string>
+    <string msgid="1589957570365247855" name="common_google_play_services_install_text_tablet">"Ця програма не запуститься без Google Play Послуг, яких немає на вашому планшетному ПК."</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"Установіть сервіси Google Play"</string>
+    <string msgid="4983316348021735578" name="common_google_play_services_invalid_account_text">"Указаний обліковий запис не існує на цьому пристрої. Виберіть інший обліковий запис."</string>
+    <string msgid="1066672360770936753" name="common_google_play_services_invalid_account_title">"Недійсний обліковий запис"</string>
+    <string msgid="2583358409598976717" name="common_google_play_services_needs_enabling_title">"Щоб додаток працював, потрібно ввімкнути сервіси Google Play."</string>
+    <string msgid="9038847255613537209" name="common_google_play_services_network_error_text">"Для під’єднання до сервісів Google Play потрібне з’єднання з мережею."</string>
+    <string msgid="3827284619958211114" name="common_google_play_services_network_error_title">"Помилка мережі"</string>
+    <string msgid="8120534356798772974" name="common_google_play_services_notification_needs_installation_title">"Щоб додаток працював, потрібно встановити сервіси Google Play."</string>
+    <string msgid="1388129345631079938" name="common_google_play_services_notification_needs_update_title">"Щоб додаток працював, потрібно оновити сервіси Google Play."</string>
+    <string msgid="1852570676146674985" name="common_google_play_services_notification_ticker">"Помилка сервісів Google Play"</string>
+    <string msgid="5194079840165204725" name="common_google_play_services_sign_in_failed_text">"Не вдалося ввійти в указаний обліковий запис. Виберіть інший."</string>
+    <string msgid="8164948898147532159" name="common_google_play_services_sign_in_failed_title">"Помилка під час входу"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"Невідома проблема із сервісами Google Play."</string>
+    <string msgid="3542578567569488671" name="common_google_play_services_unsupported_text">"Ваш пристрій не підтримує Сервіси Google Play, від яких залежить робота деяких програм. Зверніться по допомогу до виробника."</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"Сервіси Google Play"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"Оновити"</string>
+    <string msgid="448354684997260580" name="common_google_play_services_update_text">"Цей додаток не запуститься, доки ви не оновите сервіси Google Play."</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"Оновіть сервіси Google Play"</string>
+    <string msgid="411506735369601515" name="common_open_on_phone">"Відкрити на телефоні"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"Увійти"</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"Увійти в обл.запис Google"</string>
+    <string msgid="5000919058582214855" name="commono_google_play_services_api_unavailable_text">"Цей додаток використовує один або декілька сервісів Google Play, які зараз недоступні. Зверніться по допомогу до розробника."</string>
+    <string name="maps_API_MY_LOCATION_ACCURACY">\u041c\u043e\u0454\u0020\u043c\u0456\u0441\u0446\u0435\u0437\u043d\u0430\u0445\u043e\u0434\u0436\u0435\u043d\u043d\u044f\u0020\n\u0417\u0020\u0442\u043e\u0447\u043d\u0456\u0441\u0442\u044e\u0020\u0434\u043e\u0020{0}\u0020\u043c</string>
+    <string name="maps_API_OUTDATED_WARNING">\u041f\u0440\u043e\u0433\u0440\u0430\u043c\u0430\u0020\u0432\u0438\u043a\u043e\u0440\u0438\u0441\u0442\u043e\u0432\u0443\u0454\u0020\u0437\u0430\u0441\u0442\u0430\u0440\u0456\u043b\u0443\u0020\u0432\u0435\u0440\u0441\u0456\u044e\u0020\u041a\u0430\u0440\u0442.\u0020\u0412\u043e\u043d\u0430\u0020\u043c\u043e\u0436\u0435\u0020\u043f\u0440\u0430\u0446\u044e\u0432\u0430\u0442\u0438\u0020\u043d\u0435\u043d\u0430\u043b\u0435\u0436\u043d\u0438\u043c\u0020\u0447\u0438\u043d\u043e\u043c.</string>
+    <string name="maps_BACK_TO_LIST">"Назад до списку"</string>
+    <string name="maps_CLOSE_SOFTKEY">\u0417\u0430\u043a\u0440\u0438\u0442\u0438</string>
+    <string name="maps_COMPASS_ALT_TEXT">\u041a\u043e\u043c\u043f\u0430\u0441</string>
+    <string name="maps_DIRECTIONS_ALT_TEXT">Пошук напрямків</string>
+    <string name="maps_GOOGLE_MAP">Google Maps</string>
+    <string name="maps_LEVEL_ALT_TEXT">Рівень {0}</string>
+    <string name="maps_MY_LOCATION_ALT_TEXT">\u041c\u043e\u0454\u0020\u043c\u0456\u0441\u0446\u0435\u0437\u043d\u0430\u0445\u043e\u0434\u0436\u0435\u043d\u043d\u044f</string>
+    <string name="maps_OPEN_GMM_ALT_TEXT">Відкрити в Картах</string>
+    <string msgid="3304805242996771621" name="maps_YOUR_LOCATION">Поточне місцезнаходження</string>
+    <string name="maps_ZOOM_IN_ALT_TEXT">\u0417\u0431\u0456\u043b\u044c\u0448\u0438\u0442\u0438</string>
+    <string name="maps_ZOOM_OUT_ALT_TEXT">\u0417\u043c\u0435\u043d\u0448\u0438\u0442\u0438</string>
+    <string msgid="2643616411547805051" name="maps_dav_map_copyrights_full">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - Зображення ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>, Дані карти ©<ns1:g id="COPYRIGHT_YEAR_2">%4$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%5$s</ns1:g>"</string>
+    <string msgid="2340776877486681415" name="maps_dav_map_copyrights_google_only">"©<ns1:g id="COPYRIGHT_YEAR">%1$d</ns1:g> Google"</string>
+    <string msgid="4796406852640794459" name="maps_dav_map_copyrights_imagery_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - Зображення ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <string msgid="7421961728654750951" name="maps_dav_map_copyrights_map_data_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - Дані карти: ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <string msgid="5618016850433253177" name="maps_invalid_panorama_data">"Недійсний дані панорами."</string>
+    <string msgid="852879677528638846" name="maps_network_unavailable">"Для цієї програми потрібне передавання даних. Спробу буде повторено автоматично. Перевірте рівень сигналу. Режим для літака ввімкн.? Дані роумінгу вимкн.?"</string>
+    <string msgid="5724478591902584421" name="maps_no_panorama_data">"Дані панорами не задано."</string>
+    <string msgid="504349892431320733" name="maps_panorama_disabled">"Зображення недоступне"</string>
+    <string msgid="5623163711058333956" name="maps_service_unavailable">"Перегляд вулиць недоступний."</string>
+    <string msgid="8614145121611139475" name="maps_street_range_name_format">"%1$s %2$s"</string>
+    <string msgid="4679308263892194242" name="maps_waiting_for_network">"Передав. даних втрачено, повт. спроба…"</string>
+</resources>

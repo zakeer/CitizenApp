@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:id="@+id/viewReports"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/view_reports"
+            android:onClick="getLayout"
+            android:tag="view_reports" />
+
+
+        <ImageButton
+            android:id="@+id/viewLocation"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/view_location"
+            android:onClick="getLayout"
+            android:tag="view_location" />
+
+
+        <ImageButton
+            android:id="@+id/viewVehical"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/vehicle_details"
+            android:onClick="getLayout"
+            android:tag="vehicle_details" />
+
+
+        <ImageButton
+            android:id="@+id/viewDevice"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/device_tracking"
+            android:onClick="getLayout"
+            android:tag="device_tracking" />
+    </LinearLayout>
+
+</RelativeLayout>

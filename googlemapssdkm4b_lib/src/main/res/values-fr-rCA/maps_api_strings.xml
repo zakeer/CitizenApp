@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="maps_LEVEL_ALT_TEXT">{0} étage</string>
+    <string name="maps_YOUR_LOCATION" msgid="3304805242996771621">Ma position actuelle</string>
+</resources>

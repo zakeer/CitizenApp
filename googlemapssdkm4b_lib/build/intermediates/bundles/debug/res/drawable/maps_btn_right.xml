@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright 2011 Google Inc. All Rights Reserved. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/maps_btn_right_pressed" android:state_pressed="true" />
+    <item android:drawable="@drawable/maps_btn_right_normal" />
+</selector>
+<!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/drawable/maps_btn_right.xml -->

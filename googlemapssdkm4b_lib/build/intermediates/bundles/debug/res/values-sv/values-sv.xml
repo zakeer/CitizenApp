@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-sv/maps_sv_strings.xml -->
+    <eat-comment/>
+    <string-array name="maps_compass_directions">
+        <item msgid="371990129502990442">"N"</item>
+        <item msgid="1723794399812139988">"NO"</item>
+        <item msgid="8995696828344274905">"O"</item>
+        <item msgid="8971984494345895781">"SO"</item>
+        <item msgid="7174645718252695865">"S"</item>
+        <item msgid="4863051572593926737">"SV"</item>
+        <item msgid="6823513192569584945">"V"</item>
+        <item msgid="1255372719355902587">"NV"</item>
+    </string-array>
+    <string-array name="maps_full_compass_directions">
+        <item msgid="4575528752583301752">nord</item>
+        <item msgid="4350548105276290005">nordost</item>
+        <item msgid="2941955296001395559">ost</item>
+        <item msgid="7564496420537720517">sydost</item>
+        <item msgid="7734963361324256142">syd</item>
+        <item msgid="2308335477702894344">sydväst</item>
+        <item msgid="1360397508757498197">väst</item>
+        <item msgid="5107967783299132090">nordväst</item>
+    </string-array>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-sv/common_strings.xml -->
+    <eat-comment/>
+    <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"En app kräver att appen Android Wear uppdateras."</string>
+    <string msgid="3046420540094071256" name="common_android_wear_update_text">"Om du inte uppdaterar appen Android Wear kan den här appen inte köras."</string>
+    <string msgid="1366439133145190222" name="common_android_wear_update_title">"Uppdatera Android Wear"</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"Aktivera Google Play Tjänster"</string>
+    <string msgid="7627896071867667758" name="common_google_play_services_enable_text">"Du måste aktivera Google Play Tjänster för att den här appen ska fungera."</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"Aktivera Google Play Tjänster"</string>
+    <string msgid="2443362625939284971" name="common_google_play_services_error_notification_requested_by_msg">"Begärdes av <ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"Hämta Google Play Tjänster"</string>
+    <string msgid="8685301130651051380" name="common_google_play_services_install_text_phone">"Den här appen kan inte köras utan Google Play Tjänster, som saknas på mobilen."</string>
+    <string msgid="1589957570365247855" name="common_google_play_services_install_text_tablet">"Den här appen kan inte köras utan Google Play Tjänster, som saknas på surfplattan."</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"Hämta Google Play Tjänster"</string>
+    <string msgid="4983316348021735578" name="common_google_play_services_invalid_account_text">"Det angivna kontot finns inte på den här enheten. Välj ett annat konto."</string>
+    <string msgid="1066672360770936753" name="common_google_play_services_invalid_account_title">"Ogiltigt konto"</string>
+    <string msgid="2583358409598976717" name="common_google_play_services_needs_enabling_title">"Google Play-tjänster måste aktiveras för att en app ska fungera."</string>
+    <string msgid="9038847255613537209" name="common_google_play_services_network_error_text">"En dataanslutning krävs för att ansluta till Google Plays tjänster."</string>
+    <string msgid="3827284619958211114" name="common_google_play_services_network_error_title">"Nätverksfel"</string>
+    <string msgid="8120534356798772974" name="common_google_play_services_notification_needs_installation_title">"Google Play-tjänster måste installeras för att en app ska fungera."</string>
+    <string msgid="1388129345631079938" name="common_google_play_services_notification_needs_update_title">"Google Play-tjänster måste uppdateras för en app ska fungera."</string>
+    <string msgid="1852570676146674985" name="common_google_play_services_notification_ticker">"Fel på Google Play-tjänster"</string>
+    <string msgid="5194079840165204725" name="common_google_play_services_sign_in_failed_text">"Ett fel uppstod när du försökte logga in på kontot. Välj ett annat konto."</string>
+    <string msgid="8164948898147532159" name="common_google_play_services_sign_in_failed_title">"Det gick inte att logga in"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"Okänt problem med Google Play Tjänster"</string>
+    <string msgid="3542578567569488671" name="common_google_play_services_unsupported_text">"Några av dina appar använder Google Play-tjänster som inte stöds av din enhet. Kontakta tillverkaren om du vill ha hjälp."</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"Google Play-tjänster"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"Uppdatera"</string>
+    <string msgid="448354684997260580" name="common_google_play_services_update_text">"Du måste uppdatera Google Play Tjänster innan du kan köra den här appen."</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"Uppdatera Google Play Tjänster"</string>
+    <string msgid="411506735369601515" name="common_open_on_phone">"Öppna på mobilen"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"Logga in"</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"Logga in med Google"</string>
+    <string msgid="5000919058582214855" name="commono_google_play_services_api_unavailable_text">"Appen kräver en eller flera Google Play-tjänster som inte är tillgängliga för närvarande. Kontakta utvecklaren om du behöver hjälp."</string>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-sv/maps_api_strings.xml -->
+    <eat-comment/>
+    <string name="maps_API_MY_LOCATION_ACCURACY">Min\u0020plats\u0020\nExakt\u0020på\u0020{0}\u0020meter\u0020när</string>
+    <string name="maps_API_OUTDATED_WARNING">Denna\u0020app\u0020använder\u0020en\u0020gammal\u0020version\u0020av\u0020Maps.\u0020Den\u0020kanske\u0020inte\u0020fungerar\u0020korrekt.</string>
+    <string name="maps_BACK_TO_LIST">"Tillbaka till listan"</string>
+    <string name="maps_CLOSE_SOFTKEY">Stäng</string>
+    <string name="maps_COMPASS_ALT_TEXT">Kompass</string>
+    <string name="maps_DIRECTIONS_ALT_TEXT">Hämta vägbeskrivning</string>
+    <string name="maps_GOOGLE_MAP">Google-karta</string>
+    <string name="maps_LEVEL_ALT_TEXT">Nivå {0}</string>
+    <string name="maps_MY_LOCATION_ALT_TEXT">Min\u0020plats</string>
+    <string name="maps_OPEN_GMM_ALT_TEXT">Öppna i Google Maps</string>
+    <string msgid="3304805242996771621" name="maps_YOUR_LOCATION">Din nuvarande plats</string>
+    <string name="maps_ZOOM_IN_ALT_TEXT">Zooma\u0020in</string>
+    <string name="maps_ZOOM_OUT_ALT_TEXT">Zooma\u0020ut</string>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-sv/maps_dav_strings.xml -->
+    <eat-comment/>
+    <string msgid="2643616411547805051" name="maps_dav_map_copyrights_full">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - bilder ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>, kartdata ©<ns1:g id="COPYRIGHT_YEAR_2">%4$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%5$s</ns1:g>"</string>
+    <string msgid="2340776877486681415" name="maps_dav_map_copyrights_google_only">"©<ns1:g id="COPYRIGHT_YEAR">%1$d</ns1:g> Google"</string>
+    <string msgid="4796406852640794459" name="maps_dav_map_copyrights_imagery_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - bilder ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <string msgid="7421961728654750951" name="maps_dav_map_copyrights_map_data_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - kartdata ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-sv/maps_sv_strings.xml -->
+    <eat-comment/>
+    <string msgid="5618016850433253177" name="maps_invalid_panorama_data">"Ogiltigt panorama."</string>
+    <string msgid="852879677528638846" name="maps_network_unavailable">"Programmet kräver en dataanslutning och försöker igen automatiskt. Kontrollera signalstyrkan. Är flygplansläge på? Är datatrafik vid roaming inaktiverad?"</string>
+    <string msgid="5724478591902584421" name="maps_no_panorama_data">"Inga panoramadata har angetts."</string>
+    <string msgid="504349892431320733" name="maps_panorama_disabled">"Bilden är inte tillgänglig längre"</string>
+    <string msgid="5623163711058333956" name="maps_service_unavailable">"Street View inte tillgänglig"</string>
+    <string msgid="8614145121611139475" name="maps_street_range_name_format">"%2$s %1$s"</string>
+    <string msgid="4679308263892194242" name="maps_waiting_for_network">"Dataanslutningen bröts, försöker igen…"</string>
+</resources>

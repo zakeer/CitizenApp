@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:id="@+id/reportViolation"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/report_incident"
+            android:onClick="getLayout"
+            android:tag="report_incident" />
+
+
+        <ImageButton
+            android:id="@+id/safeTravel"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/location"
+            android:onClick="getLayout"
+            android:tag="location" />
+
+
+        <ImageButton
+            android:id="@+id/emergency"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/emergency_white"
+            android:onClick="getLayout"
+            android:tag="emergency" />
+
+
+        <ImageButton
+            android:id="@+id/helpMe"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/help_me"
+            android:onClick="getLayout"
+            android:tag="help_me" />
+    </LinearLayout>
+
+</RelativeLayout>

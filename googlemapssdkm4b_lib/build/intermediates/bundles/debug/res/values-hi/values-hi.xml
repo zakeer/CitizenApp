@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-hi/maps_sv_strings.xml -->
+    <eat-comment/>
+    <string-array name="maps_compass_directions">
+        <item msgid="371990129502990442">"उ"</item>
+        <item msgid="1723794399812139988">"उपू"</item>
+        <item msgid="8995696828344274905">"पू"</item>
+        <item msgid="8971984494345895781">"दपू"</item>
+        <item msgid="7174645718252695865">"द"</item>
+        <item msgid="4863051572593926737">"दप"</item>
+        <item msgid="6823513192569584945">"प"</item>
+        <item msgid="1255372719355902587">"उप"</item>
+    </string-array>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-hi/common_strings.xml -->
+    <eat-comment/>
+    <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"ऐप्लिकेशन को Android Wear ऐप्स में अपडेट की आवश्यकता है."</string>
+    <string msgid="3046420540094071256" name="common_android_wear_update_text">"यह ऐप्स तब तक नहीं चलेगा, जब तक कि आप Android Wear ऐप्स को अपडेट नहीं करते."</string>
+    <string msgid="1366439133145190222" name="common_android_wear_update_title">"Android Wear अपडेट करें"</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"Google Play सेवाएं सक्षम करें"</string>
+    <string msgid="7627896071867667758" name="common_google_play_services_enable_text">"जब तक आप Google Play सेवाएं सक्षम नहीं करते, तब तक यह ऐप्स  कार्य नहीं करेगा."</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"Google Play सेवाएं सक्षम करें"</string>
+    <string msgid="2443362625939284971" name="common_google_play_services_error_notification_requested_by_msg">"<ns1:g id="APP_NAME">%1$s</ns1:g> के द्वारा अनुरोधित"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"Google Play सेवाएं पाएं"</string>
+    <string msgid="8685301130651051380" name="common_google_play_services_install_text_phone">"यह ऐप्स  Google Play सेवाओं के बिना नहीं चलेगा, जो आपके फ़ोन में नहीं हैं."</string>
+    <string msgid="1589957570365247855" name="common_google_play_services_install_text_tablet">"यह ऐप्स  Google Play सेवाओं के बिना नहीं चलेगा, जो आपके टेबलेट में नहीं हैं."</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"Google Play सेवाएं पाएं"</string>
+    <string msgid="4983316348021735578" name="common_google_play_services_invalid_account_text">"निर्दिष्ट खाता इस डिवाइस पर मौजूद नहीं है. कृपया कोई भिन्न खाता चुनें."</string>
+    <string msgid="1066672360770936753" name="common_google_play_services_invalid_account_title">"अमान्य खाता"</string>
+    <string msgid="2583358409598976717" name="common_google_play_services_needs_enabling_title">"ऐप्लिकेशन के लिए Google Play सेवाएं सक्षम किए जाने की आवश्यकता है."</string>
+    <string msgid="9038847255613537209" name="common_google_play_services_network_error_text">"Google Play सेवाओं से कनेक्ट करने के लिए डेटा कनेक्शन की आवश्यकता है."</string>
+    <string msgid="3827284619958211114" name="common_google_play_services_network_error_title">"नेटवर्क त्रुटि"</string>
+    <string msgid="8120534356798772974" name="common_google_play_services_notification_needs_installation_title">"ऐप्लिकेशन के लिए Google Play सेवाएं इंस्टॉल किए जाने की आवश्यकता है."</string>
+    <string msgid="1388129345631079938" name="common_google_play_services_notification_needs_update_title">"ऐप्लिकेशन के लिए Google Play सेवाओं में नई जानकारी की आवश्यकता है."</string>
+    <string msgid="1852570676146674985" name="common_google_play_services_notification_ticker">"Google Play सेवाएं त्रुटि"</string>
+    <string msgid="5194079840165204725" name="common_google_play_services_sign_in_failed_text">"निर्दिष्‍ट खाते में प्रवेश करने में त्रुटि. कृपया कोई भिन्‍न खाता चुनें."</string>
+    <string msgid="8164948898147532159" name="common_google_play_services_sign_in_failed_title">"प्रवेश करना विफल रहा"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"Google Play सेवाओं के साथ अज्ञात समस्या."</string>
+    <string msgid="3542578567569488671" name="common_google_play_services_unsupported_text">"Google Play सेवाएं, जिन पर आपके कुछ ऐप्स  निर्भर करते हैं, आपके डिवाइस द्वारा समर्थित नहीं हैं. कृपया सहायता के लिए निर्माता से संपर्क करें."</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"Google Play सेवाएं"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"नई जानकारी पाएं"</string>
+    <string msgid="448354684997260580" name="common_google_play_services_update_text">"जब तक आप Google Play सेवाओं से नई जानकारी नहीं लेते हैं, तब तक यह ऐप्स  नहीं चलेगा."</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"Google Play सेवाएं से नई जानकारी"</string>
+    <string msgid="411506735369601515" name="common_open_on_phone">"फ़ोन पर खोलें"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"प्रवेश करें"</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"Google से प्रवेश करें"</string>
+    <string msgid="5000919058582214855" name="commono_google_play_services_api_unavailable_text">"इस ऐप को ऐसी एक या अधिक Google Play सेवाओं की आवश्‍यकता है जो वर्तमान में उपलब्‍ध नहीं हैं. कृपया सहायता के लिए डेवलपर से संपर्क करें."</string>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-hi/maps_api_strings.xml -->
+    <eat-comment/>
+    <string name="maps_DIRECTIONS_ALT_TEXT">दिशानिर्देश प्राप्त करें</string>
+    <string name="maps_GOOGLE_MAP">Google मैप</string>
+    <string name="maps_LEVEL_ALT_TEXT">स्तर {0}</string>
+    <string name="maps_OPEN_GMM_ALT_TEXT">Google नक्शे में खोलें</string>
+    <string msgid="3304805242996771621" name="maps_YOUR_LOCATION">आपका वर्तमान स्थान</string>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-hi/maps_dav_strings.xml -->
+    <eat-comment/>
+    <string msgid="2643616411547805051" name="maps_dav_map_copyrights_full">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - इमेजरी ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>, नक्शे डेटा ©<ns1:g id="COPYRIGHT_YEAR_2">%4$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%5$s</ns1:g>"</string>
+    <string msgid="2340776877486681415" name="maps_dav_map_copyrights_google_only">"©<ns1:g id="COPYRIGHT_YEAR">%1$d</ns1:g> Google"</string>
+    <string msgid="4796406852640794459" name="maps_dav_map_copyrights_imagery_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - इमेजरी ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <string msgid="7421961728654750951" name="maps_dav_map_copyrights_map_data_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - नक्शे डेटा ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-hi/maps_sv_strings.xml -->
+    <eat-comment/>
+    <string msgid="5618016850433253177" name="maps_invalid_panorama_data">"अमान्य पैनोरमा"</string>
+    <string msgid="852879677528638846" name="maps_network_unavailable">"इस प्रोग्राम के लिए एक डेटा कनेक्शन की आवश्यकता है, और स्वचालित रूप से पुनः प्रयास करेगा. कृपया अपने सिग्नल की प्रबलता देखें. क्या हवाई जहाज मोड चालू है? क्या रोमिंग डेटा अक्षम है?"</string>
+    <string msgid="5724478591902584421" name="maps_no_panorama_data">"कोई पैनोरमा डेटा सेट नहीं है."</string>
+    <string msgid="504349892431320733" name="maps_panorama_disabled">"चित्र अब उपलब्ध नहीं है"</string>
+    <string msgid="5623163711058333956" name="maps_service_unavailable">"स्ट्रीट दृश्य सेवा अनुपलब्ध."</string>
+    <string msgid="8614145121611139475" name="maps_street_range_name_format">"%1$s %2$s"</string>
+    <string msgid="4679308263892194242" name="maps_waiting_for_network">"डेटा कनेक्शन गुम, पुनः प्रयास कर रहा है..."</string>
+</resources>

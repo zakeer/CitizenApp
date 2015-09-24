@@ -1,0 +1,14 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/viewReportsLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.zakeer.startapp.ViewReports">
+
+    <ListView
+        android:id="@+id/viewReportsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
+</LinearLayout>

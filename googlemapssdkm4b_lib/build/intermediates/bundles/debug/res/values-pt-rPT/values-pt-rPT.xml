@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-pt-rPT/maps_sv_strings.xml -->
+    <eat-comment/>
+    <string-array name="maps_compass_directions">
+        <item msgid="371990129502990442">"N"</item>
+        <item msgid="1723794399812139988">"NE"</item>
+        <item msgid="8995696828344274905">"E"</item>
+        <item msgid="8971984494345895781">"SE"</item>
+        <item msgid="7174645718252695865">"S"</item>
+        <item msgid="4863051572593926737">"SO"</item>
+        <item msgid="6823513192569584945">"O"</item>
+        <item msgid="1255372719355902587">"NO"</item>
+    </string-array>
+    <string-array name="maps_full_compass_directions">
+        <item msgid="4575528752583301752">norte</item>
+        <item msgid="4350548105276290005">nordeste</item>
+        <item msgid="2941955296001395559">leste</item>
+        <item msgid="7564496420537720517">sudeste</item>
+        <item msgid="7734963361324256142">sul</item>
+        <item msgid="2308335477702894344">sudoeste</item>
+        <item msgid="1360397508757498197">oeste</item>
+        <item msgid="5107967783299132090">noroeste</item>
+    </string-array>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-pt-rPT/common_strings.xml -->
+    <eat-comment/>
+    <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"Uma aplicação requer uma atualização da aplicação Android Wear."</string>
+    <string msgid="3046420540094071256" name="common_android_wear_update_text">"Esta aplicação não será executada enquanto não atualizar a aplicação Android Wear."</string>
+    <string msgid="1366439133145190222" name="common_android_wear_update_title">"Atualizar Android Wear"</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"Ativar serviços do Google Play"</string>
+    <string msgid="7627896071867667758" name="common_google_play_services_enable_text">"Esta aplicação não funcionará enquanto não ativar os serviços do Google Play."</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"Ativar serviços do Google Play"</string>
+    <string msgid="2443362625939284971" name="common_google_play_services_error_notification_requested_by_msg">"Pedida por <ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"Obter serviços do Google Play"</string>
+    <string msgid="8685301130651051380" name="common_google_play_services_install_text_phone">"Esta aplicação não será executada sem os serviços do Google Play, que estão em falta no seu telemóvel."</string>
+    <string msgid="1589957570365247855" name="common_google_play_services_install_text_tablet">"Esta aplicação não será executada sem os serviços do Google Play, que estão em falta no seu tablet."</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"Obter serviços do Google Play"</string>
+    <string msgid="4983316348021735578" name="common_google_play_services_invalid_account_text">"A conta especificada não existe neste dispositivo. Escolha uma conta diferente."</string>
+    <string msgid="1066672360770936753" name="common_google_play_services_invalid_account_title">"Conta Inválida"</string>
+    <string msgid="2583358409598976717" name="common_google_play_services_needs_enabling_title">"Uma aplicação necessita da ativação dos Serviços do Google Play."</string>
+    <string msgid="9038847255613537209" name="common_google_play_services_network_error_text">"É necessária uma ligação de dados para se ligar aos Serviços do Google Play."</string>
+    <string msgid="3827284619958211114" name="common_google_play_services_network_error_title">"Erro de Rede"</string>
+    <string msgid="8120534356798772974" name="common_google_play_services_notification_needs_installation_title">"Uma aplicação necessita da instalação dos Serviços do Google Play."</string>
+    <string msgid="1388129345631079938" name="common_google_play_services_notification_needs_update_title">"Uma aplicação necessita da atualização dos Serviços do Google Play."</string>
+    <string msgid="1852570676146674985" name="common_google_play_services_notification_ticker">"Erro dos Serviços do Google Play"</string>
+    <string msgid="5194079840165204725" name="common_google_play_services_sign_in_failed_text">"Erro ao iniciar sessão na conta especificada. Escolha uma conta diferente."</string>
+    <string msgid="8164948898147532159" name="common_google_play_services_sign_in_failed_title">"Falha ao iniciar sessão"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"Problema desconhecido nos serviços do Google Play."</string>
+    <string msgid="3542578567569488671" name="common_google_play_services_unsupported_text">"Os serviços do Google Play, dos quais dependem algumas das suas aplicações, não são suportados pelo seu dispositivo. Contacte o fabricante para obter assistência."</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"Serviços do Google Play"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"Atualizar"</string>
+    <string msgid="448354684997260580" name="common_google_play_services_update_text">"Esta aplicação não será executada enquanto não atualizar os serviços do Google Play."</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"Atualizar serviços do Google Play"</string>
+    <string msgid="411506735369601515" name="common_open_on_phone">"Abrir no telemóvel"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"Inic. ses."</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"Inic. sessão com o Google"</string>
+    <string msgid="5000919058582214855" name="commono_google_play_services_api_unavailable_text">"Esta aplicação necessita de um ou mais serviços do Google Play que não estão disponíveis de momento. Contacte o programador para obter assistência."</string>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-pt-rPT/maps_api_strings.xml -->
+    <eat-comment/>
+    <string name="maps_API_MY_LOCATION_ACCURACY">A\u0020Minha\u0020Localização:\u0020\nPrecisão\u0020de\u0020{0}\u0020m</string>
+    <string name="maps_API_OUTDATED_WARNING">Esta\u0020aplic.\u0020utiliza\u0020uma\u0020versão\u0020desatualizada\u0020do\u0020Google\u0020Maps.\u0020Poderá\u0020não\u0020funcionar\u0020devidamente.</string>
+    <string name="maps_BACK_TO_LIST">"Voltar à lista"</string>
+    <string name="maps_CLOSE_SOFTKEY">Fechar</string>
+    <string name="maps_COMPASS_ALT_TEXT">Bússola</string>
+    <string name="maps_LEVEL_ALT_TEXT">Nível {0}</string>
+    <string name="maps_MY_LOCATION_ALT_TEXT">A\u0020Minha\u0020Localização</string>
+    <string msgid="3304805242996771621" name="maps_YOUR_LOCATION">A sua localização atual</string>
+    <string name="maps_ZOOM_IN_ALT_TEXT">Ampliar</string>
+    <string name="maps_ZOOM_OUT_ALT_TEXT">Reduzir</string>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-pt-rPT/maps_dav_strings.xml -->
+    <eat-comment/>
+    <string msgid="2643616411547805051" name="maps_dav_map_copyrights_full">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - Imagens © <ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>, Dados de mapas ©<ns1:g id="COPYRIGHT_YEAR_2">%4$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%5$s</ns1:g>"</string>
+    <string msgid="2340776877486681415" name="maps_dav_map_copyrights_google_only">"©<ns1:g id="COPYRIGHT_YEAR">%1$d</ns1:g> Google"</string>
+    <string msgid="4796406852640794459" name="maps_dav_map_copyrights_imagery_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - Imagens ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <string msgid="7421961728654750951" name="maps_dav_map_copyrights_map_data_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - Dados de mapas ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-pt-rPT/maps_sv_strings.xml -->
+    <eat-comment/>
+    <string msgid="5618016850433253177" name="maps_invalid_panorama_data">"Panorama inválido."</string>
+    <string msgid="852879677528638846" name="maps_network_unavailable">"Este programa requer uma ligação de dados, pelo que tentará de novo estabelecer ligação automaticamente. Verifique a intensidade do sinal. O modo de avião está ligado? Os dados de roaming estão desativados?"</string>
+    <string msgid="5724478591902584421" name="maps_no_panorama_data">"Não estão definidos dados de panorama."</string>
+    <string msgid="504349892431320733" name="maps_panorama_disabled">"A imagem já não está disponível"</string>
+    <string msgid="5623163711058333956" name="maps_service_unavailable">"Serviço de Street View indisponível."</string>
+    <string msgid="8614145121611139475" name="maps_street_range_name_format">"%1$s %2$s"</string>
+    <string msgid="4679308263892194242" name="maps_waiting_for_network">"Lig. dados perdida. A tentar…"</string>
+</resources>

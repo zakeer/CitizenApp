@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/build/intermediates/bundles/debug/res/values-ru/values-ru.xml -->
+    <eat-comment/>
+    <string-array name="maps_compass_directions">
+        <item msgid="371990129502990442">"С"</item>
+        <item msgid="1723794399812139988">"СВ"</item>
+        <item msgid="8995696828344274905">"В"</item>
+        <item msgid="8971984494345895781">"ЮВ"</item>
+        <item msgid="7174645718252695865">"Ю"</item>
+        <item msgid="4863051572593926737">"ЮЗ"</item>
+        <item msgid="6823513192569584945">"З"</item>
+        <item msgid="1255372719355902587">"СЗ"</item>
+    </string-array>
+    <string-array name="maps_full_compass_directions">
+        <item msgid="4575528752583301752">север</item>
+        <item msgid="4350548105276290005">северо-восток</item>
+        <item msgid="2941955296001395559">восток</item>
+        <item msgid="7564496420537720517">юго-восток</item>
+        <item msgid="7734963361324256142">юг</item>
+        <item msgid="2308335477702894344">юго-запад</item>
+        <item msgid="1360397508757498197">запад</item>
+        <item msgid="5107967783299132090">северо-запад</item>
+    </string-array>
+    <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"Требуется обновить приложение Android Wear."</string>
+    <string msgid="3046420540094071256" name="common_android_wear_update_text">"Для работы этого приложения требуется обновить Android Wear."</string>
+    <string msgid="1366439133145190222" name="common_android_wear_update_title">"Обновить Android Wear"</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"Включить"</string>
+    <string msgid="7627896071867667758" name="common_google_play_services_enable_text">"Для работы этого приложения требуется включить Сервисы Google Play."</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"Включите Сервисы Google Play"</string>
+    <string msgid="2443362625939284971" name="common_google_play_services_error_notification_requested_by_msg">"Источник запроса: <ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"Установить"</string>
+    <string msgid="8685301130651051380" name="common_google_play_services_install_text_phone">"Для работы этого приложения требуется установить Сервисы Google Play."</string>
+    <string msgid="1589957570365247855" name="common_google_play_services_install_text_tablet">"Для работы этого приложения требуется установить Сервисы Google Play."</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"Установите Сервисы Google Play"</string>
+    <string msgid="4983316348021735578" name="common_google_play_services_invalid_account_text">"Этого аккаунта нет на устройстве. Выберите другой."</string>
+    <string msgid="1066672360770936753" name="common_google_play_services_invalid_account_title">"Недействительный аккаунт"</string>
+    <string msgid="2583358409598976717" name="common_google_play_services_needs_enabling_title">"Для работы приложения требуется включить сервисы Google Play"</string>
+    <string msgid="9038847255613537209" name="common_google_play_services_network_error_text">"Для работы с Google Play требуется подключение к сети."</string>
+    <string msgid="3827284619958211114" name="common_google_play_services_network_error_title">"Ошибка сети"</string>
+    <string msgid="8120534356798772974" name="common_google_play_services_notification_needs_installation_title">"Для работы приложения требуется установить сервисы Google Play"</string>
+    <string msgid="1388129345631079938" name="common_google_play_services_notification_needs_update_title">"Для работы приложения требуется обновить сервисы Google Play"</string>
+    <string msgid="1852570676146674985" name="common_google_play_services_notification_ticker">"Ошибка сервисов Google Play"</string>
+    <string msgid="5194079840165204725" name="common_google_play_services_sign_in_failed_text">"При входе в указанный аккаунт произошла ошибка. Выберите другой аккаунт."</string>
+    <string msgid="8164948898147532159" name="common_google_play_services_sign_in_failed_title">"Ошибка входа"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"Неизвестная ошибка с Сервисами Google Play."</string>
+    <string msgid="3542578567569488671" name="common_google_play_services_unsupported_text">"Сервисы Google Play, необходимые для работы некоторых приложений, не поддерживаются на вашем устройстве. Обратитесь к производителю."</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"Сервисы Google Play"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"Обновить"</string>
+    <string msgid="448354684997260580" name="common_google_play_services_update_text">"Для работы этого приложения требуется обновить Сервисы Google Play."</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"Обновите Сервисы Google Play"</string>
+    <string msgid="411506735369601515" name="common_open_on_phone">"Открыть на телефоне"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"Войти"</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"Войти в аккаунт Google"</string>
+    <string msgid="5000919058582214855" name="commono_google_play_services_api_unavailable_text">"Сервисы Google Play, необходимые для работы приложения, сейчас недоступны. Обратитесь за помощью к разработчику."</string>
+    <string name="maps_API_MY_LOCATION_ACCURACY">\u041c\u043e\u0435\u0020\u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435\u0020\n\u0422\u043e\u0447\u043d\u043e\u0441\u0442\u044c:\u0020{0}\u0020\u043c</string>
+    <string name="maps_API_OUTDATED_WARNING">\u042d\u0442\u043e\u0020\u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435\u0020\u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442\u0020\u0443\u0441\u0442\u0430\u0440\u0435\u0432\u0448\u0443\u044e\u0020\u0432\u0435\u0440\u0441\u0438\u044e\u0020\u041a\u0430\u0440\u0442\u0020\u0438\u0020\u043c\u043e\u0436\u0435\u0442\u0020\u0440\u0430\u0431\u043e\u0442\u0430\u0442\u044c\u0020\u043d\u0435\u043f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u043e.</string>
+    <string name="maps_BACK_TO_LIST">"Вернуться к списку"</string>
+    <string name="maps_CLOSE_SOFTKEY">\u0417\u0430\u043a\u0440\u044b\u0442\u044c</string>
+    <string name="maps_COMPASS_ALT_TEXT">\u041a\u043e\u043c\u043f\u0430\u0441</string>
+    <string name="maps_DIRECTIONS_ALT_TEXT">Проложить маршрут</string>
+    <string name="maps_GOOGLE_MAP">Карта Google</string>
+    <string name="maps_LEVEL_ALT_TEXT">Этаж {0}</string>
+    <string name="maps_MY_LOCATION_ALT_TEXT">\u041c\u043e\u0435\u0020\u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435</string>
+    <string name="maps_OPEN_GMM_ALT_TEXT">Открыть в Google Картах</string>
+    <string msgid="3304805242996771621" name="maps_YOUR_LOCATION">Вы сейчас здесь</string>
+    <string name="maps_ZOOM_IN_ALT_TEXT">\u041f\u0440\u0438\u0431\u043b\u0438\u0437\u0438\u0442\u044c</string>
+    <string name="maps_ZOOM_OUT_ALT_TEXT">\u041e\u0442\u0434\u0430\u043b\u0438\u0442\u044c</string>
+    <string msgid="2643616411547805051" name="maps_dav_map_copyrights_full">"© Google, <ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> – Изображения © <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>, <ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> – Картографические данные © <ns1:g id="MAP_DATA_PROVIDER_NAMES">%5$s</ns1:g>, <ns1:g id="COPYRIGHT_YEAR_2">%4$d</ns1:g>"</string>
+    <string msgid="2340776877486681415" name="maps_dav_map_copyrights_google_only">"© Google, <ns1:g id="COPYRIGHT_YEAR">%1$d</ns1:g>"</string>
+    <string msgid="4796406852640794459" name="maps_dav_map_copyrights_imagery_only">"© Google, <ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> – Изображения © <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>, <ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g>"</string>
+    <string msgid="7421961728654750951" name="maps_dav_map_copyrights_map_data_only">"© Google, <ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> – Картографические данные © <ns1:g id="MAP_DATA_PROVIDER_NAMES">%3$s</ns1:g>, <ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g>"</string>
+    <string msgid="5618016850433253177" name="maps_invalid_panorama_data">"Недействительные данные панорамы."</string>
+    <string msgid="852879677528638846" name="maps_network_unavailable">"Программа будет автоматически пытаться установить соединение. Возможно, нет сигнала, включен режим полета или заблокирован роуминг."</string>
+    <string msgid="5724478591902584421" name="maps_no_panorama_data">"Не заданы данные панорамы."</string>
+    <string msgid="504349892431320733" name="maps_panorama_disabled">"Изображение недоступно"</string>
+    <string msgid="5623163711058333956" name="maps_service_unavailable">"Просмотр улиц недоступен."</string>
+    <string msgid="8614145121611139475" name="maps_street_range_name_format">"%1$s %2$s"</string>
+    <string msgid="4679308263892194242" name="maps_waiting_for_network">"Передача данных прервана. Попытка подключения…"</string>
+</resources>

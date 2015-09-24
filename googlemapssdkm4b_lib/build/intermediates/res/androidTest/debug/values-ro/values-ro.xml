@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/build/intermediates/bundles/debug/res/values-ro/values-ro.xml -->
+    <eat-comment/>
+    <string-array name="maps_compass_directions">
+        <item msgid="371990129502990442">"N"</item>
+        <item msgid="1723794399812139988">"N-E"</item>
+        <item msgid="8995696828344274905">"E"</item>
+        <item msgid="8971984494345895781">"S-E"</item>
+        <item msgid="7174645718252695865">"S"</item>
+        <item msgid="4863051572593926737">"S-V"</item>
+        <item msgid="6823513192569584945">"V"</item>
+        <item msgid="1255372719355902587">"N-V"</item>
+    </string-array>
+    <string-array name="maps_full_compass_directions">
+        <item msgid="4575528752583301752">nord</item>
+        <item msgid="4350548105276290005">nord-est</item>
+        <item msgid="2941955296001395559">est</item>
+        <item msgid="7564496420537720517">sud-est</item>
+        <item msgid="7734963361324256142">sud</item>
+        <item msgid="2308335477702894344">sud-vest</item>
+        <item msgid="1360397508757498197">vest</item>
+        <item msgid="5107967783299132090">nord-vest</item>
+    </string-array>
+    <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"O aplicație necesită actualizarea aplicației Android Wear."</string>
+    <string msgid="3046420540094071256" name="common_android_wear_update_text">"Această aplicație nu va rula dacă nu actualizați aplicația Android Wear."</string>
+    <string msgid="1366439133145190222" name="common_android_wear_update_title">"Actualizați Android Wear"</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"Activaţi Servicii Google Play"</string>
+    <string msgid="7627896071867667758" name="common_google_play_services_enable_text">"Această aplicaţie nu va funcţiona decât dacă activaţi Servicii Google Play."</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"Activaţi Servicii Google Play"</string>
+    <string msgid="2443362625939284971" name="common_google_play_services_error_notification_requested_by_msg">"Solicitată de <ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"Obţineţi Servicii Google Play"</string>
+    <string msgid="8685301130651051380" name="common_google_play_services_install_text_phone">"Această aplicaţie nu poate rula fără Servicii Google Play, care lipsesc de pe telefon."</string>
+    <string msgid="1589957570365247855" name="common_google_play_services_install_text_tablet">"Această aplicaţie nu poate rula fără Servicii Google Play, care lipsesc de pe tabletă."</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"Descărcaţi Servicii Google Play"</string>
+    <string msgid="4983316348021735578" name="common_google_play_services_invalid_account_text">"Contul menționat nu există pe acest dispozitiv. Alegeți alt cont."</string>
+    <string msgid="1066672360770936753" name="common_google_play_services_invalid_account_title">"Cont nevalid"</string>
+    <string msgid="2583358409598976717" name="common_google_play_services_needs_enabling_title">"O aplicație necesită activarea serviciilor Google Play."</string>
+    <string msgid="9038847255613537209" name="common_google_play_services_network_error_text">"Este necesară o conexiune de date pentru a vă conecta la serviciile Google Play."</string>
+    <string msgid="3827284619958211114" name="common_google_play_services_network_error_title">"Eroare de reţea"</string>
+    <string msgid="8120534356798772974" name="common_google_play_services_notification_needs_installation_title">"O aplicație necesită instalarea serviciilor Google Play."</string>
+    <string msgid="1388129345631079938" name="common_google_play_services_notification_needs_update_title">"O aplicație necesită o actualizare pentru serviciile Google Play."</string>
+    <string msgid="1852570676146674985" name="common_google_play_services_notification_ticker">"Eroare a serviciilor Google Play"</string>
+    <string msgid="5194079840165204725" name="common_google_play_services_sign_in_failed_text">"Eroare la conectarea la contul specificat. Alegeți alt cont."</string>
+    <string msgid="8164948898147532159" name="common_google_play_services_sign_in_failed_title">"Conectarea nu a reușit"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"Problemă necunoscută privind Servicii Google Play."</string>
+    <string msgid="3542578567569488671" name="common_google_play_services_unsupported_text">"Gadgetul nu acceptă serviciile Google Play, pe care se bazează unele dintre aplicații. Pentru asistență, contactați producătorul gadgetului."</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"Servicii Google Play"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"Actualizaţi"</string>
+    <string msgid="448354684997260580" name="common_google_play_services_update_text">"Această aplicaţie nu poate rula decât dacă actualizaţi Servicii Google Play."</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"Actualizaţi Servicii Google Play"</string>
+    <string msgid="411506735369601515" name="common_open_on_phone">"Deschideți pe telefon"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"Conectați"</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"Conectați-vă cu Google"</string>
+    <string msgid="5000919058582214855" name="commono_google_play_services_api_unavailable_text">"Pentru această aplicație sunt necesare unul sau mai multe servicii Google Play care momentan nu sunt disponibile. Contactați dezvoltatorul pentru asistență."</string>
+    <string name="maps_API_MY_LOCATION_ACCURACY">Loca\u021bia\u0020mea\u0020\nCu\u0020toleran\u021b\u0103\u0020de\u0020{0}\u0020metri</string>
+    <string name="maps_API_OUTDATED_WARNING">Aceast\u0103\u0020aplica\u021bie\u0020folose\u0219te\u0020o\u0020versiune\u0020învechit\u0103\u0020de\u0020H\u0103r\u021bi\u0020Google.\u0020Este\u0020posibil\u0020s\u0103\u0020nu\u0020func\u021bioneze\u0020corect.</string>
+    <string name="maps_BACK_TO_LIST">"Înapoi la listă"</string>
+    <string name="maps_CLOSE_SOFTKEY">Închidere</string>
+    <string name="maps_COMPASS_ALT_TEXT">Busol\u0103</string>
+    <string name="maps_DIRECTIONS_ALT_TEXT">Obţineţi indicaţii</string>
+    <string name="maps_GOOGLE_MAP">Hartă Google</string>
+    <string name="maps_LEVEL_ALT_TEXT">Etajul {0}</string>
+    <string name="maps_MY_LOCATION_ALT_TEXT">Loca\u0163ia\u0020mea</string>
+    <string name="maps_OPEN_GMM_ALT_TEXT">Cu Hărți Google</string>
+    <string msgid="3304805242996771621" name="maps_YOUR_LOCATION">Locația actuală</string>
+    <string name="maps_ZOOM_IN_ALT_TEXT">M\u0103ri\u0163i</string>
+    <string name="maps_ZOOM_OUT_ALT_TEXT">Mic\u015fora\u0163i</string>
+    <string msgid="2643616411547805051" name="maps_dav_map_copyrights_full">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - Imagini ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>, Date hartă ©<ns1:g id="COPYRIGHT_YEAR_2">%4$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%5$s</ns1:g>"</string>
+    <string msgid="2340776877486681415" name="maps_dav_map_copyrights_google_only">"©<ns1:g id="COPYRIGHT_YEAR">%1$d</ns1:g> Google"</string>
+    <string msgid="4796406852640794459" name="maps_dav_map_copyrights_imagery_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - Imagini ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <string msgid="7421961728654750951" name="maps_dav_map_copyrights_map_data_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - Date hartă ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <string msgid="5618016850433253177" name="maps_invalid_panorama_data">"Panoramă nevalidă."</string>
+    <string msgid="852879677528638846" name="maps_network_unavailable">"Acest program necesită o conexiune de date şi va reîncerca automat. Verificaţi puterea semnalului. Sunteţi în modul Avion? Aveţi dezactivată conexiunea de date în roaming?"</string>
+    <string msgid="5724478591902584421" name="maps_no_panorama_data">"Nu au fost setate datele de panoramare."</string>
+    <string msgid="504349892431320733" name="maps_panorama_disabled">"Imaginea nu mai este disponibilă."</string>
+    <string msgid="5623163711058333956" name="maps_service_unavailable">"Serviciul Street View nu este disponibil."</string>
+    <string msgid="8614145121611139475" name="maps_street_range_name_format">"%2$s %1$s"</string>
+    <string msgid="4679308263892194242" name="maps_waiting_for_network">"Conexiune pierdută; se reînc…"</string>
+</resources>

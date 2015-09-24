@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/build/intermediates/bundles/debug/res/values-bg/values-bg.xml -->
+    <eat-comment/>
+    <string-array name="maps_compass_directions">
+        <item msgid="371990129502990442">"С"</item>
+        <item msgid="1723794399812139988">"СИ"</item>
+        <item msgid="8995696828344274905">"И"</item>
+        <item msgid="8971984494345895781">"ЮИ"</item>
+        <item msgid="7174645718252695865">"Ю"</item>
+        <item msgid="4863051572593926737">"ЮЗ"</item>
+        <item msgid="6823513192569584945">"З"</item>
+        <item msgid="1255372719355902587">"СЗ"</item>
+    </string-array>
+    <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"Приложение изисква актуализиране на Android Wear."</string>
+    <string msgid="3046420540094071256" name="common_android_wear_update_text">"Това приложение няма да стартира, освен ако не актуализирате Android Wear."</string>
+    <string msgid="1366439133145190222" name="common_android_wear_update_title">"Актуализиране на Android Wear"</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"Услуги за Google Play: Актив."</string>
+    <string msgid="7627896071867667758" name="common_google_play_services_enable_text">"Това приложение няма да работи, освен ако не активирате услугите за Google Play."</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"Активиране на услугите за Google Play"</string>
+    <string msgid="2443362625939284971" name="common_google_play_services_error_notification_requested_by_msg">"Заявено от <ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"Услуги за Google Play: Изтегл."</string>
+    <string msgid="8685301130651051380" name="common_google_play_services_install_text_phone">"Това приложение няма да се изпълнява без услугите за Google Play, които липсват в телефона ви."</string>
+    <string msgid="1589957570365247855" name="common_google_play_services_install_text_tablet">"Това приложение няма да се изпълнява без услугите за Google Play, които липсват в таблета ви."</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"Изтегляне на услугите за Google Play"</string>
+    <string msgid="4983316348021735578" name="common_google_play_services_invalid_account_text">"Посоченият профил не съществува на това устройство. Моля, изберете друг."</string>
+    <string msgid="1066672360770936753" name="common_google_play_services_invalid_account_title">"Невалиден профил"</string>
+    <string msgid="2583358409598976717" name="common_google_play_services_needs_enabling_title">"Приложение изисква активирането на услугите за Google Play."</string>
+    <string msgid="9038847255613537209" name="common_google_play_services_network_error_text">"За свързване с услугите за Google Play се изисква връзка за данни."</string>
+    <string msgid="3827284619958211114" name="common_google_play_services_network_error_title">"Грешка в мрежата"</string>
+    <string msgid="8120534356798772974" name="common_google_play_services_notification_needs_installation_title">"Приложение изисква инсталирането на услугите за Google Play."</string>
+    <string msgid="1388129345631079938" name="common_google_play_services_notification_needs_update_title">"Приложение изисква актуализирането на услугите за Google Play."</string>
+    <string msgid="1852570676146674985" name="common_google_play_services_notification_ticker">"Грешка в услугите за Google Play"</string>
+    <string msgid="5194079840165204725" name="common_google_play_services_sign_in_failed_text">"При влизането в посочения профил възникна грешка. Моля, изберете друг."</string>
+    <string msgid="8164948898147532159" name="common_google_play_services_sign_in_failed_title">"Влизането в профила не бе успешно"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"Неизвестен проблем с услугите за Google Play."</string>
+    <string msgid="3542578567569488671" name="common_google_play_services_unsupported_text">"Услугите за Google Play, на които разчитат някои от приложенията ви, не се поддържат от устройството ви. Моля, свържете се с производителя за помощ."</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"Услуги за Google Play"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"Актуализиране"</string>
+    <string msgid="448354684997260580" name="common_google_play_services_update_text">"Това приложение няма да се изпълнява, освен ако не актуализирате услугите за Google Play."</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"Актуализиране на услугите за Google Play"</string>
+    <string msgid="411506735369601515" name="common_open_on_phone">"Отваряне в телефона"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"Вход"</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"Вход с Google"</string>
+    <string msgid="5000919058582214855" name="commono_google_play_services_api_unavailable_text">"За това приложение се изисква една или повече услуги за Google Play, които понастоящем не са налице. Моля, свържете се с програмиста за съдействие."</string>
+    <string name="maps_API_MY_LOCATION_ACCURACY">\u041c\u043e\u0435\u0442\u043e\u0020\u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435\u0020\n\u0421\u0020\u0442\u043e\u0447\u043d\u043e\u0441\u0442\u0020\u0434\u043e\u0020{0}\u0020\u043c\u0435\u0442\u0440\u0430</string>
+    <string name="maps_API_OUTDATED_WARNING">\u0422\u043e\u0432\u0430\u0020\u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435\u0020\u0438\u0437\u043f\u043e\u043b\u0437\u0432\u0430\u0020\u043d\u0435\u0430\u043a\u0442\u0443\u0430\u043b\u043d\u0430\u0020\u0432\u0435\u0440\u0441\u0438\u044f\u0020\u043d\u0430\u0020\u041a\u0430\u0440\u0442\u0438.\u0020\u0412\u044a\u0437\u043c\u043e\u0436\u043d\u043e\u0020\u0435\u0020\u0434\u0430\u0020\u043d\u0435\u0020\u0444\u0443\u043d\u043a\u0446\u0438\u043e\u043d\u0438\u0440\u0430\u0020\u043f\u0440\u0430\u0432\u0438\u043b\u043d\u043e.</string>
+    <string name="maps_CLOSE_SOFTKEY">\u0417\u0430\u0442\u0432\u0430\u0440\u044f\u043d\u0435</string>
+    <string name="maps_COMPASS_ALT_TEXT">\u041a\u043e\u043c\u043f\u0430\u0441</string>
+    <string name="maps_DIRECTIONS_ALT_TEXT">Изтеглете упътвания</string>
+    <string name="maps_GOOGLE_MAP">Карта в Google</string>
+    <string name="maps_LEVEL_ALT_TEXT">Ниво {0}</string>
+    <string name="maps_MY_LOCATION_ALT_TEXT">\u041c\u043e\u0435\u0442\u043e\u0020\u043c\u0435\u0441\u0442\u043e\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435</string>
+    <string name="maps_OPEN_GMM_ALT_TEXT">Отваряне в Google Карти</string>
+    <string msgid="3304805242996771621" name="maps_YOUR_LOCATION">Вашето текущо местоположение</string>
+    <string name="maps_ZOOM_IN_ALT_TEXT">\u0423\u0432\u0435\u043b\u0438\u0447\u0430\u0432\u0430\u043d\u0435\u0020\u043d\u0430\u0020\u043c\u0430\u0449\u0430\u0431\u0430</string>
+    <string name="maps_ZOOM_OUT_ALT_TEXT">\u041d\u0430\u043c\u0430\u043b\u044f\u0432\u0430\u043d\u0435\u0020\u043d\u0430\u0020\u043c\u0430\u0449\u0430\u0431\u0430</string>
+    <string msgid="2643616411547805051" name="maps_dav_map_copyrights_full">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google – Изображения ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>, Картографски данни ©<ns1:g id="COPYRIGHT_YEAR_2">%4$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%5$s</ns1:g>"</string>
+    <string msgid="2340776877486681415" name="maps_dav_map_copyrights_google_only">"©<ns1:g id="COPYRIGHT_YEAR">%1$d</ns1:g> Google"</string>
+    <string msgid="4796406852640794459" name="maps_dav_map_copyrights_imagery_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google – Изображения ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <string msgid="7421961728654750951" name="maps_dav_map_copyrights_map_data_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google – Картографски данни ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <string msgid="5618016850433253177" name="maps_invalid_panorama_data">"Невалидни данни за панорама."</string>
+    <string msgid="852879677528638846" name="maps_network_unavailable">"Програмата изисква връзка за данни и ще направи авт. повторен опит. Проверете силата на сигнала. Вкл. ли е самолетният режим? Деактивиран ли е роумингът за данни?"</string>
+    <string msgid="5724478591902584421" name="maps_no_panorama_data">"Не са зададени данни за панорама."</string>
+    <string msgid="504349892431320733" name="maps_panorama_disabled">"Вече няма достъп до снимката"</string>
+    <string msgid="5623163711058333956" name="maps_service_unavailable">"Няма достъп до услугата „Градски изглед“."</string>
+    <string msgid="8614145121611139475" name="maps_street_range_name_format">"%1$s %2$s"</string>
+    <string msgid="4679308263892194242" name="maps_waiting_for_network">"Няма връзка за данни. Повторен опит..."</string>
+</resources>

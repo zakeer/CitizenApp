@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:id="@+id/vehicleLayout"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context="com.turpymobileapps.citizenapp.VehicleDetails">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Vehicle Details"
+        android:textColor="#ff36beff"
+        android:id="@+id/textView"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/textView"
+        android:id="@+id/linearLayout"
+        android:paddingLeft="20sp"
+        android:paddingRight="20sp"
+        android:weightSum="1">
+
+
+        <TextView
+            android:layout_width="0sp"
+            android:layout_weight=".5"
+            android:layout_height="30sp"
+            android:gravity="center_vertical"
+            android:textColor="#ff36beff"
+            android:text="Vehicle No  :"/>
+
+        <EditText
+            android:layout_weight=".5"
+            android:layout_width="0sp"
+            android:layout_height="30sp"
+            android:gravity="center"
+            android:scaleType="fitXY"
+            android:background="@drawable/input_bg" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="190dp"
+        android:layout_height="38dp"
+        android:text="Get Details"
+        android:textColor="#fff"
+        android:textSize="13dp"
+        android:background="#ff36beff"
+        android:layout_marginTop="20dp"
+        android:id="@+id/button"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

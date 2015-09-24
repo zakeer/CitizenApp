@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-ar-v14/maps_sv_strings.xml -->
+    <eat-comment/>
+    <string-array name="maps_compass_directions">
+        <item msgid="371990129502990442">"الشمال"</item>
+        <item msgid="1723794399812139988">"شمال شرق"</item>
+        <item msgid="8995696828344274905">"شرق"</item>
+        <item msgid="8971984494345895781">"جنوب شرق"</item>
+        <item msgid="7174645718252695865">"جنوب"</item>
+        <item msgid="4863051572593926737">"جنوب غرب"</item>
+        <item msgid="6823513192569584945">"غرب"</item>
+        <item msgid="1255372719355902587">"شمال غرب"</item>
+    </string-array>
+    <string-array name="maps_full_compass_directions">
+        <item msgid="4575528752583301752">الاتجاه إلى الشمال</item>
+        <item msgid="4350548105276290005">الاتجاه إلى الشمال الشرقي</item>
+        <item msgid="2941955296001395559">الاتجاه إلى الشرق</item>
+        <item msgid="7564496420537720517">الاتجاه إلى الجنوب الشرقي</item>
+        <item msgid="7734963361324256142">الاتجاه إلى الجنوب</item>
+        <item msgid="2308335477702894344">الاتجاه إلى الجنوب الغربي</item>
+        <item msgid="1360397508757498197">الاتجاه إلى الغرب</item>
+        <item msgid="5107967783299132090">الاتجاه إلى الشمال الغربي</item>
+    </string-array>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-ar-v14/maps_api_strings.xml -->
+    <eat-comment/>
+    <string name="maps_API_MY_LOCATION_ACCURACY">\u0645\u0648\u0642\u0639\u064a\u0020\n\u0639\u0644\u0649\u0020\u0645\u0633\u0627\u0641\u0629\u0020{0}\u0020\u0645\u0646\u0020\u0627\u0644\u0623\u0645\u062a\u0627\u0631</string>
+    <string name="maps_API_OUTDATED_WARNING">\u064a\u0633\u062a\u062e\u062f\u0645\u0020\u0647\u0630\u0627\u0020\u0627\u0644\u062a\u0637\u0628\u064a\u0642\u0020\u0625\u0635\u062f\u0627\u0631\u064b\u0627\u0020\u0642\u062f\u064a\u0645\u064b\u0627\u0020\u0645\u0646\u0020\u0627\u0644\u062e\u0631\u0627\u0626\u0637.\u0020\u0642\u062f\u0020\u0644\u0627\u0020\u064a\u0639\u0645\u0644\u0020\u0628\u0634\u0643\u0644\u0020\u0635\u062d\u064a\u062d.</string>
+    <string name="maps_BACK_TO_LIST">"الرجوع إلى القائمة"</string>
+    <string name="maps_CLOSE_SOFTKEY">\u0625\u063a\u0644\u0627\u0642</string>
+    <string name="maps_COMPASS_ALT_TEXT">\u0627\u0644\u0628\u0648\u0635\u0644\u0629</string>
+    <string name="maps_MY_LOCATION_ALT_TEXT">\u0645\u0648\u0642\u0639\u064a</string>
+    <string name="maps_ZOOM_IN_ALT_TEXT">\u062a\u0643\u0628\u064a\u0631</string>
+    <string name="maps_ZOOM_OUT_ALT_TEXT">\u062a\u0635\u063a\u064a\u0631</string>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-ar-v14/maps_dav_strings.xml -->
+    <eat-comment/>
+    <string msgid="2643616411547805051" name="maps_dav_map_copyrights_full">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - صور ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g><ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>، بيانات الخريطة ©<ns1:g id="COPYRIGHT_YEAR_2">%4$d</ns1:g><ns1:g id="MAP_DATA_PROVIDER_NAMES">%5$s</ns1:g>"</string>
+    <string msgid="2340776877486681415" name="maps_dav_map_copyrights_google_only">"©<ns1:g id="COPYRIGHT_YEAR">%1$d</ns1:g> Google"</string>
+    <string msgid="4796406852640794459" name="maps_dav_map_copyrights_imagery_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - صور ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g><ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <string msgid="7421961728654750951" name="maps_dav_map_copyrights_map_data_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - بيانات الخريطة ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g><ns1:g id="MAP_DATA_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-ar-v14/maps_sv_strings.xml -->
+    <eat-comment/>
+    <string msgid="5618016850433253177" name="maps_invalid_panorama_data">"بيانات بانوراما غير صالحة."</string>
+    <string msgid="852879677528638846" name="maps_network_unavailable">"يتطلب هذا البرنامج اتصالاً بالبيانات، وسيعيد محاولة الاتصال تلقائيًا. الرجاء التحقق من قوة الإشارة. هل تم تشغيل وضع الطائرة؟ هل تم تعطيل بيانات التجوال؟"</string>
+    <string msgid="5724478591902584421" name="maps_no_panorama_data">"لم يتم تعيين بيانات بانوراما."</string>
+    <string msgid="504349892431320733" name="maps_panorama_disabled">"الصورة غير متوفرة"</string>
+    <string msgid="5623163711058333956" name="maps_service_unavailable">"خدمة التجوّل الافتراضي غير متوفرة."</string>
+    <string msgid="8614145121611139475" name="maps_street_range_name_format">"%1$s %2$s"</string>
+    <string msgid="4679308263892194242" name="maps_waiting_for_network">"تم فقد اتصال البيانات، وجارٍ إعادة المحاولة…"</string>
+</resources>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-ko/maps_sv_strings.xml -->
+    <eat-comment/>
+    <string-array name="maps_compass_directions">
+        <item msgid="371990129502990442">"북"</item>
+        <item msgid="1723794399812139988">"북동"</item>
+        <item msgid="8995696828344274905">"동"</item>
+        <item msgid="8971984494345895781">"동남"</item>
+        <item msgid="7174645718252695865">"남"</item>
+        <item msgid="4863051572593926737">"남서"</item>
+        <item msgid="6823513192569584945">"서"</item>
+        <item msgid="1255372719355902587">"북서"</item>
+    </string-array>
+    <string-array name="maps_full_compass_directions">
+        <item msgid="4575528752583301752">북쪽</item>
+        <item msgid="4350548105276290005">북동쪽</item>
+        <item msgid="2941955296001395559">동쪽</item>
+        <item msgid="7564496420537720517">남동쪽</item>
+        <item msgid="7734963361324256142">남쪽</item>
+        <item msgid="2308335477702894344">남서쪽</item>
+        <item msgid="1360397508757498197">서쪽</item>
+        <item msgid="5107967783299132090">북서쪽</item>
+    </string-array>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-ko/common_strings.xml -->
+    <eat-comment/>
+    <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"Android Wear 앱에 대한 업데이트가 필요한 애플리케이션이 있습니다."</string>
+    <string msgid="3046420540094071256" name="common_android_wear_update_text">"Android Wear 앱을 업데이트해야만 이 앱이 실행됩니다."</string>
+    <string msgid="1366439133145190222" name="common_android_wear_update_title">"Android Wear 업데이트"</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"Google Play 서비스 사용"</string>
+    <string msgid="7627896071867667758" name="common_google_play_services_enable_text">"Google Play 서비스를 사용하도록 설정해야 이 앱이 작동합니다."</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"Google Play 서비스 사용"</string>
+    <string msgid="2443362625939284971" name="common_google_play_services_error_notification_requested_by_msg">"<ns1:g id="APP_NAME">%1$s</ns1:g>에서 요청"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"Google Play 서비스 설치"</string>
+    <string msgid="8685301130651051380" name="common_google_play_services_install_text_phone">"휴대전화에 Google Play 서비스가 설치되어 있어야 이 앱이 실행됩니다."</string>
+    <string msgid="1589957570365247855" name="common_google_play_services_install_text_tablet">"태블릿에 Google Play 서비스가 설치되어 있어야 이 앱이 실행됩니다."</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"Google Play 서비스 설치"</string>
+    <string msgid="4983316348021735578" name="common_google_play_services_invalid_account_text">"지정한 계정이 이 기기에 존재하지 않습니다. 다른 계정을 선택하세요."</string>
+    <string msgid="1066672360770936753" name="common_google_play_services_invalid_account_title">"올바르지 않은 계정"</string>
+    <string msgid="2583358409598976717" name="common_google_play_services_needs_enabling_title">"Google Play 서비스를 사용 설정해야 하는 애플리케이션입니다."</string>
+    <string msgid="9038847255613537209" name="common_google_play_services_network_error_text">"Google Play 서비스에 연결하려면 데이터 연결이 필요합니다."</string>
+    <string msgid="3827284619958211114" name="common_google_play_services_network_error_title">"네트워크 오류"</string>
+    <string msgid="8120534356798772974" name="common_google_play_services_notification_needs_installation_title">"Google Play 서비스를 설치해야 하는 애플리케이션입니다."</string>
+    <string msgid="1388129345631079938" name="common_google_play_services_notification_needs_update_title">"Google Play 서비스를 업데이트해야 하는 애플리케이션입니다."</string>
+    <string msgid="1852570676146674985" name="common_google_play_services_notification_ticker">"Google Play 서비스 오류"</string>
+    <string msgid="5194079840165204725" name="common_google_play_services_sign_in_failed_text">"지정한 계정에 로그인하는 중에 오류가 발생했습니다. 다른 계정을 선택해 주세요."</string>
+    <string msgid="8164948898147532159" name="common_google_play_services_sign_in_failed_title">"로그인 실패"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"Google Play 서비스에 알 수 없는 문제가 발생했습니다."</string>
+    <string msgid="3542578567569488671" name="common_google_play_services_unsupported_text">"일부 사용자 애플리케이션에 필요한 Google Play 서비스가 사용자 기기에서 지원되지 않습니다. 기기 제조업체에 문의하시기 바랍니다."</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"Google Play 서비스"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"업데이트"</string>
+    <string msgid="448354684997260580" name="common_google_play_services_update_text">"Google Play 서비스를 업데이트해야만 이 앱이 실행됩니다."</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"Google Play 서비스 업데이트"</string>
+    <string msgid="411506735369601515" name="common_open_on_phone">"휴대전화에서 열기"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"로그인"</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"Google 계정으로 로그인"</string>
+    <string msgid="5000919058582214855" name="commono_google_play_services_api_unavailable_text">"이 앱에 필요한 하나 이상의 Google Play 서비스를 현재 사용할 수 없습니다. 개발자에게 문의하여 도움을 받으시기 바랍니다."</string>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-ko/maps_api_strings.xml -->
+    <eat-comment/>
+    <string name="maps_API_MY_LOCATION_ACCURACY">\ub0b4\u0020\uc704\uce58\u0020\n\uc815\ud655\ub3c4\u0020{0}\ubbf8\ud130</string>
+    <string name="maps_API_OUTDATED_WARNING">\uc774\u0020\uc560\ud50c\ub9ac\ucf00\uc774\uc158\uc740\u0020\uc624\ub798\ub41c\u0020Google\u0020\uc9c0\ub3c4\u0020\ubc84\uc804\uc744\u0020\uc0ac\uc6a9\ud569\ub2c8\ub2e4.\u0020\uc81c\ub300\ub85c\u0020\uc791\ub3d9\ud558\uc9c0\u0020\uc54a\uc744\u0020\uc218\u0020\uc788\uc2b5\ub2c8\ub2e4.</string>
+    <string name="maps_BACK_TO_LIST">"목록으로 돌아가기"</string>
+    <string name="maps_CLOSE_SOFTKEY">\ub2eb\uae30</string>
+    <string name="maps_COMPASS_ALT_TEXT">\ub098\uce68\ubc18</string>
+    <string name="maps_DIRECTIONS_ALT_TEXT">길찾기</string>
+    <string name="maps_GOOGLE_MAP">Google 지도</string>
+    <string name="maps_LEVEL_ALT_TEXT">{0}층</string>
+    <string name="maps_MY_LOCATION_ALT_TEXT">\ub0b4\u0020\uc704\uce58</string>
+    <string name="maps_OPEN_GMM_ALT_TEXT">Google 지도에서 열기</string>
+    <string msgid="3304805242996771621" name="maps_YOUR_LOCATION">현재 위치</string>
+    <string name="maps_ZOOM_IN_ALT_TEXT">\ud655\ub300</string>
+    <string name="maps_ZOOM_OUT_ALT_TEXT">\ucd95\uc18c</string>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-ko/maps_dav_strings.xml -->
+    <eat-comment/>
+    <string msgid="2643616411547805051" name="maps_dav_map_copyrights_full">"© <ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - 이미지 © <ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g> ,지도 데이터 ©<ns1:g id="COPYRIGHT_YEAR_2">%4$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%5$s</ns1:g>"</string>
+    <string msgid="2340776877486681415" name="maps_dav_map_copyrights_google_only">"©<ns1:g id="COPYRIGHT_YEAR">%1$d</ns1:g> Google"</string>
+    <string msgid="4796406852640794459" name="maps_dav_map_copyrights_imagery_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - 이미지 ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <string msgid="7421961728654750951" name="maps_dav_map_copyrights_map_data_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - 지도 데이터 ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-ko/maps_sv_strings.xml -->
+    <eat-comment/>
+    <string msgid="5618016850433253177" name="maps_invalid_panorama_data">"잘못된 파노라마입니다."</string>
+    <string msgid="852879677528638846" name="maps_network_unavailable">"프로그램을 실행하려면 데이터 접속이 필요하며 자동으로 연결을 다시 시도합니다. 신호 강도를 확인하시고 비행 모드가 아닌지, 데이터 로밍이 사용 중지되지 않았는지 확인하세요."</string>
+    <string msgid="5724478591902584421" name="maps_no_panorama_data">"파노라마 데이터 집합이 없습니다."</string>
+    <string msgid="504349892431320733" name="maps_panorama_disabled">"사진이 더 이상 제공되지 않습니다."</string>
+    <string msgid="5623163711058333956" name="maps_service_unavailable">"스트리트 뷰 서비스를 사용할 수 없습니다."</string>
+    <string msgid="8614145121611139475" name="maps_street_range_name_format">"%2$s %1$s"</string>
+    <string msgid="4679308263892194242" name="maps_waiting_for_network">"데이터 연결이 끊겨 재시도하고 있습니다."</string>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/maps_button_compass_highlighted" android:state_pressed="true" />
+    <item android:drawable="@drawable/maps_button_compass" />
+</selector>
+<!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/drawable/maps_button_compass_selector.xml --><!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/build/intermediates/bundles/debug/res/drawable/maps_button_compass_selector.xml -->

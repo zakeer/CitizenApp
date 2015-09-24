@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/build/intermediates/bundles/debug/res/values/values.xml -->
+    <eat-comment/>
+    <string-array name="maps_compass_directions">
+        <item>N</item>
+        <item>NE</item>
+        <item>E</item>
+        <item>SE</item>
+        <item>S</item>
+        <item>SW</item>
+        <item>W</item>
+        <item>NW</item>
+    </string-array>
+    <string-array name="maps_full_compass_directions">
+        <item>north</item>
+        <item>northeast</item>
+        <item>east</item>
+        <item>southeast</item>
+        <item>south</item>
+        <item>southwest</item>
+        <item>west</item>
+        <item>northwest</item>
+    </string-array>
+    <bool name="maps_is_tablet">false</bool>
+    <color name="common_action_bar_splitter">#d2d2d2</color>
+    <color name="common_signin_btn_dark_text_default">@android:color/white</color>
+    <color name="common_signin_btn_dark_text_disabled">#FFAAAAAA</color>
+    <color name="common_signin_btn_dark_text_focused">@android:color/white</color>
+    <color name="common_signin_btn_dark_text_pressed">@android:color/white</color>
+    <color name="common_signin_btn_default_background">#FFDD4B39</color>
+    <color name="common_signin_btn_light_text_default">#FF737373</color>
+    <color name="common_signin_btn_light_text_disabled">#FFAAAAAA</color>
+    <color name="common_signin_btn_light_text_focused">#FF737373</color>
+    <color name="common_signin_btn_light_text_pressed">@android:color/white</color>
+    <color name="maps_accuracy_circle_fill_color">#338CC6EF</color>
+    <color name="maps_accuracy_circle_line_color">#73217BCE</color>
+    <color name="maps_bubble_highlight">#FFD0D0D0</color>
+    <color name="maps_floorpicker_black">#FF000000</color>
+    <color name="maps_floorpicker_text">#FF777777</color>
+    <color name="maps_qu_google_blue_500">#FF4285F4</color>
+    <color name="maps_qu_google_yellow_500">#FFF4B400</color>
+    <declare-styleable name="MapM4bAttrs"><attr format="enum" name="m4b_mapType"><enum name="none" value="0"/><enum name="normal" value="1"/><enum name="satellite" value="2"/><enum name="terrain" value="3"/><enum name="hybrid" value="4"/></attr><attr format="float" name="m4b_cameraBearing"/><attr format="float" name="m4b_cameraTargetLat"/><attr format="float" name="m4b_cameraTargetLng"/><attr format="float" name="m4b_cameraTilt"/><attr format="float" name="m4b_cameraZoom"/><attr format="boolean" name="m4b_liteMode"/><attr format="boolean" name="m4b_uiCompass"/><attr format="boolean" name="m4b_uiRotateGestures"/><attr format="boolean" name="m4b_uiScrollGestures"/><attr format="boolean" name="m4b_uiTiltGestures"/><attr format="boolean" name="m4b_uiZoomControls"/><attr format="boolean" name="m4b_uiZoomGestures"/><attr format="boolean" name="m4b_useViewLifecycle"/><attr format="boolean" name="m4b_zOrderOnTop"/><attr format="boolean" name="m4b_uiMapToolbar"/></declare-styleable>
+    <dimen name="maps_btn_map_toolbar_bottom_shadow">1dp</dimen>
+    <dimen name="maps_btn_map_toolbar_divider">1px</dimen>
+    <dimen name="maps_btn_map_toolbar_margin">2dp</dimen>
+    <dimen name="maps_btn_margin">10dp</dimen>
+    <dimen name="maps_btn_width">42dp</dimen>
+    <dimen name="maps_btn_zoom_y_margin">15dp</dimen>
+    <dimen name="maps_dav_compass_size">64dp</dimen>
+    <dimen name="maps_dav_hud_copyright_fontsize">12dp</dimen>
+    <dimen name="maps_dav_my_location_bubble_y_offset">7dp</dimen>
+    <dimen name="maps_lite_mode_grid_spacing">15dp</dimen>
+    <dimen name="maps_sv_arrow_height">16dp</dimen>
+    <dimen name="maps_sv_arrow_width">17dp</dimen>
+    <dimen name="maps_sv_circle_height">160dp</dimen>
+    <dimen name="maps_sv_circle_width">160dp</dimen>
+    <dimen name="maps_vm_mylocation_dot_size">32dp</dimen>
+    <dimen name="maps_watermark_margin">5dp</dimen>
+    <integer name="maps_vm_mylocation_chevron_opaque_percent">54</integer>
+    <integer name="maps_vm_mylocation_dot_opaque_percent">40</integer>
+    <string name="common_android_wear_notification_needs_update_text">An application requires an update to the Android Wear app.</string>
+    <string name="common_android_wear_update_text">This app won\'t run unless you update the Android Wear app.</string>
+    <string msgid="6006316683626838685" name="common_android_wear_update_title">Update Android Wear</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable Google Play services</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">This app won\'t work unless you enable Google Play services.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Enable Google Play services</string>
+    <string name="common_google_play_services_error_notification_requested_by_msg">Requested by <ns1:g id="app_name">%1$s</ns1:g></string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Get Google Play services</string>
+    <string msgid="2122112764540849864" name="common_google_play_services_install_text_phone">This app won\'t run without Google Play services, which are missing from your phone.</string>
+    <string msgid="7351599665250191022" name="common_google_play_services_install_text_tablet">This app won\'t run without Google Play services, which are missing from your tablet.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Get Google Play services</string>
+    <string name="common_google_play_services_invalid_account_text">The specified account does not exist on this device. Please choose a different account.</string>
+    <string name="common_google_play_services_invalid_account_title">Invalid Account</string>
+    <string name="common_google_play_services_needs_enabling_title">An application requires Google Play services to be enabled.</string>
+    <string name="common_google_play_services_network_error_text">A data connection is required to connect to Google Play services.</string>
+    <string name="common_google_play_services_network_error_title">Network Error</string>
+    <string name="common_google_play_services_notification_needs_installation_title">An application requires installation of Google Play services.</string>
+    <string name="common_google_play_services_notification_needs_update_title">An application requires an update for Google Play services.</string>
+    <string name="common_google_play_services_notification_ticker">Google Play services error</string>
+    <string name="common_google_play_services_sign_in_failed_text">Error signing in the specified account. Please choose a different account.</string>
+    <string name="common_google_play_services_sign_in_failed_title">Sign in failed</string>
+    <string name="common_google_play_services_unknown_issue">Unknown issue with Google Play services.</string>
+    <string name="common_google_play_services_unsupported_text">Google Play services, which some of your applications rely on, is not supported by your device. Please contact the manufacturer for assistance.</string>
+    <string name="common_google_play_services_unsupported_title">Google Play services</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Update</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">This app won\'t run unless you update Google Play services.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Update Google Play services</string>
+    <string name="common_open_on_phone">Open on phone</string>
+    <string name="common_signin_button_text">Sign in</string>
+    <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="commono_google_play_services_api_unavailable_text">This app requires one or more Google Play services that are not currently
+available. Please contact the developer for assistance.</string>
+    <string name="maps_API_MY_LOCATION_ACCURACY">My\u0020Location\u0020\nAccurate\u0020to\u0020{0}\u0020meters</string>
+    <string name="maps_API_OUTDATED_WARNING">This\u0020app\u0020uses\u0020an\u0020outdated\u0020version\u0020of\u0020Maps.\u0020It\u0020might\u0020not\u0020work\u0020properly.</string>
+    <string name="maps_BACK_TO_LIST">"Back to list"</string>
+    <string name="maps_CLOSE_SOFTKEY">Close</string>
+    <string name="maps_COMPASS_ALT_TEXT">Compass</string>
+    <string name="maps_DIRECTIONS_ALT_TEXT">Get directions</string>
+    <string name="maps_GOOGLE_MAP">Google Map</string>
+    <string name="maps_LEVEL_ALT_TEXT">Level {0}</string>
+    <string name="maps_MY_LOCATION_ALT_TEXT">My\u0020Location</string>
+    <string name="maps_NO_GMM">Google Maps is not installed</string>
+    <string name="maps_OPEN_GMM_ALT_TEXT">Open in Google Maps</string>
+    <string msgid="3304805242996771621" name="maps_YOUR_LOCATION">Your current location</string>
+    <string name="maps_ZOOM_IN_ALT_TEXT">Zoom\u0020in</string>
+    <string name="maps_ZOOM_OUT_ALT_TEXT">Zoom\u0020out</string>
+    <string name="maps_dav_map_copyrights_full">©<ns1:g id="copyright_year">%1$d</ns1:g> Google - Imagery ©<ns1:g id="copyright_year">%2$d</ns1:g> <ns1:g id="imagery_provider_names">%3$s</ns1:g>, Map data ©<ns1:g id="copyright_year">%4$d</ns1:g> <ns1:g id="map_data_provider_names">%5$s</ns1:g></string>
+    <string name="maps_dav_map_copyrights_google_only">©<ns1:g id="copyright_year">%1$d</ns1:g> Google</string>
+    <string name="maps_dav_map_copyrights_imagery_only">©<ns1:g id="copyright_year">%1$d</ns1:g> Google - Imagery ©<ns1:g id="copyright_year">%2$d</ns1:g> <ns1:g id="imagery_provider_names">%3$s</ns1:g></string>
+    <string name="maps_dav_map_copyrights_map_data_only">©<ns1:g id="copyright_year">%1$d</ns1:g> Google - Map data  ©<ns1:g id="copyright_year">%2$d</ns1:g> <ns1:g id="map_data_provider_names">%3$s</ns1:g></string>
+    <string name="maps_invalid_panorama_data">Invalid panorama.</string>
+    <string name="maps_network_unavailable">This program requires a data connection, and will retry automatically. Please check your signal strength. Is airplane mode on? Is roaming data disabled?</string>
+    <string name="maps_no_panorama_data">No panorama data set.</string>
+    <string name="maps_panorama_disabled">Picture no longer available</string>
+    <string name="maps_service_unavailable">Street View service unavailable.</string>
+    <string name="maps_street_range_name_format">%1$s %2$s</string>
+    <string name="maps_waiting_for_network">Data connection lost, retrying\u2026</string>
+</resources>

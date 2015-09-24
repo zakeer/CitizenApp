@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-et/maps_sv_strings.xml -->
+    <eat-comment/>
+    <string-array name="maps_compass_directions">
+        <item msgid="371990129502990442">"N"</item>
+        <item msgid="1723794399812139988">"NE"</item>
+        <item msgid="8995696828344274905">"E"</item>
+        <item msgid="8971984494345895781">"SE"</item>
+        <item msgid="7174645718252695865">"S"</item>
+        <item msgid="4863051572593926737">"SW"</item>
+        <item msgid="6823513192569584945">"W"</item>
+        <item msgid="1255372719355902587">"NW"</item>
+    </string-array>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-et/maps_api_strings.xml -->
+    <eat-comment/>
+    <string name="maps_API_MY_LOCATION_ACCURACY">Minu\u0020asukoht\u0020\nTäpsus\u0020{0}\u0020meetrit</string>
+    <string name="maps_API_OUTDATED_WARNING">Rakendus\u0020kasutab\u0020Mapsi\u0020vananenud\u0020versiooni.\u0020See\u0020ei\u0020pruugi\u0020korralikult\u0020töötada.</string>
+    <string name="maps_CLOSE_SOFTKEY">Sule</string>
+    <string name="maps_COMPASS_ALT_TEXT">Kompass</string>
+    <string name="maps_DIRECTIONS_ALT_TEXT">Hangi juhised</string>
+    <string name="maps_GOOGLE_MAP">Google map</string>
+    <string name="maps_LEVEL_ALT_TEXT">Tase {0}</string>
+    <string name="maps_MY_LOCATION_ALT_TEXT">Minu\u0020asukoht</string>
+    <string name="maps_OPEN_GMM_ALT_TEXT">Ava Google Mapsis</string>
+    <string msgid="3304805242996771621" name="maps_YOUR_LOCATION">Teie praegune asukoht</string>
+    <string name="maps_ZOOM_IN_ALT_TEXT">Suurenda</string>
+    <string name="maps_ZOOM_OUT_ALT_TEXT">Vähenda</string>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-et/maps_dav_strings.xml -->
+    <eat-comment/>
+    <string msgid="2643616411547805051" name="maps_dav_map_copyrights_full">"© <ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google — Imagery © <ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>, Kaardiandmed © <ns1:g id="COPYRIGHT_YEAR_2">%4$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%5$s</ns1:g>"</string>
+    <string msgid="2340776877486681415" name="maps_dav_map_copyrights_google_only">"© <ns1:g id="COPYRIGHT_YEAR">%1$d</ns1:g> Google"</string>
+    <string msgid="4796406852640794459" name="maps_dav_map_copyrights_imagery_only">"© <ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google — Imagery © <ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <string msgid="7421961728654750951" name="maps_dav_map_copyrights_map_data_only">"© <ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google — Kaardiandmed © <ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-et/maps_sv_strings.xml -->
+    <eat-comment/>
+    <string msgid="5618016850433253177" name="maps_invalid_panorama_data">"Vale panoraam"</string>
+    <string msgid="852879677528638846" name="maps_network_unavailable">"See programm nõuab andmeühendust ning proovib automaatselt uuesti. Kontrollige palun oma signaali tugevust. Kas lennukirežiim on sisselülitatud? Kas rändlusandmed on keelatud?"</string>
+    <string msgid="5724478591902584421" name="maps_no_panorama_data">"Panoraami andmed on seadmata."</string>
+    <string msgid="504349892431320733" name="maps_panorama_disabled">"Pilt pole enam saadaval"</string>
+    <string msgid="5623163711058333956" name="maps_service_unavailable">"Tänavavaate teenus pole kasutatav."</string>
+    <string msgid="8614145121611139475" name="maps_street_range_name_format">"%1$s %2$s"</string>
+    <string msgid="4679308263892194242" name="maps_waiting_for_network">"Andmeühendus katkes, uuesti proovimine…"</string>
+</resources>

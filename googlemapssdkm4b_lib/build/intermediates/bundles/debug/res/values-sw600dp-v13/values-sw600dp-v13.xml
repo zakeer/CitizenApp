@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-sw600dp/maps_bools.xml -->
+    <eat-comment/>
+    <bool name="maps_is_tablet">true</bool>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/build/intermediates/bundles/debug/res/values-he/values-he.xml -->
+    <eat-comment/>
+    <string-array name="maps_compass_directions">
+        <item msgid="371990129502990442">"צ"</item>
+        <item msgid="1723794399812139988">"צ-מז"</item>
+        <item msgid="8995696828344274905">"מז"</item>
+        <item msgid="8971984494345895781">"ד-מז"</item>
+        <item msgid="7174645718252695865">"ד"</item>
+        <item msgid="4863051572593926737">"ד-מע"</item>
+        <item msgid="6823513192569584945">"מע"</item>
+        <item msgid="1255372719355902587">"צ-מע"</item>
+    </string-array>
+    <string-array name="maps_full_compass_directions">
+        <item msgid="4575528752583301752">צפון</item>
+        <item msgid="4350548105276290005">צפון מזרח</item>
+        <item msgid="2941955296001395559">מזרח</item>
+        <item msgid="7564496420537720517">דרום מזרח</item>
+        <item msgid="7734963361324256142">דרום</item>
+        <item msgid="2308335477702894344">דרום מערב</item>
+        <item msgid="1360397508757498197">מערב</item>
+        <item msgid="5107967783299132090">צפון מערב</item>
+    </string-array>
+    <string name="maps_BACK_TO_LIST">"חזרה לרשימה"</string>
+    <string name="maps_DIRECTIONS_ALT_TEXT">מצא מסלול</string>
+    <string name="maps_GOOGLE_MAP">מפה של Google</string>
+    <string name="maps_LEVEL_ALT_TEXT">רמה {0}</string>
+    <string name="maps_OPEN_GMM_ALT_TEXT">פתח במפות Google</string>
+    <string msgid="3304805242996771621" name="maps_YOUR_LOCATION">המיקום הנוכחי שלך</string>
+    <string msgid="2643616411547805051" name="maps_dav_map_copyrights_full">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - Imagery ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>, נתוני מפות ©<ns1:g id="COPYRIGHT_YEAR_2">%4$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%5$s</ns1:g>"</string>
+    <string msgid="2340776877486681415" name="maps_dav_map_copyrights_google_only">"©<ns1:g id="COPYRIGHT_YEAR">%1$d</ns1:g> Google"</string>
+    <string msgid="4796406852640794459" name="maps_dav_map_copyrights_imagery_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - Imagery ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <string msgid="7421961728654750951" name="maps_dav_map_copyrights_map_data_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - נתוני מפות ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <string msgid="5618016850433253177" name="maps_invalid_panorama_data">"פנורמה לא חוקית."</string>
+    <string msgid="852879677528638846" name="maps_network_unavailable">"תוכנית זו דורשת חיבור נתונים, ותנסה להתחבר שוב באופן אוטומטי. בדוק את עוצמת האות. האם מצב טיסה מופעל? האם נדידת נתונים מושבתת?"</string>
+    <string msgid="5724478591902584421" name="maps_no_panorama_data">"לא הוגדרו נתוני פנורמה."</string>
+    <string msgid="504349892431320733" name="maps_panorama_disabled">"התמונה כבר אינה זמינה"</string>
+    <string msgid="5623163711058333956" name="maps_service_unavailable">"שירות \'תצוגת הרחוב\' אינו זמין."</string>
+    <string msgid="8614145121611139475" name="maps_street_range_name_format">"%1$s %2$s"</string>
+    <string msgid="4679308263892194242" name="maps_waiting_for_network">"החיבור לנתונים אבד, מנסה שנית…"</string>
+</resources>

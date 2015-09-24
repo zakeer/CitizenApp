@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-da/maps_sv_strings.xml -->
+    <eat-comment/>
+    <string-array name="maps_compass_directions">
+        <item msgid="371990129502990442">"N"</item>
+        <item msgid="1723794399812139988">"NØ"</item>
+        <item msgid="8995696828344274905">"Ø"</item>
+        <item msgid="8971984494345895781">"SØ"</item>
+        <item msgid="7174645718252695865">"S"</item>
+        <item msgid="4863051572593926737">"SV"</item>
+        <item msgid="6823513192569584945">"V"</item>
+        <item msgid="1255372719355902587">"NV"</item>
+    </string-array>
+    <string-array name="maps_full_compass_directions">
+        <item msgid="4575528752583301752">nord</item>
+        <item msgid="4350548105276290005">nordøst</item>
+        <item msgid="2941955296001395559">øst</item>
+        <item msgid="7564496420537720517">sydøst</item>
+        <item msgid="7734963361324256142">syd</item>
+        <item msgid="2308335477702894344">sydvest</item>
+        <item msgid="1360397508757498197">vest</item>
+        <item msgid="5107967783299132090">nordvest</item>
+    </string-array>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-da/common_strings.xml -->
+    <eat-comment/>
+    <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"En applikation kræver en opdatering af appen Android Wear."</string>
+    <string msgid="3046420540094071256" name="common_android_wear_update_text">"Denne app kan ikke køre, medmindre du opdaterer appen Android Wear."</string>
+    <string msgid="1366439133145190222" name="common_android_wear_update_title">"Opdater Android Wear"</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"Aktivér Google Play-tjenester"</string>
+    <string msgid="7627896071867667758" name="common_google_play_services_enable_text">"Denne app virker ikke, medmindre du aktiverer Google Play-tjenester."</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"Aktivér Google Play-tjenester"</string>
+    <string msgid="2443362625939284971" name="common_google_play_services_error_notification_requested_by_msg">"Anmodning fra <ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"Hent Google Play-tjenester"</string>
+    <string msgid="8685301130651051380" name="common_google_play_services_install_text_phone">"Denne app kan ikke køre uden Google Play-tjenester, som mangler på din telefon."</string>
+    <string msgid="1589957570365247855" name="common_google_play_services_install_text_tablet">"Denne app kan ikke køre uden Google Play-tjenester, som mangler på din tablet."</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"Hent Google Play-tjenester"</string>
+    <string msgid="4983316348021735578" name="common_google_play_services_invalid_account_text">"Den angivne konto findes ikke på denne enhed. Vælg en anden konto."</string>
+    <string msgid="1066672360770936753" name="common_google_play_services_invalid_account_title">"Ugyldig konto"</string>
+    <string msgid="2583358409598976717" name="common_google_play_services_needs_enabling_title">"En applikation kræver, at Google Play-tjenester aktiveres."</string>
+    <string msgid="9038847255613537209" name="common_google_play_services_network_error_text">"Der kræves en dataforbindelse for at oprette forbindelse til Google Play-tjenester."</string>
+    <string msgid="3827284619958211114" name="common_google_play_services_network_error_title">"Netværksfejl"</string>
+    <string msgid="8120534356798772974" name="common_google_play_services_notification_needs_installation_title">"En applikation kræver, at Google Play-tjenester installeres."</string>
+    <string msgid="1388129345631079938" name="common_google_play_services_notification_needs_update_title">"En applikation kræver, at Google Play-tjenester opdateres."</string>
+    <string msgid="1852570676146674985" name="common_google_play_services_notification_ticker">"Fejl i Google Play-tjenester"</string>
+    <string msgid="5194079840165204725" name="common_google_play_services_sign_in_failed_text">"Der opstod en fejl under login på angivne konto. Vælg en anden konto."</string>
+    <string msgid="8164948898147532159" name="common_google_play_services_sign_in_failed_title">"Login mislykkedes"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"Ukendt problem med Google Play-tjenester."</string>
+    <string msgid="3542578567569488671" name="common_google_play_services_unsupported_text">"Google Play-tjenester, som nogle af dine applikationer er afhængige af, understøttes ikke af din enhed. Kontakt producenten for at få hjælp."</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"Google Play-tjenester"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"Opdater"</string>
+    <string msgid="448354684997260580" name="common_google_play_services_update_text">"Denne app kan ikke køre, medmindre du opdaterer Google Play-tjenester."</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"Opdater Google Play-tjenester"</string>
+    <string msgid="411506735369601515" name="common_open_on_phone">"Åbn på telefonen"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"Log ind"</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"Log ind med Google"</string>
+    <string msgid="5000919058582214855" name="commono_google_play_services_api_unavailable_text">"Denne app kræver en eller flere Google Play-tjenester, der ikke er tilgængelige i øjeblikket. Kontakt udvikleren for at få hjælp."</string>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-da/maps_api_strings.xml -->
+    <eat-comment/>
+    <string name="maps_API_MY_LOCATION_ACCURACY">Min\u0020placering\nMed\u0020{0}\u0020meters\u0020nøjagtighed</string>
+    <string name="maps_API_OUTDATED_WARNING">Denne\u0020app\u0020bruger\u0020en\u0020forældet\u0020version\u0020af\u0020Maps.\u0020Den\u0020fungerer\u0020muligvis\u0020ikke\u0020korrekt.</string>
+    <string name="maps_BACK_TO_LIST">"Tilbage til listen"</string>
+    <string name="maps_CLOSE_SOFTKEY">Luk</string>
+    <string name="maps_COMPASS_ALT_TEXT">Kompas</string>
+    <string name="maps_DIRECTIONS_ALT_TEXT">Hent rutevejledning</string>
+    <string name="maps_GOOGLE_MAP">Google kort</string>
+    <string name="maps_LEVEL_ALT_TEXT">Etage {0}</string>
+    <string name="maps_MY_LOCATION_ALT_TEXT">Min\u0020placering</string>
+    <string name="maps_OPEN_GMM_ALT_TEXT">Åbn i Google Maps</string>
+    <string msgid="3304805242996771621" name="maps_YOUR_LOCATION">Din aktuelle placering</string>
+    <string name="maps_ZOOM_IN_ALT_TEXT">Zoom\u0020ind</string>
+    <string name="maps_ZOOM_OUT_ALT_TEXT">Zoom\u0020ud</string>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-da/maps_dav_strings.xml -->
+    <eat-comment/>
+    <string msgid="2643616411547805051" name="maps_dav_map_copyrights_full">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google – Billeder ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>, Kortdata ©<ns1:g id="COPYRIGHT_YEAR_2">%4$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%5$s</ns1:g>"</string>
+    <string msgid="2340776877486681415" name="maps_dav_map_copyrights_google_only">"©<ns1:g id="COPYRIGHT_YEAR">%1$d</ns1:g> Google"</string>
+    <string msgid="4796406852640794459" name="maps_dav_map_copyrights_imagery_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google – Billeder ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <string msgid="7421961728654750951" name="maps_dav_map_copyrights_map_data_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google – Kortdata ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-da/maps_sv_strings.xml -->
+    <eat-comment/>
+    <string msgid="5618016850433253177" name="maps_invalid_panorama_data">"Ugyldigt panorama."</string>
+    <string msgid="852879677528638846" name="maps_network_unavailable">"Dette program kræver en dataforbindelse og vil automatisk prøve igen. Kontroller dit signal. Er du i flytilstand? Har du deaktiveret roamingdata?"</string>
+    <string msgid="5724478591902584421" name="maps_no_panorama_data">"Der er ikke angivet nogen panorama-data."</string>
+    <string msgid="504349892431320733" name="maps_panorama_disabled">"Billedet er ikke længere tilgængeligt"</string>
+    <string msgid="5623163711058333956" name="maps_service_unavailable">"Street View-tjenesten er ikke tilgængelig."</string>
+    <string msgid="8614145121611139475" name="maps_street_range_name_format">"%2$s %1$s"</string>
+    <string msgid="4679308263892194242" name="maps_waiting_for_network">"Dataforbindelsen blev tabt, prøver igen…"</string>
+</resources>

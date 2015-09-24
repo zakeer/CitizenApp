@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/build/intermediates/bundles/debug/res/values-el/values-el.xml -->
+    <eat-comment/>
+    <string-array name="maps_compass_directions">
+        <item msgid="371990129502990442">"Β"</item>
+        <item msgid="1723794399812139988">"ΒΑ"</item>
+        <item msgid="8995696828344274905">"Α"</item>
+        <item msgid="8971984494345895781">"ΝΑ"</item>
+        <item msgid="7174645718252695865">"Ν"</item>
+        <item msgid="4863051572593926737">"ΝΔ"</item>
+        <item msgid="6823513192569584945">"Δ"</item>
+        <item msgid="1255372719355902587">"ΒΔ"</item>
+    </string-array>
+    <string-array name="maps_full_compass_directions">
+        <item msgid="4575528752583301752">βόρεια</item>
+        <item msgid="4350548105276290005">βορειοανατολικά</item>
+        <item msgid="2941955296001395559">ανατολικά</item>
+        <item msgid="7564496420537720517">νοτιοανατολικά</item>
+        <item msgid="7734963361324256142">νότια</item>
+        <item msgid="2308335477702894344">νοτιοδυτικά</item>
+        <item msgid="1360397508757498197">δυτικά</item>
+        <item msgid="5107967783299132090">βορειοδυτικά</item>
+    </string-array>
+    <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"Μια εφαρμογή απαιτεί την ενημέρωση της εφαρμογής Android Wear."</string>
+    <string msgid="3046420540094071256" name="common_android_wear_update_text">"Αυτή η εφαρμογή δεν θα εκτελεστεί εάν δεν ενημερώσετε την εφαρμογή Android Wear."</string>
+    <string msgid="1366439133145190222" name="common_android_wear_update_title">"Ενημέρωση Android Wear"</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"Ενεργοπ. υπηρεσιών Google Play"</string>
+    <string msgid="7627896071867667758" name="common_google_play_services_enable_text">"Αυτή η εφαρμογή δεν θα λειτουργήσει εάν δεν έχετε ενεργοποιήσει τις υπηρεσίες Google Play."</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"Ενεργοποίηση υπηρεσιών Google Play"</string>
+    <string msgid="2443362625939284971" name="common_google_play_services_error_notification_requested_by_msg">"Υποβλήθηκε αίτημα από την εφαρμογή <ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"Λήψη υπηρεσιών Google Play"</string>
+    <string msgid="8685301130651051380" name="common_google_play_services_install_text_phone">"Αυτή η εφαρμογή δεν θα εκτελεστεί χωρίς τις υπηρεσίες Google Play, οι οποίες λείπουν από το τηλέφωνό σας."</string>
+    <string msgid="1589957570365247855" name="common_google_play_services_install_text_tablet">"Αυτή η εφαρμογή δεν θα εκτελεστεί χωρίς τις υπηρεσίες Google Play, οι οποίες λείπουν από το tablet σας."</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"Λήψη υπηρεσιών Google Play"</string>
+    <string msgid="4983316348021735578" name="common_google_play_services_invalid_account_text">"Ο συγκεκριμένος λογαριασμός δεν υπάρχει σε αυτήν τη συσκευή. Επιλέξτε έναν διαφορετικό λογαριασμό."</string>
+    <string msgid="1066672360770936753" name="common_google_play_services_invalid_account_title">"Μη έγκυρος λογαριασμός"</string>
+    <string msgid="2583358409598976717" name="common_google_play_services_needs_enabling_title">"Μια εφαρμογή απαιτεί την ενεργοποίηση των Υπηρεσιών Google Play."</string>
+    <string msgid="9038847255613537209" name="common_google_play_services_network_error_text">"Απαιτείται σύνδεση δεδομένων για να συνδεθείτε με τις Υπηρεσίες Google Play."</string>
+    <string msgid="3827284619958211114" name="common_google_play_services_network_error_title">"Σφάλμα δικτύου"</string>
+    <string msgid="8120534356798772974" name="common_google_play_services_notification_needs_installation_title">"Μια εφαρμογή απαιτεί την εγκατάσταση των Υπηρεσιών Google Play."</string>
+    <string msgid="1388129345631079938" name="common_google_play_services_notification_needs_update_title">"Μια εφαρμογή απαιτεί την ενημέρωση των Υπηρεσιών Google Play."</string>
+    <string msgid="1852570676146674985" name="common_google_play_services_notification_ticker">"Σφάλμα Υπηρεσιών Google Play"</string>
+    <string msgid="5194079840165204725" name="common_google_play_services_sign_in_failed_text">"Σφάλμα κατά τη σύνδεση στον συγκεκριμένο λογαριασμό. Επιλέξτε έναν διαφορετικό λογαριασμό."</string>
+    <string msgid="8164948898147532159" name="common_google_play_services_sign_in_failed_title">"Η σύνδεση απέτυχε"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"Άγνωστο πρόβλημα με τις υπηρεσίες Google Play."</string>
+    <string msgid="3542578567569488671" name="common_google_play_services_unsupported_text">"Οι υπηρεσίες Google Play, στις οποίες βασίζονται ορισμένες από τις εφαρμογές σας, δεν υποστηρίζονται στη συσκευή σας. Επικοινωνήστε με τον κατασκευαστή για υποστήριξη."</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"Υπηρεσίες Google Play"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"Ενημέρωση"</string>
+    <string msgid="448354684997260580" name="common_google_play_services_update_text">"Αυτή η εφαρμογή θα εκτελεστεί αφού ενημερώσετε τις υπηρεσίες Google Play."</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"Ενημέρωση υπηρεσιών Google Play"</string>
+    <string msgid="411506735369601515" name="common_open_on_phone">"Άνοιγμα στο τηλέφωνο"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"Σύνδεση"</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"Συνδεθείτε στο Google"</string>
+    <string msgid="5000919058582214855" name="commono_google_play_services_api_unavailable_text">"Αυτή η εφαρμογή απαιτεί μία ή περισσότερες υπηρεσίες του Google Play που δεν είναι διαθέσιμες προς το παρόν. Επικοινωνήστε με τον προγραμματιστή για βοήθεια."</string>
+    <string name="maps_API_MY_LOCATION_ACCURACY">\u0397\u0020\u03c4\u03bf\u03c0\u03bf\u03b8\u03b5\u03c3\u03af\u03b1\u0020\u03bc\u03bf\u03c5\u0020\n\u0391\u03ba\u03c1\u03af\u03b2\u03b5\u03b9\u03b1\u0020{0}\u0020\u03bc\u03ad\u03c4\u03c1\u03c9\u03bd</string>
+    <string name="maps_API_OUTDATED_WARNING">\u0391\u03c5\u03c4\u03ae\u0020\u03b7\u0020\u03b5\u03c6\u03b1\u03c1\u03bc\u03bf\u03b3\u03ae\u0020\u03c7\u03c1\u03b7\u03c3\u03b9\u03bc\u03bf\u03c0\u03bf\u03b9\u03b5\u03af\u0020\u03c0\u03b1\u03bb\u03b9\u03ac\u0020\u03ad\u03ba\u03b4\u03bf\u03c3\u03b7\u0020\u03c4\u03c9\u03bd\u0020\u03a7\u03b1\u03c1\u03c4\u03ce\u03bd.\u0020\u0395\u03bd\u03b4\u03ad\u03c7\u03b5\u03c4\u03b1\u03b9\u0020\u03bd\u03b1\u0020\u03bc\u03b7\u03bd\u0020\u03bb\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b5\u03af\u0020\u03c3\u03c9\u03c3\u03c4\u03ac.</string>
+    <string name="maps_BACK_TO_LIST">"Επιστροφή στη λίστα"</string>
+    <string name="maps_CLOSE_SOFTKEY">\u039a\u03bb\u03b5\u03af\u03c3\u03b9\u03bc\u03bf</string>
+    <string name="maps_COMPASS_ALT_TEXT">\u03a0\u03c5\u03be\u03af\u03b4\u03b1</string>
+    <string name="maps_DIRECTIONS_ALT_TEXT">Λήψη οδηγιών</string>
+    <string name="maps_GOOGLE_MAP">Χάρτης Google</string>
+    <string name="maps_LEVEL_ALT_TEXT">Επίπεδο {0}</string>
+    <string name="maps_MY_LOCATION_ALT_TEXT">\u0397\u0020\u03c4\u03bf\u03c0\u03bf\u03b8\u03b5\u03c3\u03af\u03b1\u0020\u03bc\u03bf\u03c5</string>
+    <string name="maps_OPEN_GMM_ALT_TEXT">Άνοιγμα στους Χάρτες Google</string>
+    <string msgid="3304805242996771621" name="maps_YOUR_LOCATION">Η τρέχουσα θέση σας</string>
+    <string name="maps_ZOOM_IN_ALT_TEXT">\u039c\u03b5\u03b3\u03ad\u03b8\u03c5\u03bd\u03c3\u03b7</string>
+    <string name="maps_ZOOM_OUT_ALT_TEXT">\u03a3\u03bc\u03af\u03ba\u03c1\u03c5\u03bd\u03c3\u03b7</string>
+    <string msgid="2643616411547805051" name="maps_dav_map_copyrights_full">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - Εικόνες ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g><ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>, Δεδομένα χάρτη ©<ns1:g id="COPYRIGHT_YEAR_2">%4$d</ns1:g><ns1:g id="MAP_DATA_PROVIDER_NAMES">%5$s</ns1:g>"</string>
+    <string msgid="2340776877486681415" name="maps_dav_map_copyrights_google_only">"©<ns1:g id="COPYRIGHT_YEAR">%1$d</ns1:g> Google"</string>
+    <string msgid="4796406852640794459" name="maps_dav_map_copyrights_imagery_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - Εικόνες ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g><ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <string msgid="7421961728654750951" name="maps_dav_map_copyrights_map_data_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - Δεδομένα χάρτη ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g><ns1:g id="MAP_DATA_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <string msgid="5618016850433253177" name="maps_invalid_panorama_data">"Μη έγκυρο πανόραμα."</string>
+    <string msgid="852879677528638846" name="maps_network_unavailable">"Αυτό το πρόγραμμα απαιτεί μια σύνδεση δεδομένων και θα επαναλάβει αυτόματα την προσπάθεια. Ελέγξτε την ισχύ του σήματός σας. Είναι ενεργοποιημένη η λειτουργία αεροσκάφους; Έχουν απενεργοποιηθεί τα δεδομένα περιαγωγής;"</string>
+    <string msgid="5724478591902584421" name="maps_no_panorama_data">"Δεν έχουν ρυθμιστεί δεδομένα πανοράματος."</string>
+    <string msgid="504349892431320733" name="maps_panorama_disabled">"Η εικόνα δεν είναι πλέον διαθέσιμη"</string>
+    <string msgid="5623163711058333956" name="maps_service_unavailable">"Η υπηρεσία Street View δεν είναι διαθέσιμη."</string>
+    <string msgid="8614145121611139475" name="maps_street_range_name_format">"%1$s %2$s"</string>
+    <string msgid="4679308263892194242" name="maps_waiting_for_network">"Η σύνδεση δεδομένων χάθηκε, γίνεται προσπάθεια ξανά…"</string>
+</resources>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/build/intermediates/bundles/debug/res/values-en-rGB/values-en-rGB.xml -->
+    <eat-comment/>
+    <string-array name="maps_compass_directions">
+        <item msgid="371990129502990442">"N"</item>
+        <item msgid="1723794399812139988">"NE"</item>
+        <item msgid="8995696828344274905">"E"</item>
+        <item msgid="8971984494345895781">"SE"</item>
+        <item msgid="7174645718252695865">"S"</item>
+        <item msgid="4863051572593926737">"SW"</item>
+        <item msgid="6823513192569584945">"W"</item>
+        <item msgid="1255372719355902587">"NW"</item>
+    </string-array>
+    <string-array name="maps_full_compass_directions">
+        <item msgid="4575528752583301752">north</item>
+        <item msgid="4350548105276290005">northeast</item>
+        <item msgid="2941955296001395559">east</item>
+        <item msgid="7564496420537720517">southeast</item>
+        <item msgid="7734963361324256142">south</item>
+        <item msgid="2308335477702894344">southwest</item>
+        <item msgid="1360397508757498197">west</item>
+        <item msgid="5107967783299132090">northwest</item>
+    </string-array>
+    <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"An application requires an update to the Android Wear app."</string>
+    <string msgid="3046420540094071256" name="common_android_wear_update_text">"This app won\'t run unless you update the Android Wear app."</string>
+    <string msgid="1366439133145190222" name="common_android_wear_update_title">"Update Android Wear"</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"Enable Google Play services"</string>
+    <string msgid="7627896071867667758" name="common_google_play_services_enable_text">"This app won\'t work unless you enable Google Play services."</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"Enable Google Play services"</string>
+    <string msgid="2443362625939284971" name="common_google_play_services_error_notification_requested_by_msg">"Requested by <ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"Get Google Play services"</string>
+    <string msgid="8685301130651051380" name="common_google_play_services_install_text_phone">"This app won\'t run without Google Play services, which are missing from your phone."</string>
+    <string msgid="1589957570365247855" name="common_google_play_services_install_text_tablet">"This app won\'t run without Google Play services, which are missing from your tablet."</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"Get Google Play services"</string>
+    <string msgid="4983316348021735578" name="common_google_play_services_invalid_account_text">"The specified account does not exist on this device. Please choose a different account."</string>
+    <string msgid="1066672360770936753" name="common_google_play_services_invalid_account_title">"Invalid Account"</string>
+    <string msgid="2583358409598976717" name="common_google_play_services_needs_enabling_title">"An application requires Google Play services to be enabled."</string>
+    <string msgid="9038847255613537209" name="common_google_play_services_network_error_text">"A data connection is required to connect to Google Play services."</string>
+    <string msgid="3827284619958211114" name="common_google_play_services_network_error_title">"Network Error"</string>
+    <string msgid="8120534356798772974" name="common_google_play_services_notification_needs_installation_title">"An application requires installation of Google Play services."</string>
+    <string msgid="1388129345631079938" name="common_google_play_services_notification_needs_update_title">"An application requires an update for Google Play Services."</string>
+    <string msgid="1852570676146674985" name="common_google_play_services_notification_ticker">"Google Play services error"</string>
+    <string msgid="5194079840165204725" name="common_google_play_services_sign_in_failed_text">"Error signing in the specified account. Please choose a different account."</string>
+    <string msgid="8164948898147532159" name="common_google_play_services_sign_in_failed_title">"Sign in failed"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"Unknown issue with Google Play services."</string>
+    <string msgid="3542578567569488671" name="common_google_play_services_unsupported_text">"Google Play services, which some of your applications rely on, is not supported by your device. Please contact the manufacturer for assistance."</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"Google Play services"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"Update"</string>
+    <string msgid="448354684997260580" name="common_google_play_services_update_text">"This app won\'t run unless you update Google Play services."</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"Update Google Play services"</string>
+    <string msgid="411506735369601515" name="common_open_on_phone">"Open on phone"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"Sign in"</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"Sign in with Google"</string>
+    <string msgid="5000919058582214855" name="commono_google_play_services_api_unavailable_text">"This app requires one or more Google Play services that are not currently available. Please contact the developer for assistance."</string>
+    <string name="maps_API_MY_LOCATION_ACCURACY">My\u0020Location\u0020\nAccurate\u0020to\u0020{0}\u0020metres</string>
+    <string name="maps_API_OUTDATED_WARNING">This\u0020app\u0020uses\u0020an\u0020outdated\u0020version\u0020of\u0020Maps.\u0020It\u0020might\u0020not\u0020work\u0020properly.</string>
+    <string name="maps_BACK_TO_LIST">"Back to list"</string>
+    <string name="maps_CLOSE_SOFTKEY">Close</string>
+    <string name="maps_COMPASS_ALT_TEXT">Compass</string>
+    <string name="maps_LEVEL_ALT_TEXT">Level {0}</string>
+    <string name="maps_MY_LOCATION_ALT_TEXT">My\u0020Location</string>
+    <string msgid="3304805242996771621" name="maps_YOUR_LOCATION">Your current location</string>
+    <string name="maps_ZOOM_IN_ALT_TEXT">Zoom\u0020in</string>
+    <string name="maps_ZOOM_OUT_ALT_TEXT">Zoom\u0020out</string>
+    <string msgid="2643616411547805051" name="maps_dav_map_copyrights_full">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - Imagery ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>, Map data ©<ns1:g id="COPYRIGHT_YEAR_2">%4$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%5$s</ns1:g>"</string>
+    <string msgid="2340776877486681415" name="maps_dav_map_copyrights_google_only">"&amp;copy;<ns1:g id="COPYRIGHT_YEAR">%1$d</ns1:g> Google"</string>
+    <string msgid="4796406852640794459" name="maps_dav_map_copyrights_imagery_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - Imagery ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <string msgid="7421961728654750951" name="maps_dav_map_copyrights_map_data_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - Map data ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <string msgid="5618016850433253177" name="maps_invalid_panorama_data">"Invalid panorama."</string>
+    <string msgid="852879677528638846" name="maps_network_unavailable">"This programme requires a data connection and will retry automatically. Please check your signal strength. Is aeroplane mode on? Is roaming data disabled?"</string>
+    <string msgid="5724478591902584421" name="maps_no_panorama_data">"No panorama data set."</string>
+    <string msgid="504349892431320733" name="maps_panorama_disabled">"Picture no longer available"</string>
+    <string msgid="5623163711058333956" name="maps_service_unavailable">"Street View service unavailable."</string>
+    <string msgid="8614145121611139475" name="maps_street_range_name_format">"%1$s %2$s"</string>
+    <string msgid="4679308263892194242" name="maps_waiting_for_network">"Data connection lost, retrying…"</string>
+</resources>

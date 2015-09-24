@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/build/intermediates/bundles/debug/res/values-pl/values-pl.xml -->
+    <eat-comment/>
+    <string-array name="maps_compass_directions">
+        <item msgid="371990129502990442">"pn"</item>
+        <item msgid="1723794399812139988">"pn-wsch"</item>
+        <item msgid="8995696828344274905">"wsch"</item>
+        <item msgid="8971984494345895781">"pd-wsch"</item>
+        <item msgid="7174645718252695865">"pd"</item>
+        <item msgid="4863051572593926737">"pd-zach"</item>
+        <item msgid="6823513192569584945">"zach"</item>
+        <item msgid="1255372719355902587">"pn-zach"</item>
+    </string-array>
+    <string-array name="maps_full_compass_directions">
+        <item msgid="4575528752583301752">północ</item>
+        <item msgid="4350548105276290005">północny wschód</item>
+        <item msgid="2941955296001395559">wschód</item>
+        <item msgid="7564496420537720517">południowy wschód</item>
+        <item msgid="7734963361324256142">południe</item>
+        <item msgid="2308335477702894344">południowy zachód</item>
+        <item msgid="1360397508757498197">zachód</item>
+        <item msgid="5107967783299132090">północny zachód</item>
+    </string-array>
+    <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"Aplikacja wymaga aktualizacji do Android Wear."</string>
+    <string msgid="3046420540094071256" name="common_android_wear_update_text">"Ta aplikacja nie będzie działać, jeśli nie zaktualizujesz aplikacji Google Wear."</string>
+    <string msgid="1366439133145190222" name="common_android_wear_update_title">"Zaktualizuj Android Wear"</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"Włącz Usługi Google Play"</string>
+    <string msgid="7627896071867667758" name="common_google_play_services_enable_text">"Ta aplikacja nie będzie działać, jeśli nie włączysz Usług Google Play."</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"Włącz Usługi Google Play"</string>
+    <string msgid="2443362625939284971" name="common_google_play_services_error_notification_requested_by_msg">"Żądanie z aplikacji <ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"Pobierz Usługi Google Play"</string>
+    <string msgid="8685301130651051380" name="common_google_play_services_install_text_phone">"Ta aplikacja nie będzie działać bez Usług Google Play, których nie masz na telefonie."</string>
+    <string msgid="1589957570365247855" name="common_google_play_services_install_text_tablet">"Ta aplikacja nie będzie działać bez Usług Google Play, których nie masz na tablecie."</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"Pobierz Usługi Google Play"</string>
+    <string msgid="4983316348021735578" name="common_google_play_services_invalid_account_text">"Podanego konta nie ma na tym urządzeniu. Wybierz inne konto."</string>
+    <string msgid="1066672360770936753" name="common_google_play_services_invalid_account_title">"Nieprawidłowe konto"</string>
+    <string msgid="2583358409598976717" name="common_google_play_services_needs_enabling_title">"Aplikacja wymaga włączenia Usług Google Play."</string>
+    <string msgid="9038847255613537209" name="common_google_play_services_network_error_text">"Korzystanie z usług Google Play wymaga połączenia z internetem."</string>
+    <string msgid="3827284619958211114" name="common_google_play_services_network_error_title">"Błąd sieci"</string>
+    <string msgid="8120534356798772974" name="common_google_play_services_notification_needs_installation_title">"Aplikacja wymaga zainstalowania Usług Google Play."</string>
+    <string msgid="1388129345631079938" name="common_google_play_services_notification_needs_update_title">"Aplikacja wymaga zaktualizowania Usług Google Play."</string>
+    <string msgid="1852570676146674985" name="common_google_play_services_notification_ticker">"Błąd Usług Google Play"</string>
+    <string msgid="5194079840165204725" name="common_google_play_services_sign_in_failed_text">"Błąd podczas logowania na określone konto. Wybierz inne."</string>
+    <string msgid="8164948898147532159" name="common_google_play_services_sign_in_failed_title">"Błąd logowania"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"Nieznany problem z Usługami Google Play."</string>
+    <string msgid="3542578567569488671" name="common_google_play_services_unsupported_text">"Usługi Google Play, od których zależy działanie niektórych aplikacji, nie są obsługiwane na Twoim urządzeniu. Skontaktuj się z producentem, by uzyskać pomoc."</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"Usługi Google Play"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"Aktualizuj"</string>
+    <string msgid="448354684997260580" name="common_google_play_services_update_text">"Ta aplikacja nie będzie działać, jeśli nie zaktualizujesz Usług Google Play."</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"Aktualizuj Usługi Google Play"</string>
+    <string msgid="411506735369601515" name="common_open_on_phone">"Otwórz na telefonie"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"Zaloguj się"</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"Zaloguj się przez Google"</string>
+    <string msgid="5000919058582214855" name="commono_google_play_services_api_unavailable_text">"Ta aplikacja wymaga co najmniej jednej usługi Google Play, która jest obecnie niedostępna. Skontaktuj się z programistą, by uzyskać pomoc."</string>
+    <string name="maps_API_MY_LOCATION_ACCURACY">Moja\u0020lokalizacja\u0020\nDok\u0142adno\u015b\u0107:\u0020{0}\u0020m</string>
+    <string name="maps_API_OUTDATED_WARNING">Ta\u0020aplikacja\u0020u\u017cywa\u0020starej\u0020wersji\u0020Map\u0020Google\u0020i\u0020mo\u017ce\u0020nie\u0020dzia\u0142a\u0107\u0020prawid\u0142owo.</string>
+    <string name="maps_BACK_TO_LIST">"Wróć do listy"</string>
+    <string name="maps_CLOSE_SOFTKEY">Zamknij</string>
+    <string name="maps_COMPASS_ALT_TEXT">Kompas</string>
+    <string name="maps_DIRECTIONS_ALT_TEXT">Wyznacz trasę</string>
+    <string name="maps_GOOGLE_MAP">Mapa Google</string>
+    <string name="maps_LEVEL_ALT_TEXT">Poziom {0}</string>
+    <string name="maps_MY_LOCATION_ALT_TEXT">Moja\u0020lokalizacja</string>
+    <string name="maps_OPEN_GMM_ALT_TEXT">Otwórz w Mapach Google</string>
+    <string msgid="3304805242996771621" name="maps_YOUR_LOCATION">Twoja bieżąca lokalizacja</string>
+    <string name="maps_ZOOM_IN_ALT_TEXT">Powi\u0119ksz</string>
+    <string name="maps_ZOOM_OUT_ALT_TEXT">Pomniejsz</string>
+    <string msgid="2643616411547805051" name="maps_dav_map_copyrights_full">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google – Zdjęcia: ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>, Dane map: ©<ns1:g id="COPYRIGHT_YEAR_2">%4$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%5$s</ns1:g>"</string>
+    <string msgid="2340776877486681415" name="maps_dav_map_copyrights_google_only">"©<ns1:g id="COPYRIGHT_YEAR">%1$d</ns1:g> Google"</string>
+    <string msgid="4796406852640794459" name="maps_dav_map_copyrights_imagery_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google – Zdjęcia: ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <string msgid="7421961728654750951" name="maps_dav_map_copyrights_map_data_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google – Dane map: ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <string msgid="5618016850433253177" name="maps_invalid_panorama_data">"Nieprawidłowa panorama"</string>
+    <string msgid="852879677528638846" name="maps_network_unavailable">"Dla tego programu wymagane jest połączenie transmisji danych. Próba nawiązania połączenia będzie ponawiana automatycznie. Sprawdź siłę sygnału. Czy jest włączony tryb samolotowy? Czy jest wyłączony roaming danych?"</string>
+    <string msgid="5724478591902584421" name="maps_no_panorama_data">"Nie ustawiono danych panoramy."</string>
+    <string msgid="504349892431320733" name="maps_panorama_disabled">"Obraz już jest niedostępny"</string>
+    <string msgid="5623163711058333956" name="maps_service_unavailable">"Street View jest niedostępny."</string>
+    <string msgid="8614145121611139475" name="maps_street_range_name_format">"%2$s %1$s"</string>
+    <string msgid="4679308263892194242" name="maps_waiting_for_network">"Połączenie zostało zerwane. Ponawianie próby…"</string>
+</resources>

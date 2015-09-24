@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/maps_btn_zoom_down_wear_disabled" android:state_enabled="false" />
+    <item android:drawable="@drawable/maps_btn_zoom_down_wear_pressed" android:state_pressed="true" />
+    <item android:drawable="@drawable/maps_btn_zoom_down_wear_normal" />
+</selector>
+
+<!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/drawable/maps_btn_zoom_down_wear.xml --><!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/build/intermediates/bundles/debug/res/drawable/maps_btn_zoom_down_wear.xml -->

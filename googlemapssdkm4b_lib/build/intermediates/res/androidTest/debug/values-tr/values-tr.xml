@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/build/intermediates/bundles/debug/res/values-tr/values-tr.xml -->
+    <eat-comment/>
+    <string-array name="maps_compass_directions">
+        <item msgid="371990129502990442">"K"</item>
+        <item msgid="1723794399812139988">"KD"</item>
+        <item msgid="8995696828344274905">"D"</item>
+        <item msgid="8971984494345895781">"GD"</item>
+        <item msgid="7174645718252695865">"G"</item>
+        <item msgid="4863051572593926737">"GB"</item>
+        <item msgid="6823513192569584945">"B"</item>
+        <item msgid="1255372719355902587">"KB"</item>
+    </string-array>
+    <string-array name="maps_full_compass_directions">
+        <item msgid="4575528752583301752">kuzey</item>
+        <item msgid="4350548105276290005">kuzeydoğu</item>
+        <item msgid="2941955296001395559">doğu</item>
+        <item msgid="7564496420537720517">güneydoğu</item>
+        <item msgid="7734963361324256142">güney</item>
+        <item msgid="2308335477702894344">güneybatı</item>
+        <item msgid="1360397508757498197">batı</item>
+        <item msgid="5107967783299132090">kuzeybatı</item>
+    </string-array>
+    <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"Bir uygulama, Android Wear uygulamasında güncelleme yapılmasını gerektiriyor."</string>
+    <string msgid="3046420540094071256" name="common_android_wear_update_text">"Android Wear uygulaması güncelleninceye kadar bu uygulama çalışmayacak."</string>
+    <string msgid="1366439133145190222" name="common_android_wear_update_title">"Android Wear\'ı Güncelle"</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"Google Play hizmetlerini etkinleştir"</string>
+    <string msgid="7627896071867667758" name="common_google_play_services_enable_text">"Bu uygulama, Google Play Hizmetleri etkinleştirilmeden çalışmaz"</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"Google Play hizmetlerini etkinleştir"</string>
+    <string msgid="2443362625939284971" name="common_google_play_services_error_notification_requested_by_msg">"İstekte bulunan: <ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"Google Play hizmetlerini edin"</string>
+    <string msgid="8685301130651051380" name="common_google_play_services_install_text_phone">"Google Play Hizmetleri telefonunuzda yok ve bu uygulama Google Play Hizmetleri olmadan çalışmaz."</string>
+    <string msgid="1589957570365247855" name="common_google_play_services_install_text_tablet">"Google Play Hizmetleri tabletinizde yok ve bu uygulama Google Play Hizmetleri olmadan çalışmaz."</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"Google Play hizmetlerini edinin"</string>
+    <string msgid="4983316348021735578" name="common_google_play_services_invalid_account_text">"Belirtilen hesap bu cihazda mevcut değil. Lütfen farklı bir hesap seçin."</string>
+    <string msgid="1066672360770936753" name="common_google_play_services_invalid_account_title">"Geçersiz Hesap"</string>
+    <string msgid="2583358409598976717" name="common_google_play_services_needs_enabling_title">"Bir uygulama, Google Play Hizmetleri\'nin etkin olmasını gerektiriyor."</string>
+    <string msgid="9038847255613537209" name="common_google_play_services_network_error_text">"Google Play hizmetlerine bağlanmak için bir veri bağlantısı gerekiyor."</string>
+    <string msgid="3827284619958211114" name="common_google_play_services_network_error_title">"Ağ Hatası"</string>
+    <string msgid="8120534356798772974" name="common_google_play_services_notification_needs_installation_title">"Bir uygulama, Google Play hizmetlerinin yüklenmesini gerektiriyor."</string>
+    <string msgid="1388129345631079938" name="common_google_play_services_notification_needs_update_title">"Bir uygulama, Google Play Hizmetleri için bir güncelleme gerektiriyor."</string>
+    <string msgid="1852570676146674985" name="common_google_play_services_notification_ticker">"Google Play Hizmetleri hatası"</string>
+    <string msgid="5194079840165204725" name="common_google_play_services_sign_in_failed_text">"Belirtilen hesapta oturum açılırken hata oluştu. Lütfen farklı bir hesap seçin."</string>
+    <string msgid="8164948898147532159" name="common_google_play_services_sign_in_failed_title">"Oturum açılamadı"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"Google Play hizmetleriyle ilgili bilinmeyen sorun."</string>
+    <string msgid="3542578567569488671" name="common_google_play_services_unsupported_text">"Cihazınız, uygulamalarınızdan bazıları için gerekli olan Google Play hizmetlerini desteklemiyor. Lütfen yardım için üreticiyle iletişim kurun."</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"Google Play hizmetleri"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"Güncelle"</string>
+    <string msgid="448354684997260580" name="common_google_play_services_update_text">"Bu uygulama Google Play Hizmetleri güncellenmeden çalışmaz."</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"Google Play hizmetlerini güncelle"</string>
+    <string msgid="411506735369601515" name="common_open_on_phone">"Telefonda aç"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"Oturum aç"</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"Google\'da oturum aç"</string>
+    <string msgid="5000919058582214855" name="commono_google_play_services_api_unavailable_text">"Bu uygulama, şu anda kullanılmayan bir veya daha fazla Google Play hizmeti gerektiriyor. Yardım için lütfen geliştiriciyle bağlantı kurun."</string>
+    <string name="maps_API_MY_LOCATION_ACCURACY">Konumum\u0020\nDo\u011fruluk:\u0020{0}\u0020metre</string>
+    <string name="maps_API_OUTDATED_WARNING">Bu\u0020uygulama\u0020Google\u0020Haritalar\'\u0131n\u0020eski\u0020bir\u0020sürümünü\u0020kulland\u0131\u011f\u0131\u0020için\u0020düzgün\u0020çal\u0131\u015fmayabilir.</string>
+    <string name="maps_BACK_TO_LIST">"Listeye geri dön"</string>
+    <string name="maps_CLOSE_SOFTKEY">Kapat</string>
+    <string name="maps_COMPASS_ALT_TEXT">Pusula</string>
+    <string name="maps_DIRECTIONS_ALT_TEXT">Yol Tarifi Al</string>
+    <string name="maps_GOOGLE_MAP">Google haritası</string>
+    <string name="maps_LEVEL_ALT_TEXT">{0} katı</string>
+    <string name="maps_MY_LOCATION_ALT_TEXT">Konumum</string>
+    <string name="maps_OPEN_GMM_ALT_TEXT">Google Haritalar\'da aç</string>
+    <string msgid="3304805242996771621" name="maps_YOUR_LOCATION">Mevcut konumunuz</string>
+    <string name="maps_ZOOM_IN_ALT_TEXT">Yak\u0131nla\u015ft\u0131r</string>
+    <string name="maps_ZOOM_OUT_ALT_TEXT">Uzakla\u015ft\u0131r</string>
+    <string msgid="2643616411547805051" name="maps_dav_map_copyrights_full">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - Görüntüler ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>, Harita verileri ©<ns1:g id="COPYRIGHT_YEAR_2">%4$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%5$s</ns1:g>"</string>
+    <string msgid="2340776877486681415" name="maps_dav_map_copyrights_google_only">"©<ns1:g id="COPYRIGHT_YEAR">%1$d</ns1:g> Google"</string>
+    <string msgid="4796406852640794459" name="maps_dav_map_copyrights_imagery_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - Görüntüler ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <string msgid="7421961728654750951" name="maps_dav_map_copyrights_map_data_only">"©<ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - Harita verileri ©<ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <string msgid="5618016850433253177" name="maps_invalid_panorama_data">"Geçersiz panorama."</string>
+    <string msgid="852879677528638846" name="maps_network_unavailable">"Bu program veri bağlantısı gerektirir ve bağlanmayı otomatik olarak deneyecektir. Lütfen sinyal gücünü denetleyin. Uçak modu açık mı? Dolaşım verileri devre dışı mı?"</string>
+    <string msgid="5724478591902584421" name="maps_no_panorama_data">"Panorama verisi belirlenmedi."</string>
+    <string msgid="504349892431320733" name="maps_panorama_disabled">"Resim artık mevcut değil"</string>
+    <string msgid="5623163711058333956" name="maps_service_unavailable">"Sokak Görünümü hizmeti mevcut değil."</string>
+    <string msgid="8614145121611139475" name="maps_street_range_name_format">"%1$s %2$s"</string>
+    <string msgid="4679308263892194242" name="maps_waiting_for_network">"Veri bağl. kesildi, tkr. denyr…"</string>
+</resources>

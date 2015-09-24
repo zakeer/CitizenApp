@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-sk/maps_sv_strings.xml -->
+    <eat-comment/>
+    <string-array name="maps_compass_directions">
+        <item msgid="371990129502990442">"S"</item>
+        <item msgid="1723794399812139988">"SV"</item>
+        <item msgid="8995696828344274905">"V"</item>
+        <item msgid="8971984494345895781">"JV"</item>
+        <item msgid="7174645718252695865">"J"</item>
+        <item msgid="4863051572593926737">"JZ"</item>
+        <item msgid="6823513192569584945">"Z"</item>
+        <item msgid="1255372719355902587">"SZ"</item>
+    </string-array>
+    <string-array name="maps_full_compass_directions">
+        <item msgid="4575528752583301752">sever</item>
+        <item msgid="4350548105276290005">severovýchod</item>
+        <item msgid="2941955296001395559">východ</item>
+        <item msgid="7564496420537720517">juhovýchod</item>
+        <item msgid="7734963361324256142">juh</item>
+        <item msgid="2308335477702894344">juhozápad</item>
+        <item msgid="1360397508757498197">západ</item>
+        <item msgid="5107967783299132090">severozápad</item>
+    </string-array>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-sk/common_strings.xml -->
+    <eat-comment/>
+    <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"Niektorá aplikácia vyžaduje aktualizáciu aplikácie Android Wear."</string>
+    <string msgid="3046420540094071256" name="common_android_wear_update_text">"Táto aplikácia bude fungovať až po aktualizácii aplikácie Android Wear."</string>
+    <string msgid="1366439133145190222" name="common_android_wear_update_title">"Aktualizujte aplikáciu Android Wear"</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"Povoliť služby Google Play"</string>
+    <string msgid="7627896071867667758" name="common_google_play_services_enable_text">"Táto aplikácia bude fungovať až po povolení služieb Google Play."</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"Povoliť služby Google Play"</string>
+    <string msgid="2443362625939284971" name="common_google_play_services_error_notification_requested_by_msg">"Vyžiadané aplikáciou <ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"Inštalovať služby Google Play"</string>
+    <string msgid="8685301130651051380" name="common_google_play_services_install_text_phone">"Na spustenie tejto aplikácie sa vyžadujú služby Google Play, ktoré v telefóne nemáte."</string>
+    <string msgid="1589957570365247855" name="common_google_play_services_install_text_tablet">"Na spustenie tejto aplikácie sa vyžadujú služby Google Play, ktoré v tablete nemáte."</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"Inštalovať služby Google Play"</string>
+    <string msgid="4983316348021735578" name="common_google_play_services_invalid_account_text">"Zadaný účet v tomto zariadení neexistuje. Vyberte iný účet."</string>
+    <string msgid="1066672360770936753" name="common_google_play_services_invalid_account_title">"Neplatný účet"</string>
+    <string msgid="2583358409598976717" name="common_google_play_services_needs_enabling_title">"Aplikácia vyžaduje povolenie služieb Google Play."</string>
+    <string msgid="9038847255613537209" name="common_google_play_services_network_error_text">"Pripojenie k službám Google Play si vyžaduje dátové pripojenie."</string>
+    <string msgid="3827284619958211114" name="common_google_play_services_network_error_title">"Chyba siete"</string>
+    <string msgid="8120534356798772974" name="common_google_play_services_notification_needs_installation_title">"Aplikácia vyžaduje inštaláciu služieb Google Play."</string>
+    <string msgid="1388129345631079938" name="common_google_play_services_notification_needs_update_title">"Aplikácia vyžaduje aktualizáciu služieb Google Play."</string>
+    <string msgid="1852570676146674985" name="common_google_play_services_notification_ticker">"Chyba služieb Google Play"</string>
+    <string msgid="5194079840165204725" name="common_google_play_services_sign_in_failed_text">"Pri prihlasovaní do určeného účtu sa vyskytla chyba. Zvoľte iný účet."</string>
+    <string msgid="8164948898147532159" name="common_google_play_services_sign_in_failed_title">"Prihlásenie zlyhalo"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"Neznámy problém so službami Google Play."</string>
+    <string msgid="3542578567569488671" name="common_google_play_services_unsupported_text">"Niektoré vaše aplikácie vyžadujú služby Google Play, ktoré vo vašom zariadení nie sú podporované. Ak potrebujete pomoc, kontaktujte výrobcu."</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"Služby Google Play"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"Aktualizovať"</string>
+    <string msgid="448354684997260580" name="common_google_play_services_update_text">"Túto aplikáciu bude možné spustiť až po aktualizácii služieb Google Play."</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"Aktualizovať služby Google Play"</string>
+    <string msgid="411506735369601515" name="common_open_on_phone">"Otvoriť na telefóne"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"Prihlásiť sa"</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"Prihlásiť sa do účtu Google"</string>
+    <string msgid="5000919058582214855" name="commono_google_play_services_api_unavailable_text">"Táto aplikácia potrebuje jednu alebo viac služieb Google Play, ktoré v súčasnosti nie sú k dispozícii. Obráťte sa na vývojára a získajte pomoc."</string>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-sk/maps_api_strings.xml -->
+    <eat-comment/>
+    <string name="maps_API_MY_LOCATION_ACCURACY">Moja\u0020poloha\u0020\nPresnos\u0165\u0020na\u0020{0}\u0020m</string>
+    <string name="maps_API_OUTDATED_WARNING">Táto\u0020aplikácia\u0020pou\u017eíva\u0020zastaranú\u0020verziu\u0020slu\u017eby\u0020Mapy.\u0020Nemusí\u0020fungova\u0165\u0020správne.</string>
+    <string name="maps_BACK_TO_LIST">"Späť na zoznam"</string>
+    <string name="maps_CLOSE_SOFTKEY">Zavrie\u0165</string>
+    <string name="maps_COMPASS_ALT_TEXT">Kompas</string>
+    <string name="maps_DIRECTIONS_ALT_TEXT">Vyhľadať trasu</string>
+    <string name="maps_GOOGLE_MAP">Mapa Google</string>
+    <string name="maps_LEVEL_ALT_TEXT">Úroveň {0}</string>
+    <string name="maps_MY_LOCATION_ALT_TEXT">Moja\u0020poloha</string>
+    <string name="maps_OPEN_GMM_ALT_TEXT">Otvoriť v Mapách Google</string>
+    <string msgid="3304805242996771621" name="maps_YOUR_LOCATION">Vaša aktuálna poloha</string>
+    <string name="maps_ZOOM_IN_ALT_TEXT">Priblí\u017ei\u0165</string>
+    <string name="maps_ZOOM_OUT_ALT_TEXT">Oddiali\u0165</string>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-sk/maps_dav_strings.xml -->
+    <eat-comment/>
+    <string msgid="2643616411547805051" name="maps_dav_map_copyrights_full">"© <ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - snímky © <ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>, mapové údaje © <ns1:g id="COPYRIGHT_YEAR_2">%4$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%5$s</ns1:g>"</string>
+    <string msgid="2340776877486681415" name="maps_dav_map_copyrights_google_only">"© <ns1:g id="COPYRIGHT_YEAR">%1$d</ns1:g> Google"</string>
+    <string msgid="4796406852640794459" name="maps_dav_map_copyrights_imagery_only">"© <ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - snímky © <ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="IMAGERY_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <string msgid="7421961728654750951" name="maps_dav_map_copyrights_map_data_only">"© <ns1:g id="COPYRIGHT_YEAR_0">%1$d</ns1:g> Google - mapové údaje © <ns1:g id="COPYRIGHT_YEAR_1">%2$d</ns1:g> <ns1:g id="MAP_DATA_PROVIDER_NAMES">%3$s</ns1:g>"</string>
+    <!-- From: file:/C:/Users/harsh/AndroidStudioProjects/StartApp/googlemapssdkm4b_lib/src/main/res/values-sk/maps_sv_strings.xml -->
+    <eat-comment/>
+    <string msgid="5618016850433253177" name="maps_invalid_panorama_data">"Neplatná panoráma."</string>
+    <string msgid="852879677528638846" name="maps_network_unavailable">"Tento program vyžaduje dátové spojenie a automaticky zopakuje pokus o pripojenie. Skontrolujte silu signálu. Sú dátové služby pri roamingu zakázané?"</string>
+    <string msgid="5724478591902584421" name="maps_no_panorama_data">"Neboli nastavené žiadne údaje o panoráme."</string>
+    <string msgid="504349892431320733" name="maps_panorama_disabled">"Obrázok nie je k dispozícii"</string>
+    <string msgid="5623163711058333956" name="maps_service_unavailable">"Služba Zobrazenie ulíc nie je k dispozícii."</string>
+    <string msgid="8614145121611139475" name="maps_street_range_name_format">"%2$s %1$s"</string>
+    <string msgid="4679308263892194242" name="maps_waiting_for_network">"Dátové spojenie sa prerušilo, pokus sa opakuje…"</string>
+</resources>
