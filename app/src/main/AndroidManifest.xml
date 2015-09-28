@@ -24,6 +24,7 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAEUxvBdRgzfjVN5VidxLmZp40TqN_QIiI" />
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
@@ -33,6 +34,7 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -43,6 +45,10 @@
         <activity
             android:name=".OfficialActivity"
             android:label="@string/title_activity_official" >
+        </activity>
+        <activity
+            android:name=".ResultActivity"
+            android:label="@string/title_activity_result" >
         </activity>
     </application>
 

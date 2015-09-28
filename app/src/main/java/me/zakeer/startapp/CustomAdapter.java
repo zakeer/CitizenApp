@@ -1,6 +1,7 @@
 package me.zakeer.startapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -80,6 +81,8 @@ public class CustomAdapter extends BaseAdapter{
                 public void onClick(View v) {
                     // TODO Auto-generated method stub
                     Toast.makeText(context, "You Clicked ", Toast.LENGTH_LONG).show();
+                    Intent resultIntent = new Intent(context, ResultActivity.class);
+                    context.startActivity(resultIntent);
                 }
             });
             return rowView;
