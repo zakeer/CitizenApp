@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -62,7 +61,7 @@ public class CustomAdapter extends BaseAdapter{
         // TODO Auto-generated method stub
 
         try {
-            JSONObject singleRowData = new JSONObject(result[position]);
+            final JSONObject singleRowData = new JSONObject(result[position]);
             Log.d("Tile " + position, (String) singleRowData.get("title"));
             Holder holder=new Holder();
             View rowView;
@@ -80,8 +79,9 @@ public class CustomAdapter extends BaseAdapter{
                 @Override
                 public void onClick(View v) {
                     // TODO Auto-generated method stub
-                    Toast.makeText(context, "You Clicked ", Toast.LENGTH_LONG).show();
                     Intent resultIntent = new Intent(context, ResultActivity.class);
+                    resultIntent.putExtra("activity", "view_reports");
+                    resultIntent.putExtra("server_data", singleRowData.toString());
                     context.startActivity(resultIntent);
                 }
             });
