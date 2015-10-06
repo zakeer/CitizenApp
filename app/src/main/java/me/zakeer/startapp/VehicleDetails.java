@@ -1,16 +1,17 @@
 package me.zakeer.startapp;
 
 
+import android.content.Intent;
 import android.os.Bundle;
-
 import android.support.v4.app.Fragment;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.ListView;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 
 /**
@@ -39,6 +40,20 @@ public class VehicleDetails extends Fragment {
         view = getView();
         if(view != null) {
             OfficialActivity activity = (OfficialActivity)getActivity();
+            final EditText input = (EditText) view.findViewById(R.id.etInput);
+            Button btn = (Button) view.findViewById(R.id.button);
+
+            btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (input.getText() != null) {
+                        Intent intent = new Intent(getActivity(), VehicleReport.class);
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(getActivity(), "All Fields Required", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
 
             Display display = activity.getWindowManager().getDefaultDisplay();
             int h = display.getHeight() - activity.h;
@@ -49,7 +64,7 @@ public class VehicleDetails extends Fragment {
             params.width = ViewGroup.LayoutParams.MATCH_PARENT;
             params.height = h;
             relativeLayout.requestLayout();
-            relativeLayout.setPadding(0, 0, 0, (int) ((int) activity.h * 1.5));
+            relativeLayout.setPadding(0, 0, 0, (int) (activity.h * 1.5));
 
             /*ServerCal serverCal = new ServerCal();
             serverCal.execute("http://citizen.turpymobileapps.com/gettracks.php");*/

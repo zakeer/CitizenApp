@@ -12,4 +12,5 @@
     <string name="title_activity_official">OfficialActivity</string>
     <string name="title_activity_view_repots">ViewRepots</string>
     <string name="title_activity_result">ResultActivity</string>
+    <string name="title_activity_vehicle_report">VehicleReport</string>
 </resources>

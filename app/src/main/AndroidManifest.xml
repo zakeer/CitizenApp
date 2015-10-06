@@ -50,6 +50,9 @@
             android:name=".ResultActivity"
             android:label="@string/title_activity_result" >
         </activity>
+        <activity
+            android:name=".VehicleReport"
+            android:label="@string/title_activity_vehicle_report"></activity>
     </application>
 
 </manifest>

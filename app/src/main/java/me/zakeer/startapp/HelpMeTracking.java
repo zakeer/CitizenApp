@@ -3,6 +3,7 @@ package me.zakeer.startapp;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -15,7 +16,6 @@ import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -71,7 +71,7 @@ public class HelpMeTracking extends Fragment {
             params.width = ViewGroup.LayoutParams.MATCH_PARENT;
             params.height = h;
             linearLayout.requestLayout();
-            listView.setPadding(0, 0, 0, (int) ((int) activity.h * 1.5));
+            listView.setPadding(0, 0, 0, (int) (activity.h * 1.5));
 
             ServerCal serverCal = new ServerCal();
             serverCal.execute("http://citizen.turpymobileapps.com/getsos.php");
@@ -143,12 +143,11 @@ public class HelpMeTracking extends Fragment {
     }
 
     public class MyAdapter extends BaseAdapter {
+        final static String URL = "http://citizen.turpymobileapps.com/";
         String[] result;
         Context context;
-        private LayoutInflater inflater=null;
         ImageLoader imageLoader;
-
-        final static String URL = "http://citizen.turpymobileapps.com/";
+        private LayoutInflater inflater = null;
 
         public MyAdapter(OfficialActivity officialActivity, String[] prgmNameList) {
             // TODO Auto-generated constructor stub
@@ -158,13 +157,6 @@ public class HelpMeTracking extends Fragment {
                     getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             imageLoader = new ImageLoader(context);
         }
-
-        public class Holder
-        {
-            TextView tvPhone;
-            TextView tvPlace;
-        }
-
 
         @Override
         public int getCount() {
@@ -186,7 +178,7 @@ public class HelpMeTracking extends Fragment {
             // TODO Auto-generated method stub
 
             try {
-                JSONObject singleRowData = new JSONObject(result[position]);
+                final JSONObject singleRowData = new JSONObject(result[position]);
                 //Log.d("Tile " + position, (String) singleRowData.get("title"));
                 Holder holder=new Holder();
                 View rowView;
@@ -204,7 +196,10 @@ public class HelpMeTracking extends Fragment {
                     @Override
                     public void onClick(View v) {
                         // TODO Auto-generated method stub
-                        Toast.makeText(context, "You Clicked ", Toast.LENGTH_LONG).show();
+                        Intent resultIntent = new Intent(context, ResultActivity.class);
+                        resultIntent.putExtra("activity", "view_help");
+                        resultIntent.putExtra("server_data", singleRowData.toString());
+                        startActivity(resultIntent);
                     }
                 });
                 return rowView;
@@ -214,6 +209,11 @@ public class HelpMeTracking extends Fragment {
 
             return inflater.inflate(R.layout.view_travel_list, null);
 
+        }
+
+        public class Holder {
+            TextView tvPhone;
+            TextView tvPlace;
         }
 
     }

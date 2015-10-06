@@ -28,6 +28,7 @@ public class ResultActivity extends FragmentActivity implements OnMapReadyCallba
     ImageLoader imageLoader;
 
     LatLng latLng;
+    String address;
 
 
 
@@ -44,12 +45,59 @@ public class ResultActivity extends FragmentActivity implements OnMapReadyCallba
 
             switch (intentActivity) {
                 case "view_reports":
-                    resultActivity();
+                    reportActivity();
+                    break;
+                case "view_travel":
+                    travelActivity();
+                    break;
+                case "view_help":
+                    helpMeActivity();
+                    break;
             }
         }
     }
 
-    private void resultActivity() {
+    private void travelActivity() {
+        if (intentServerData != null) {
+            setContentView(R.layout.travel_detail);
+            SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+
+            try {
+                JSONObject reportData = new JSONObject(intentServerData);
+                latLng = new LatLng(reportData.getDouble("updated_lat"), reportData.getDouble("updated_long"));
+                address = (String) reportData.get("place");
+                mapFragment.getMapAsync(this);                //setMap(mapFragment, latLng);
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+            Log.d("Server Activity Data : ", intentServerData);
+        }
+    }
+
+    private void helpMeActivity() {
+        if (intentServerData != null) {
+            setContentView(R.layout.travel_detail);
+            SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+            TextView title = (TextView) findViewById(R.id.report_title);
+            title.setText("Help Me Tracking");
+
+            try {
+                JSONObject reportData = new JSONObject(intentServerData);
+                latLng = new LatLng(reportData.getDouble("latitude"), reportData.getDouble("longitude"));
+                address = (String) reportData.get("place");
+                mapFragment.getMapAsync(this);                //setMap(mapFragment, latLng);
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+            Log.d("Server Activity Data : ", intentServerData);
+        }
+    }
+
+    private void reportActivity() {
         if (intentServerData != null) {
             setContentView(R.layout.report_detail);
             TextView reportTitle = (TextView) findViewById(R.id.report_title);
@@ -71,6 +119,7 @@ public class ResultActivity extends FragmentActivity implements OnMapReadyCallba
                 imageLoader.DisplayImage(URL + reportData.get("image"), reportImage);
 
                 latLng = new LatLng(reportData.getDouble("lat"), reportData.getDouble("lon"));
+                address = (String) reportData.get("address");
 
                 //setMap(mapFragment, latLng);
 
@@ -84,7 +133,7 @@ public class ResultActivity extends FragmentActivity implements OnMapReadyCallba
 
     public void setMap(SupportMapFragment mapObject, LatLng latLng) {
         GoogleMap map = mapObject.getMap();
-        map.addMarker(new MarkerOptions().position(latLng).title("Marker in Sydney"));
+        map.addMarker(new MarkerOptions().position(latLng).title(address));
         map.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         Toast.makeText(getApplication(), latLng.toString(), Toast.LENGTH_LONG).show();
     }
