@@ -11,24 +11,28 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.model.LatLng;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
 public class CustomAdapter extends BaseAdapter{
+    final static String URL = "http://citizen.turpymobileapps.com/";
+    private static LayoutInflater inflater = null;
     String[] result;
     Context context;
-    private static LayoutInflater inflater=null;
     ImageLoader imageLoader;
+    double longitude, latitude;
 
-    final static String URL = "http://citizen.turpymobileapps.com/";
-
-    public CustomAdapter(OfficialActivity officialActivity, String[] prgmNameList) {
+    public CustomAdapter(OfficialActivity officialActivity, String[] prgmNameList, LatLng latLng) {
         // TODO Auto-generated constructor stub
         result=prgmNameList;
         context=officialActivity;
         inflater = ( LayoutInflater )context.
                 getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         imageLoader = new ImageLoader(context);
+        this.latitude = latLng.latitude;
+        this.longitude = latLng.longitude;
     }
     @Override
     public int getCount() {
@@ -47,14 +51,6 @@ public class CustomAdapter extends BaseAdapter{
         // TODO Auto-generated method stub
         return position;
     }
-
-    public class Holder
-    {
-        TextView tvTitle;
-        TextView tvLocation;
-        ImageView img;
-    }
-
 
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
@@ -80,6 +76,8 @@ public class CustomAdapter extends BaseAdapter{
                 public void onClick(View v) {
                     // TODO Auto-generated method stub
                     Intent resultIntent = new Intent(context, ResultActivity.class);
+                    resultIntent.putExtra("longitude", longitude);
+                    resultIntent.putExtra("latitude", latitude);
                     resultIntent.putExtra("activity", "view_reports");
                     resultIntent.putExtra("server_data", singleRowData.toString());
                     context.startActivity(resultIntent);
@@ -94,4 +92,9 @@ public class CustomAdapter extends BaseAdapter{
 
     }
 
+    public class Holder {
+        TextView tvTitle;
+        TextView tvLocation;
+        ImageView img;
+    }
 }

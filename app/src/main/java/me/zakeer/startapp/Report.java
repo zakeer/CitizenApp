@@ -15,8 +15,10 @@ import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -82,6 +84,15 @@ public class Report extends Fragment implements View.OnClickListener {
             btnSubmit = (Button) view.findViewById(R.id.btnSubmit);
             btnSubmit.setOnClickListener(this);
         }
+
+        view.setOnTouchListener(new View.OnTouchListener() {
+            public boolean onTouch(View v, MotionEvent event) {
+                InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.
+                        INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+                return true;
+            }
+        });
     }
     @Override
     public void onClick(View v) {
@@ -112,77 +123,9 @@ public class Report extends Fragment implements View.OnClickListener {
                 Toast.makeText(getActivity(), "All Fields Required", Toast.LENGTH_SHORT).show();
             } else {
                 ServerCal serverCal = new ServerCal();
-                Toast.makeText(getActivity(), address, Toast.LENGTH_LONG).show();
                 serverCal.execute("http://citizen.turpymobileapps.com/report.php", title, description, address);
             }
         }
-    }
-
-    public class ServerCal extends AsyncTask<String, String, String> {
-
-        private ProgressDialog dialog = new ProgressDialog(getActivity());
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            dialog.setMessage("Loading");
-            dialog.show();
-
-        }
-
-        @Override
-        protected String doInBackground(String... params) {
-            HttpClient client = new DefaultHttpClient();
-            HttpPost postRequest = new HttpPost(params[0]);
-            HttpResponse response = null;
-
-            MultipartEntity multipartEntity = new MultipartEntity(HttpMultipartMode.BROWSER_COMPATIBLE);
-            try {
-                multipartEntity.addPart("title", new StringBody(params[1]));
-                multipartEntity.addPart("description", new StringBody(params[2]));
-                multipartEntity.addPart("lat", new StringBody(String.valueOf(latitue)));
-                multipartEntity.addPart("long", new StringBody(String.valueOf(longitude)));
-                multipartEntity.addPart("addr", new StringBody(String.valueOf(params[3])));
-                multipartEntity.addPart("image", new FileBody(imageFile));
-                Log.d("Multipar", ""+multipartEntity);
-                postRequest.setEntity(multipartEntity);
-                HttpResponse responsePOST = client.execute(postRequest);
-                HttpEntity resEntity = responsePOST.getEntity();
-                String _response = EntityUtils.toString(resEntity); // content will be consume only once
-                return (_response != null) ? _response : null;
-
-
-            } catch (UnsupportedEncodingException e) {
-                e.printStackTrace();
-            } catch (ClientProtocolException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(String s) {
-            super.onPostExecute(s);
-            Log.d("Execute String", s);
-            dialog.dismiss();
-            try {
-                JSONObject serverData = new JSONObject(s);
-                String status = serverData.getString("message");
-                Log.d("Server Data", s);
-                if (status.equals("Report successfully Submitted")) {
-                    showDialog(status, "success");
-                } else {
-                    showDialog(status, "fail");
-                    System.out.print("login failled");
-                }
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-
     }
 
     @Override
@@ -230,7 +173,6 @@ public class Report extends Fragment implements View.OnClickListener {
         }
     }
 
-
     public void showDialog(String msg, String type){
         AlertDialog.Builder dialog;
         String title = msg;
@@ -262,6 +204,73 @@ public class Report extends Fragment implements View.OnClickListener {
         }
 
         dialog.show();
+    }
+
+    public class ServerCal extends AsyncTask<String, String, String> {
+
+        private ProgressDialog dialog = new ProgressDialog(getActivity());
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            dialog.setMessage("Loading");
+            dialog.show();
+
+        }
+
+        @Override
+        protected String doInBackground(String... params) {
+            HttpClient client = new DefaultHttpClient();
+            HttpPost postRequest = new HttpPost(params[0]);
+            HttpResponse response = null;
+
+            MultipartEntity multipartEntity = new MultipartEntity(HttpMultipartMode.BROWSER_COMPATIBLE);
+            try {
+                multipartEntity.addPart("title", new StringBody(params[1]));
+                multipartEntity.addPart("description", new StringBody(params[2]));
+                multipartEntity.addPart("lat", new StringBody(String.valueOf(latitue)));
+                multipartEntity.addPart("long", new StringBody(String.valueOf(longitude)));
+                multipartEntity.addPart("addr", new StringBody(String.valueOf(params[3])));
+                multipartEntity.addPart("image", new FileBody(imageFile));
+                Log.d("Multipar", "" + multipartEntity);
+                postRequest.setEntity(multipartEntity);
+                HttpResponse responsePOST = client.execute(postRequest);
+                HttpEntity resEntity = responsePOST.getEntity();
+                String _response = EntityUtils.toString(resEntity); // content will be consume only once
+                return (_response != null) ? _response : null;
+
+
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            } catch (ClientProtocolException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            Log.d("Execute String", s);
+            dialog.dismiss();
+            try {
+                JSONObject serverData = new JSONObject(s);
+                String status = serverData.getString("message");
+                Log.d("Server Data", s);
+                if (status.equals("Report successfully Submitted")) {
+                    showDialog(status, "success");
+                } else {
+                    showDialog(status, "fail");
+                    System.out.print("login failled");
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 
 

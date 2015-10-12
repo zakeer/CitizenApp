@@ -3,16 +3,18 @@ package me.zakeer.startapp;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -68,15 +70,53 @@ public class HelpMe extends Fragment implements View.OnClickListener {
             btnSend.setOnClickListener(this);
         }
 
+        view.setOnTouchListener(new View.OnTouchListener() {
+            public boolean onTouch(View v, MotionEvent event) {
+                InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.
+                        INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+                return true;
+            }
+        });
+
     }
 
     @Override
     public void onClick(View v) {
         if(v.getId() == R.id.sendBtn) {
             ServerCal serverCal = new ServerCal();
-            Toast.makeText(getActivity(), address, Toast.LENGTH_LONG).show();
-            serverCal.execute("http://citizen.turpymobileapps.com/report.php");
+            serverCal.execute("http://citizen.turpymobileapps.com/sos.php");
         }
+    }
+
+    public void showDialog(String msg, String type) {
+        AlertDialog.Builder dialog;
+        String title = msg;
+        dialog = new AlertDialog.Builder(getActivity());
+        dialog.setTitle(title);
+
+        if (type.equals("fail")) {
+            dialog.setIcon(R.drawable.alert);
+            dialog.setCancelable(false);
+            dialog.setNegativeButton("Retry", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                }
+            });
+        } else {
+            dialog.setIcon(R.drawable.success);
+            dialog.setCancelable(true);
+            dialog.setPositiveButton("Success", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                    dialog.dismiss();
+                }
+            });
+        }
+
+        dialog.show();
     }
 
     public class ServerCal extends AsyncTask<String, String, String> {
@@ -141,35 +181,5 @@ public class HelpMe extends Fragment implements View.OnClickListener {
             }
         }
 
-    }
-
-    public void showDialog(String msg, String type){
-        AlertDialog.Builder dialog;
-        String title = msg;
-        dialog = new AlertDialog.Builder(getActivity());
-        dialog.setTitle(title);
-
-        if(type.equals("fail")) {
-            dialog.setIcon(R.drawable.alert);
-            dialog.setCancelable(false);
-            dialog.setNegativeButton("Retry", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-
-                }
-            });
-        } else {
-            dialog.setIcon(R.drawable.success);
-            dialog.setCancelable(true);
-            dialog.setPositiveButton("Success", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-
-                    dialog.dismiss();
-                }
-            });
-        }
-
-        dialog.show();
     }
 }

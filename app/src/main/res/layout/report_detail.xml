@@ -1,55 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/report_title"
-        android:text="Report Title"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        android:textAllCaps="true"
-        android:padding="15sp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:padding="15sp"
+        android:text="Report Title"
+        android:textAllCaps="true"
+        android:textSize="26sp"
+        android:textStyle="bold" />
 
     <LinearLayout
-        android:padding="15sp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="15sp">
 
         <TextView
             android:id="@+id/report_description"
-            android:text="Report Description"
-            android:layout_weight=".5"
             android:layout_width="0sp"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="Report Description" />
 
         <ImageView
             android:id="@+id/report_image"
-            android:padding="5px"
-            android:src="@drawable/splash_bg"
-            android:background="@drawable/input_bg"
-            android:layout_weight=".5"
             android:layout_width="0sp"
-            android:layout_height="75sp" />
+            android:layout_height="75sp"
+            android:layout_weight=".5"
+            android:background="@drawable/input_bg"
+            android:padding="5px"
+            android:src="@drawable/splash_bg" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/report_at"
-        android:text="reported at..."
-        android:textStyle="italic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15sp"
         android:paddingLeft="15sp"
         android:paddingRight="15sp"
-        android:paddingBottom="15sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:text="reported at..."
+        android:textStyle="italic" />
 
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="150sp" />
+
+    <Button
+        android:id="@+id/btnGetDirection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10sp"
+        android:background="#ff36beff"
+        android:paddingBottom="10sp"
+        android:paddingLeft="20sp"
+        android:paddingRight="20sp"
+        android:paddingTop="10sp"
+        android:text="Get Directions" />
 
 </LinearLayout>

@@ -1,10 +1,13 @@
 package me.zakeer.startapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -103,6 +106,7 @@ public class ResultActivity extends FragmentActivity implements OnMapReadyCallba
             TextView reportTitle = (TextView) findViewById(R.id.report_title);
             TextView reportDescription = (TextView) findViewById(R.id.report_description);
             TextView reportAt = (TextView) findViewById(R.id.report_at);
+            Button btnGetDirection = (Button) findViewById(R.id.btnGetDirection);
 
             ImageView reportImage = (ImageView) findViewById(R.id.report_image);
 
@@ -115,11 +119,21 @@ public class ResultActivity extends FragmentActivity implements OnMapReadyCallba
                 reportTitle.setText((CharSequence) reportData.get("title"));
                 reportDescription.setText((CharSequence) reportData.get("description"));
                 reportAt.setText((CharSequence) reportData.get("report_at"));
-
                 imageLoader.DisplayImage(URL + reportData.get("image"), reportImage);
 
                 latLng = new LatLng(reportData.getDouble("lat"), reportData.getDouble("lon"));
                 address = (String) reportData.get("address");
+
+                btnGetDirection.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent getDirectionIntent = new Intent(getApplicationContext(), DirectionActivity.class);
+                        getDirectionIntent.putExtra("latitude", latLng.latitude);
+                        getDirectionIntent.putExtra("longitude", latLng.longitude);
+                        getDirectionIntent.putExtra("address", address);
+                        startActivity(getDirectionIntent);
+                    }
+                });
 
                 //setMap(mapFragment, latLng);
 
@@ -162,7 +176,7 @@ public class ResultActivity extends FragmentActivity implements OnMapReadyCallba
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        googleMap.addMarker(new MarkerOptions().position(latLng).title("Marker in Sydney"));
+        googleMap.addMarker(new MarkerOptions().position(latLng).title(address));
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         googleMap.animateCamera(CameraUpdateFactory.zoomTo(12));
     }

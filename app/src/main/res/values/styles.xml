@@ -9,4 +9,8 @@
         <item name="android:background">#049ae6</item>
     </style>
 
+    <style name="fbLoginStyle">
+        <item name="android:text">FB Login</item>
+    </style>
+
 </resources>

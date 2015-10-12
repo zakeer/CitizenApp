@@ -2,8 +2,9 @@ package me.zakeer.startapp;
 
 
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,9 +12,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.apache.http.HttpEntity;
@@ -23,7 +21,6 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.mime.HttpMultipartMode;
 import org.apache.http.entity.mime.MultipartEntity;
-import org.apache.http.entity.mime.content.FileBody;
 import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
@@ -38,7 +35,7 @@ import java.io.UnsupportedEncodingException;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Emergency extends Fragment {
+public class Emergency extends Fragment implements View.OnClickListener {
 
     Double latitue, longitude;
     View view;
@@ -74,9 +71,54 @@ public class Emergency extends Fragment {
             etHospitalNum = (TextView) view.findViewById(R.id.hsText);
             etFire = (TextView) view.findViewById(R.id.fireText);
 
+            etPsNum.setOnClickListener(this);
+            etAcp.setOnClickListener(this);
+            etDcp.setOnClickListener(this);
+            etPatrolNum.setOnClickListener(this);
+            etHospitalNum.setOnClickListener(this);
+            etFire.setOnClickListener(this);
+
             ServerCal serverCal = new ServerCal();
             serverCal.execute("http://citizen.turpymobileapps.com/getemergency.php");
         }
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v.isClickable()) {
+            TextView textView = (TextView) view.findViewById(v.getId());
+            Intent callIntent = new Intent(Intent.ACTION_CALL);
+            callIntent.setData(Uri.parse("tel:+91" + textView.getText().toString().replace(" ", "").trim()));
+            startActivity(callIntent);
+        }
+    }
+
+    public void showDialog(String msg, String type) {
+        AlertDialog.Builder dialog;
+        String title = msg;
+        dialog = new AlertDialog.Builder(getActivity());
+        dialog.setTitle(title);
+
+        if (type.equals("fail")) {
+            dialog.setIcon(R.drawable.alert);
+            dialog.setCancelable(false);
+            dialog.setNegativeButton("Retry", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                }
+            });
+        } else {
+            dialog.setIcon(R.drawable.success);
+            dialog.setCancelable(true);
+            dialog.setPositiveButton("Success", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+        }
+
+        dialog.show();
     }
 
     public class ServerCal extends AsyncTask<String, String, String> {
@@ -124,12 +166,12 @@ public class Emergency extends Fragment {
                     JSONObject data = serverData.getJSONObject(0);
 
                     etPs.setText(data.getString("ps_name"));
-                    etPsNum.setText(data.getString("ps_phone"));
+                    etPsNum.setText(data.getString("std_code") + data.getString("ps_phone"));
                     etAcp.setText(data.getString("acp"));
                     etDcp.setText(data.getString("dcp"));
                     etPatrolNum.setText(data.getString("patrol"));
                     etHospital.setText(data.getString("hospital"));
-                    etHospitalNum.setText(data.getString("std_code") + " " + data.getString("hospital_phone"));
+                    etHospitalNum.setText(data.getString("std_code") + data.getString("hospital_phone"));
                     etFire.setText(data.getString("fire"));
 
                 }
@@ -151,34 +193,6 @@ public class Emergency extends Fragment {
             }*/
         }
 
-    }
-
-    public void showDialog(String msg, String type){
-        AlertDialog.Builder dialog;
-        String title = msg;
-        dialog = new AlertDialog.Builder(getActivity());
-        dialog.setTitle(title);
-
-        if(type.equals("fail")) {
-            dialog.setIcon(R.drawable.alert);
-            dialog.setCancelable(false);
-            dialog.setNegativeButton("Retry", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                }
-            });
-        } else {
-            dialog.setIcon(R.drawable.success);
-            dialog.setCancelable(true);
-            dialog.setPositiveButton("Success", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    dialog.dismiss();
-                }
-            });
-        }
-
-        dialog.show();
     }
 
 

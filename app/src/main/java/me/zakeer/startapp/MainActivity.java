@@ -1,6 +1,8 @@
 package me.zakeer.startapp;
 
 import android.app.AlertDialog;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.location.Location;
@@ -12,7 +14,9 @@ import android.view.Display;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -105,6 +109,14 @@ public class MainActivity extends FragmentActivity implements
         }
     }
 
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.
+                INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        return true;
+    }
+
 
     public void setRatioDimensions(ImageButton imgBtn, LinearLayout.LayoutParams params) {
         imgBtn.setLayoutParams(params);
@@ -180,14 +192,15 @@ public class MainActivity extends FragmentActivity implements
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        if (id == R.id.official_logout) {
+            finish();
+        }
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.official_login) {
+            Intent intent = new Intent(getApplicationContext(), UserLogin.class);
+            intent.putExtra("login", 1);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);

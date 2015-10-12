@@ -41,9 +41,9 @@
             android:background="@drawable/input_bg"
             android:fontFamily="Sans"
             android:hint="username"
-            android:text="user123"
             android:padding="10sp"
             android:singleLine="true"
+            android:text="user123"
             android:typeface="normal" />
 
         <EditText
@@ -54,10 +54,10 @@
             android:background="@drawable/input_bg"
             android:fontFamily="Sans"
             android:hint="password"
-            android:text="password"
             android:inputType="textPassword"
             android:padding="10sp"
             android:singleLine="true"
+            android:text="password"
             android:typeface="normal" />
 
 
@@ -81,13 +81,33 @@
                 android:textStyle="bold" />
         </GridLayout>
 
-        <Button
-            android:id="@+id/btnLogin"
+        <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="40sp"
-            android:background="#039be5"
-            android:text="Login"
-            android:textColor="#ffffff" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:layout_marginTop="5sp"
+            android:columnCount="2">
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_height="30sp"
+                android:layout_columnWeight=".5"
+                android:background="#039be5"
+                android:text="Login"
+                android:textColor="#ffffff"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/login_button"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight=".5"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5sp"
+                android:padding="15sp" />
+        </GridLayout>
+
+
     </LinearLayout>
 
 </RelativeLayout>

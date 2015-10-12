@@ -12,7 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.Toast;
+
+import com.google.android.gms.maps.model.LatLng;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -31,9 +32,10 @@ import java.io.UnsupportedEncodingException;
 public class ViewReports extends Fragment {
 
     View view;
-
     ListView listView;
     LinearLayout linearLayout;
+    double latitude, longitude;
+    LatLng latLng;
 
     public ViewReports() {
         // Required empty public constructor
@@ -66,16 +68,18 @@ public class ViewReports extends Fragment {
             OfficialActivity activity = (OfficialActivity)getActivity();
             listView = (ListView) view.findViewById(R.id.viewReportsList);
 
+            latitude = activity.latitue;
+            longitude = activity.longitude;
+            latLng = new LatLng(latitude, longitude);
+
             Display display = activity.getWindowManager().getDefaultDisplay();
             int h = display.getHeight() - activity.h;
-
             linearLayout = (LinearLayout) view.findViewById(R.id.viewReportsLayout);
-
             ViewGroup.LayoutParams params = listView.getLayoutParams();
             params.width = ViewGroup.LayoutParams.MATCH_PARENT;
             params.height = h;
             linearLayout.requestLayout();
-            listView.setPadding(0,0,0, (int) ((int) activity.h*1.5));
+            listView.setPadding(0, 0, 0, (int) (activity.h * 1.5));
 
             ServerCal serverCal = new ServerCal();
             serverCal.execute("http://citizen.turpymobileapps.com/getreports.php");
@@ -83,15 +87,12 @@ public class ViewReports extends Fragment {
     }
 
     public class ServerCal extends AsyncTask<String, String, String> {
-
         private ProgressDialog dialog = new ProgressDialog(getActivity());
-
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
             dialog.setMessage("Loading");
             dialog.show();
-
         }
 
         @Override
@@ -104,8 +105,6 @@ public class ViewReports extends Fragment {
                 HttpEntity resEntity = responseGET.getEntity();
                 String _response = EntityUtils.toString(resEntity); // content will be consume only once
                 return (_response != null) ? _response : null;
-
-
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
             } catch (ClientProtocolException e) {
@@ -113,7 +112,6 @@ public class ViewReports extends Fragment {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
             return null;
         }
 
@@ -135,8 +133,8 @@ public class ViewReports extends Fragment {
                 //String status = serverData.getString("message");
                 Log.d("Data", String.valueOf(data.length));
 
-                if(data.length > 0) {
-                    listView.setAdapter(new CustomAdapter((OfficialActivity) getActivity(), data));
+                if (data.length > 0 && latLng != null) {
+                    listView.setAdapter(new CustomAdapter((OfficialActivity) getActivity(), data, latLng));
                 }
                 /*if (status.equals("Report successfully Submitted")) {
                     showDialog(status, "success");
@@ -148,8 +146,5 @@ public class ViewReports extends Fragment {
                 e.printStackTrace();
             }
         }
-
     }
-
-
 }

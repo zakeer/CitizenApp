@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/StartApp.iml" filepath="$PROJECT_DIR$/StartApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/citizenApp.iml" filepath="$PROJECT_DIR$/citizenApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/mime4j-0.2/mime4j-0.2.iml" filepath="$PROJECT_DIR$/mime4j-0.2/mime4j-0.2.iml" />
     </modules>
   </component>

@@ -17,6 +17,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.model.LatLng;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
@@ -38,9 +40,10 @@ import java.io.UnsupportedEncodingException;
 public class TravelTracking extends Fragment {
 
     View view;
-
     ListView listView;
     LinearLayout linearLayout;
+    double latitude, longitude;
+    LatLng latLng;
 
     public TravelTracking() {
         // Required empty public constructor
@@ -62,11 +65,13 @@ public class TravelTracking extends Fragment {
             OfficialActivity activity = (OfficialActivity)getActivity();
             listView = (ListView) view.findViewById(R.id.viewTravelList);
 
+            latitude = activity.latitue;
+            longitude = activity.longitude;
+            latLng = new LatLng(latitude, longitude);
+
             Display display = activity.getWindowManager().getDefaultDisplay();
             int h = display.getHeight() - activity.h;
-
             linearLayout = (LinearLayout) view.findViewById(R.id.viewTravelLayout);
-
             ViewGroup.LayoutParams params = listView.getLayoutParams();
             params.width = ViewGroup.LayoutParams.MATCH_PARENT;
             params.height = h;
@@ -133,7 +138,7 @@ public class TravelTracking extends Fragment {
                 Log.d("Data", String.valueOf(data.length));
 
                 if(data.length > 0) {
-                    listView.setAdapter(new MyAdapter((OfficialActivity) getActivity(), data));
+                    listView.setAdapter(new MyAdapter((OfficialActivity) getActivity(), data, latLng));
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -147,15 +152,19 @@ public class TravelTracking extends Fragment {
         String[] result;
         Context context;
         ImageLoader imageLoader;
+        double longitude, latitude;
         private LayoutInflater inflater = null;
 
-        public MyAdapter(OfficialActivity officialActivity, String[] prgmNameList) {
+
+        public MyAdapter(OfficialActivity officialActivity, String[] prgmNameList, LatLng latLng) {
             // TODO Auto-generated constructor stub
             result=prgmNameList;
             context=officialActivity;
             inflater = ( LayoutInflater )context.
                     getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             imageLoader = new ImageLoader(context);
+            this.latitude = latLng.latitude;
+            this.longitude = latLng.longitude;
         }
 
         @Override

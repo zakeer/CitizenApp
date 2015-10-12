@@ -12,9 +12,10 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
-    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -22,8 +23,11 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+        <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAEUxvBdRgzfjVN5VidxLmZp40TqN_QIiI" />
+            android:value="AIzaSyDoLMnItaIdplA1ppQ_lAV2g3dtik4y_Fs" />
 
         <activity
             android:name=".MainActivity"
@@ -31,7 +35,7 @@
         </activity>
         <activity
             android:name=".Splash"
-            android:label="@string/app_name" >
+            android:label="Citizen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -40,19 +44,27 @@
         </activity>
         <activity
             android:name=".UserLogin"
-            android:label="@string/title_activity_user_login" >
+            android:label="Citizen">
         </activity>
         <activity
             android:name=".OfficialActivity"
-            android:label="@string/title_activity_official" >
+            android:label="Citizen">
         </activity>
         <activity
             android:name=".ResultActivity"
-            android:label="@string/title_activity_result" >
+            android:label="Citizen">
         </activity>
         <activity
             android:name=".VehicleReport"
-            android:label="@string/title_activity_vehicle_report"></activity>
+            android:label="Citizen" />
+        <activity
+            android:name=".DirectionActivity"
+            android:label="Citizen"></activity>
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
     </application>
 
 </manifest>
