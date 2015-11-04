@@ -1,5 +1,6 @@
 package me.zakeer.startapp;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -65,6 +67,19 @@ public class CustomAdapter extends BaseAdapter{
             holder.tvTitle =(TextView) rowView.findViewById(R.id.report_title);
             holder.tvLocation =(TextView) rowView.findViewById(R.id.report_location);
             holder.img= (ImageView) rowView.findViewById(R.id.report_image);
+            holder.cb = (CheckBox) rowView.findViewById(R.id.cb);
+            holder.cb.setTag(singleRowData.get("id"));
+            holder.cb.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
+
+            if (singleRowData.get("checked").equals("1")) {
+                holder.cb.setChecked(true);
+                holder.cb.setClickable(false);
+            }
 
             holder.tvTitle.setText((String) singleRowData.get("title"));
             holder.tvLocation.setText((String) singleRowData.get("address"));
@@ -80,7 +95,7 @@ public class CustomAdapter extends BaseAdapter{
                     resultIntent.putExtra("latitude", latitude);
                     resultIntent.putExtra("activity", "view_reports");
                     resultIntent.putExtra("server_data", singleRowData.toString());
-                    context.startActivity(resultIntent);
+                    ((Activity) context).startActivityForResult(resultIntent, 1);
                 }
             });
             return rowView;
@@ -96,5 +111,6 @@ public class CustomAdapter extends BaseAdapter{
         TextView tvTitle;
         TextView tvLocation;
         ImageView img;
+        CheckBox cb;
     }
 }

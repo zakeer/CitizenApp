@@ -58,7 +58,6 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 
@@ -66,13 +65,16 @@ public class UserLogin extends Activity {
 
     CallbackManager callbackManager;
     Menu menu;
-    Button loginBtn, registerBtn;
+    Button loginBtn, registerBtn, fbLoginBtn, loginWithPhonebtn;
+    LinearLayout userBtns, btLayout;
     LoginButton fbLoginButton;
     ImageView logo;
-    EditText userName, password;
-    TextView reg, tvLoginText;
+    EditText userName, password, rePassword;
+    TextView tvRef, tvLoginText;
     AlertDialog.Builder dialog;
+    int fb = 0;
     int loginState = 0;
+    int user = 1;
 
     public static boolean isNetworkAvailable(Context context) {
 
@@ -98,6 +100,7 @@ public class UserLogin extends Activity {
         setContentView(R.layout.layout_login_citizen);
 
         tvLoginText = (TextView) findViewById(R.id.tvLoginText);
+        tvRef = (TextView) findViewById(R.id.tvRef);
         logo = (ImageView) findViewById(R.id.login_logo);
 
         if(isNetworkAvailable(this)) {
@@ -108,12 +111,21 @@ public class UserLogin extends Activity {
 
         userName = (EditText) findViewById(R.id.etusername);
         password = (EditText) findViewById(R.id.etPassword);
+        rePassword = (EditText) findViewById(R.id.etRePassword);
+
+        userName.setText("7898");
+        password.setText("123");
 
         loginBtn = (Button) findViewById(R.id.btnLogin);
+        loginWithPhonebtn = (Button) findViewById(R.id.btnLoginWithPhone);
         registerBtn = (Button) findViewById(R.id.btnRegister);
+        fbLoginBtn = (Button) findViewById(R.id.btnFbLogin);
+
+        userBtns = (LinearLayout) findViewById(R.id.userButtons);
+        btLayout = (LinearLayout) findViewById(R.id.bottomLayout);
 
         fbLoginButton = (LoginButton) findViewById(R.id.login_button);
-        fbLoginButton.setReadPermissions(Arrays.asList("public_profile, email, user_birthday"));
+        //fbLoginButton.setReadPermissions(Arrays.asList("public_profile, email, user_birthday"));
 
         userName.addTextChangedListener(new TextWatcher() {
             @Override
@@ -124,9 +136,9 @@ public class UserLogin extends Activity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (s.length() == 10 && loginState == 0) {
-                    fbLoginButton.setVisibility(View.VISIBLE);
+                    //fbLoginButton.setVisibility(View.VISIBLE);
                 } else {
-                    fbLoginButton.setVisibility(View.INVISIBLE);
+                    //fbLoginButton.setVisibility(View.INVISIBLE);
                 }
             }
 
@@ -157,51 +169,27 @@ public class UserLogin extends Activity {
             }
         });
 
+        fbLoginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fbLayout();
+            }
+        });
+
+        loginWithPhonebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                changeForm(true);
+            }
+        });
+
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final String username = userName.getText().toString();
-                final String paswrd = password.getText().toString();
-                if (username.equals("") && paswrd.equals("")) {
-                    Toast.makeText(getApplicationContext(), "All Fields Required", Toast.LENGTH_SHORT).show();
-                } else {
-                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(UserLogin.this);
-                    alertDialog.setTitle("RE-ENTER PASSWORD");
-                    //alertDialog.setMessage("Enter Password");
-
-                    final EditText input = new EditText(UserLogin.this);
-                    LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                            LinearLayout.LayoutParams.MATCH_PARENT,
-                            LinearLayout.LayoutParams.WRAP_CONTENT);
-                    input.setLayoutParams(lp);
-                    alertDialog.setView(input);
-
-                    alertDialog.setPositiveButton("Register", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            String rePass = input.getText().toString();
-                            if (paswrd.equals(rePass)) {
-                                loginCheck login = new loginCheck();
-                                login.execute("http://citizen.turpymobileapps.com/user_reg.php", username, paswrd, "register");
-                                //Toast.makeText(getApplicationContext(),"Password Matched", Toast.LENGTH_SHORT).show();
-                            } else {
-                                Toast.makeText(getApplicationContext(),
-                                        "Password Does Not Matched!", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    });
-
-                    alertDialog.setNegativeButton("NO",
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                    dialog.cancel();
-                                }
-                            });
-
-                    alertDialog.show();
-                }
+                changeForm(false);
             }
         });
+
 
         LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
@@ -259,6 +247,18 @@ public class UserLogin extends Activity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
+            if (fb == 1) {
+                fbLayout();
+                if (user == 0) {
+                    changeForm(true);
+                }
+                return true;
+            }
+            if (user == 0) {
+                changeForm(true);
+                return true;
+            }
+
             if (loginState == 1) {
                 changeLayout();
                 return true;
@@ -301,6 +301,73 @@ public class UserLogin extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void changeForm(Boolean checkBtn) {
+        String username = userName.getText().toString();
+        String paswrd = password.getText().toString();
+        String rePaswrd = rePassword.getText().toString();
+
+        if (user == 1) {
+            user = 0;
+            rePassword.setVisibility(View.VISIBLE);
+            loginBtn.setVisibility(View.GONE);
+            logo.setVisibility(View.GONE);
+            fbLoginButton.setVisibility(View.GONE);
+
+            tvLoginText.setText("User Registration Form");
+            loginWithPhonebtn.setVisibility(View.VISIBLE);
+        } else {
+            if (user == 0 && !checkBtn) {
+                if (username.equals("") && paswrd.equals("") && paswrd.equals("")) {
+                    Toast.makeText(getApplicationContext(), "All Fields Required", Toast.LENGTH_SHORT).show();
+                } else {
+                    if (paswrd.equals(rePaswrd) == false) {
+                        Toast.makeText(getApplicationContext(), "Password Does not Match", Toast.LENGTH_SHORT).show();
+                    } else {
+                        loginCheck login = new loginCheck();
+                        login.execute("http://citizen.turpymobileapps.com/user_reg.php", username, paswrd, "register");
+                    }
+                }
+
+            } else {
+                user = 1;
+                rePassword.setVisibility(View.GONE);
+                loginBtn.setVisibility(View.VISIBLE);
+                logo.setVisibility(View.VISIBLE);
+
+                tvLoginText.setText("User Login");
+                loginWithPhonebtn.setVisibility(View.GONE);
+            }
+        }
+    }
+
+    public void fbLayout() {
+        String username = userName.getText().toString();
+        if (fb == 0) {
+            fb = 1;
+            fbLoginButton.setVisibility(View.VISIBLE);
+            password.setVisibility(View.GONE);
+            rePassword.setVisibility(View.GONE);
+            btLayout.setVisibility(View.GONE);
+            userBtns.setVisibility(View.GONE);
+            tvRef.setVisibility(View.GONE);
+            tvLoginText.setText("Login with Facebook");
+        } else {
+            fb = 0;
+            fbLoginButton.setVisibility(View.GONE);
+            logo.setVisibility(View.VISIBLE);
+            password.setVisibility(View.VISIBLE);
+            loginBtn.setVisibility(View.VISIBLE);
+            userBtns.setVisibility(View.VISIBLE);
+            btLayout.setVisibility(View.VISIBLE);
+            tvRef.setVisibility(View.VISIBLE);
+
+            tvLoginText.setText("User Login");
+            loginWithPhonebtn.setVisibility(View.GONE);
+
+
+        }
+    }
+
     public void changeLayout(){
         loginState = (loginState == 1) ? 0 : 1;
         if(loginState == 1) {
@@ -309,7 +376,11 @@ public class UserLogin extends Activity {
             logo.setImageDrawable(image);
             menu.getItem(0).setIcon(getResources().getDrawable(R.drawable.user_login));
             registerBtn.setVisibility(View.GONE);
-            fbLoginButton.setVisibility(View.INVISIBLE);
+            fbLoginButton.setVisibility(View.GONE);
+            fbLoginBtn.setVisibility(View.GONE);
+            tvRef.setVisibility(View.GONE);
+            userName.setText("police");
+            password.setText("password");
             userName.setInputType(InputType.TYPE_CLASS_TEXT);
             userName.setHint("Enter Username");
         } else {
@@ -318,8 +389,11 @@ public class UserLogin extends Activity {
             logo.setImageDrawable(image);
             menu.getItem(0).setIcon(getResources().getDrawable(R.drawable.official_login));
             registerBtn.setVisibility(View.VISIBLE);
+            userName.setText("7898");
+            password.setText("123");
             userName.setInputType(InputType.TYPE_CLASS_PHONE);
-            userName.setHint("Phone Number");
+            fbLoginBtn.setVisibility(View.VISIBLE);
+            tvRef.setVisibility(View.VISIBLE);
         }
     }
 

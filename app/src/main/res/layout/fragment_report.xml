@@ -71,17 +71,26 @@
 
         <ImageView
             android:id="@+id/btnGetPhoto"
-            android:layout_width="wrap_content"
+            android:layout_width="0sp"
             android:layout_height="50sp"
             android:layout_weight=".5"
             android:src="@drawable/photo_button"
             />
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:id="@+id/btnGetVideo"
+            android:layout_width="0sp"
             android:layout_height="50sp"
             android:layout_weight=".5"
             android:src="@drawable/video_button" />
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="0sp"
+            android:layout_height="50sp"
+            android:layout_weight=".5"
+            android:src="@drawable/video_button"
+            android:visibility="gone" />
     </LinearLayout>
 
     <Button
@@ -89,7 +98,7 @@
         android:layout_width="180dp"
         android:layout_height="38dp"
         android:layout_gravity="right"
-        android:background="#ff36beff"
+        android:background="@drawable/bg_report"
         android:text="Submit with Location"
         android:textColor="#fff"
         android:textSize="13dp" />

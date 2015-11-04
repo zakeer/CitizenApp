@@ -4,6 +4,7 @@ package me.zakeer.startapp;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -13,15 +14,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.mime.HttpMultipartMode;
+import org.apache.http.entity.mime.MultipartEntity;
+import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
@@ -42,8 +50,34 @@ public class HelpMeTracking extends Fragment {
     ListView listView;
     LinearLayout linearLayout;
 
+    Button btnSubmit;
+    String reports = "";
+
     public HelpMeTracking() {
         // Required empty public constructor
+    }
+
+    public void checkReports(String tag) {
+
+        if (reports.indexOf(tag) == -1) {
+            reports += "," + tag;
+        } else {
+            //Log.d("Index of Tag", String.valueOf(reports.indexOf(tag)));
+            reports = reports.replace("," + tag, "");
+        }
+
+        if (!reports.equals("") && btnSubmit != null) {
+            btnSubmit.setClickable(true);
+            Drawable image = getResources().getDrawable(R.drawable.bg_report);
+            btnSubmit.setBackground(image);
+        } else {
+            btnSubmit.setClickable(false);
+            Drawable image = getResources().getDrawable(R.drawable.disable_bg);
+            btnSubmit.setBackground(image);
+
+        }
+
+        //Log.d("Report String : ", reports);
     }
 
 
@@ -60,6 +94,18 @@ public class HelpMeTracking extends Fragment {
         view = getView();
         if(view != null) {
             OfficialActivity activity = (OfficialActivity)getActivity();
+            btnSubmit = (Button) view.findViewById(R.id.btnSubmit);
+            btnSubmit.setClickable(false);
+
+            btnSubmit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (!reports.equals("")) {
+                        ServerCal saveReports = new ServerCal();
+                        saveReports.execute("POST", "http://citizen.turpymobileapps.com/sos.php");
+                    }
+                }
+            });
             listView = (ListView) view.findViewById(R.id.viewHelpList);
 
             Display display = activity.getWindowManager().getDefaultDisplay();
@@ -68,19 +114,20 @@ public class HelpMeTracking extends Fragment {
             linearLayout = (LinearLayout) view.findViewById(R.id.viewHelpLayout);
 
             ViewGroup.LayoutParams params = listView.getLayoutParams();
-            params.width = ViewGroup.LayoutParams.MATCH_PARENT;
-            params.height = h;
+            //params.width = ViewGroup.LayoutParams.MATCH_PARENT;
+            //params.height = h;
             linearLayout.requestLayout();
             listView.setPadding(0, 0, 0, (int) (activity.h * 1.5));
 
             ServerCal serverCal = new ServerCal();
-            serverCal.execute("http://citizen.turpymobileapps.com/getsos.php");
+            serverCal.execute("GET", "http://citizen.turpymobileapps.com/getsos.php");
         }
 
     }
 
     public class ServerCal extends AsyncTask<String, String, String> {
 
+        String request = "GET";
         private ProgressDialog dialog = new ProgressDialog(getActivity());
 
         @Override
@@ -94,10 +141,25 @@ public class HelpMeTracking extends Fragment {
         @Override
         protected String doInBackground(String... params) {
             HttpClient client = new DefaultHttpClient();
-            HttpGet getRequest = new HttpGet(params[0]);
+            HttpGet getRequest = new HttpGet(params[1]);
+            HttpPost postRequest = new HttpPost(params[1]);
+            HttpResponse responseGET = null;
+            MultipartEntity multipartEntity = new MultipartEntity(HttpMultipartMode.BROWSER_COMPATIBLE);
 
             try {
-                HttpResponse responseGET = client.execute(getRequest);
+                if (params[0].equals("GET")) {
+                    responseGET = client.execute(getRequest);
+                }
+
+                if (params[0].equals("POST")) {
+                    request = "POST";
+                    multipartEntity.addPart("user", new StringBody("7898"));
+                    multipartEntity.addPart("report_id", new StringBody(reports));
+                    multipartEntity.addPart("submit", new StringBody("1"));
+
+                    postRequest.setEntity(multipartEntity);
+                    responseGET = client.execute(postRequest);
+                }
                 HttpEntity resEntity = responseGET.getEntity();
                 String _response = EntityUtils.toString(resEntity); // content will be consume only once
                 return (_response != null) ? _response : null;
@@ -119,24 +181,40 @@ public class HelpMeTracking extends Fragment {
             super.onPostExecute(s);
             Log.d("Execute String", s);
             dialog.dismiss();
-            try {
-                JSONArray serverData = new JSONArray(s);
-                int dataCount = serverData.length();
+            if (request.equals("POST")) {
+                try {
+                    JSONObject serverData = new JSONObject(s);
+                    if (serverData.get("message").equals("ok")) {
+                        int saveItems = (int) serverData.get("total");
+                        Toast.makeText(getActivity(), "" + saveItems + " Tracks are Saved", Toast.LENGTH_SHORT).show();
 
-                Log.d("Server Data", serverData.getString(0));
-                String[] data = new String[dataCount];
+                    } else {
+                        Toast.makeText(getActivity(), "Fail to Save Tracks ", Toast.LENGTH_SHORT).show();
+                    }
 
-                for(int i=0; i < serverData.length(); i++) {
-                    data[i] = serverData.getString(i);
+                } catch (JSONException e) {
+                    e.printStackTrace();
                 }
-                //String status = serverData.getString("message");
-                Log.d("Data", String.valueOf(data.length));
+            } else {
+                try {
+                    JSONArray serverData = new JSONArray(s);
+                    int dataCount = serverData.length();
 
-                if(data.length > 0) {
-                    listView.setAdapter(new MyAdapter((OfficialActivity) getActivity(), data));
+                    Log.d("Server Data", serverData.getString(0));
+                    String[] data = new String[dataCount];
+
+                    for (int i = 0; i < serverData.length(); i++) {
+                        data[i] = serverData.getString(i);
+                    }
+                    //String status = serverData.getString("message");
+                    Log.d("Data", String.valueOf(data.length));
+
+                    if (data.length > 0) {
+                        listView.setAdapter(new MyAdapter((OfficialActivity) getActivity(), data));
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
                 }
-            } catch (JSONException e) {
-                e.printStackTrace();
             }
         }
 
@@ -189,6 +267,23 @@ public class HelpMeTracking extends Fragment {
                 holder.tvPhone.setText((String) singleRowData.get("phone"));
                 holder.tvPlace.setText(((String) singleRowData.get("place")).replace("\n", " "));
 
+                holder.cb = (CheckBox) rowView.findViewById(R.id.cb);
+                holder.cb.setTag(singleRowData.get("id"));
+
+                holder.cb.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        String tag = (String) v.getTag();
+                        //Log.d("Click Tag is : " ,tag);
+                        checkReports(tag);
+                    }
+                });
+
+                if (singleRowData.get("checked").equals("1")) {
+                    holder.cb.setChecked(true);
+                    holder.cb.setClickable(false);
+                }
+
 
                 //imageLoader.DisplayImage(URL + singleRowData.get("image"), holder.img);
                 //holder.img.setImageResource();
@@ -199,7 +294,7 @@ public class HelpMeTracking extends Fragment {
                         Intent resultIntent = new Intent(context, ResultActivity.class);
                         resultIntent.putExtra("activity", "view_help");
                         resultIntent.putExtra("server_data", singleRowData.toString());
-                        startActivity(resultIntent);
+                        startActivityForResult(resultIntent, 1);
                     }
                 });
                 return rowView;
@@ -214,6 +309,7 @@ public class HelpMeTracking extends Fragment {
         public class Holder {
             TextView tvPhone;
             TextView tvPlace;
+            CheckBox cb;
         }
 
     }

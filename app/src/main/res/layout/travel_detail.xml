@@ -1,24 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/report_title"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15sp"
+        android:weightSum="10">
+
+        <TextView
+            android:id="@+id/report_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="15sp"
+            android:text="Travel Tracking"
+            android:textAllCaps="true"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="7"
+            android:background="@drawable/input_bg"
+            android:padding="2sp">
+
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnGetDirection"
+            android:layout_width="wrap_content"
+            android:layout_height="35sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/bg_report"
+            android:paddingLeft="20sp"
+            android:paddingRight="20sp"
+            android:text="Get Directions"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="15sp"
-        android:text="Travel Tracking"
-        android:textAllCaps="true"
-        android:textSize="26sp"
-        android:textStyle="bold" />
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
 
-    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/map"
-        android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="match_parent"
-        android:layout_height="350sp" />
+        <ImageButton
+            android:id="@+id/reportViolation"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/view_reports"
+            android:onClick="getLayout"
+            android:tag="view_reports" />
 
-</LinearLayout>
+        <ImageButton
+            android:id="@+id/safeTravel"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/view_location_white"
+            android:onClick="getLayout"
+            android:tag="view_location" />
+
+        <ImageButton
+            android:id="@+id/emergency"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/vehicle_details"
+            android:onClick="getLayout"
+            android:tag="vehicle_details" />
+
+        <ImageButton
+            android:id="@+id/helpMe"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/device_tracking"
+            android:onClick="getLayout"
+            android:tag="device_tracking" />
+    </LinearLayout>
+</RelativeLayout>

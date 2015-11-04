@@ -1,7 +1,7 @@
 package me.zakeer.startapp;
 
 import android.app.AlertDialog;
-import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.location.Location;
@@ -13,9 +13,7 @@ import android.view.Display;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -32,15 +30,33 @@ public class OfficialActivity extends FragmentActivity implements
     public double latitue, longitude;
     public String address;
     public int h;
-    Menu menu;
+    Bundle resultBunlde;
     ViewPager viewPager;
     ViewPager.OnPageChangeListener onPageChangeListener;
-
     GoogleApiClient googleApiClient;
     Location lastLocation;
-
-
     AlertDialog.Builder alertDialog;
+    private Menu menu;
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (data != null) {
+            Bundle result = data.getExtras();
+            int p = result.getInt("PAGE_POSITON");
+            viewPager.setCurrentItem(p, true);
+            //Toast.makeText(getApplicationContext(), "Got it : " + p, Toast.LENGTH_LONG).show();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        resultBunlde = getIntent().getExtras();
+        if (resultBunlde != null) {
+            int page = resultBunlde.getInt("position");
+            viewPager.setCurrentItem(page, true);
+        }
+    }
 
 //    protected synchronized void buildGoogleApiClient() {
 //        googleApiClient = new GoogleApiClient.Builder(getApplicationContext())
@@ -107,14 +123,6 @@ public class OfficialActivity extends FragmentActivity implements
         } else {
             return super.onKeyDown(keyCode, event);
         }
-    }
-
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        InputMethodManager imm = (InputMethodManager) getSystemService(Context.
-                INPUT_METHOD_SERVICE);
-        imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
-        return true;
     }
 
 
@@ -185,8 +193,8 @@ public class OfficialActivity extends FragmentActivity implements
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         this.menu = menu;
+        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         menu.getItem(1).setVisible(false);
         return true;
@@ -199,12 +207,9 @@ public class OfficialActivity extends FragmentActivity implements
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+        //noinspection SimplifiableIfStatement
         if (id == R.id.official_logout) {
             finish();
-        }
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
             return true;
         }
 
@@ -251,5 +256,4 @@ public class OfficialActivity extends FragmentActivity implements
     }
 
 }
-
 

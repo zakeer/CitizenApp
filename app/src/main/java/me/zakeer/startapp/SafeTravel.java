@@ -1,17 +1,25 @@
 package me.zakeer.startapp;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.InflateException;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -19,6 +27,22 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.mime.HttpMultipartMode;
+import org.apache.http.entity.mime.MultipartEntity;
+import org.apache.http.entity.mime.content.StringBody;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 
 
 /**
@@ -33,6 +57,8 @@ public class SafeTravel extends SupportMapFragment implements OnMapReadyCallback
     SupportMapFragment supportMapFragment;
     Double latitue, longitude;
     String address = "";
+    Button btnSubmit;
+    EditText editText;
     private FragmentActivity myContext;
 
     public SafeTravel() {
@@ -81,12 +107,14 @@ public class SafeTravel extends SupportMapFragment implements OnMapReadyCallback
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         if (Build.VERSION.SDK_INT < 21) {
-            supportMapFragment = (SupportMapFragment) getActivity().getSupportFragmentManager().findFragmentById(R.id.map);
+            //supportMapFragment = (SupportMapFragment) getActivity().getSupportFragmentManager().findFragmentById(R.id.map);
+            supportMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
         } else {
             supportMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
         }
         googleMap = ((SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map)).getMap();
         supportMapFragment.getMapAsync(this);
+
     }
 
     @Override
@@ -105,6 +133,22 @@ public class SafeTravel extends SupportMapFragment implements OnMapReadyCallback
             latitue = activity.latitue;
             longitude = activity.longitude;
             address = activity.address.trim();
+
+            editText = (EditText) view.findViewById(R.id.etText);
+            btnSubmit = (Button) view.findViewById(R.id.saveButton);
+
+            btnSubmit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String title = editText.getText().toString();
+                    if (title.equals("")) {
+                        Toast.makeText(getActivity(), "All Fields Required", Toast.LENGTH_SHORT).show();
+                    } else {
+                        ServerCal serverCal = new ServerCal();
+                        serverCal.execute("http://citizen.turpymobileapps.com/savetrack.php", title);
+                    }
+                }
+            });
 
 
         }
@@ -140,6 +184,102 @@ public class SafeTravel extends SupportMapFragment implements OnMapReadyCallback
         googleMap.addMarker(new MarkerOptions().position(latLng).title(address));
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         googleMap.animateCamera(CameraUpdateFactory.zoomTo(12));
+    }
+
+    public void showDialog(String msg, String type) {
+        AlertDialog.Builder dialog;
+        String title = msg;
+        dialog = new AlertDialog.Builder(getActivity());
+        dialog.setTitle(title);
+
+        if (type.equals("fail")) {
+            dialog.setIcon(R.drawable.alert);
+            dialog.setCancelable(false);
+            dialog.setNegativeButton("Retry", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                }
+            });
+        } else {
+            dialog.setIcon(R.drawable.success);
+            dialog.setCancelable(true);
+            dialog.setPositiveButton("Success", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+        }
+
+        dialog.show();
+    }
+
+    public class ServerCal extends AsyncTask<String, String, String> {
+
+        private ProgressDialog dialog = new ProgressDialog(getActivity());
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            dialog.setMessage("Loading");
+            dialog.show();
+
+        }
+
+        @Override
+        protected String doInBackground(String... params) {
+            HttpClient client = new DefaultHttpClient();
+            HttpPost postRequest = new HttpPost(params[0]);
+            HttpResponse response = null;
+
+            MultipartEntity multipartEntity = new MultipartEntity(HttpMultipartMode.BROWSER_COMPATIBLE);
+            try {
+                multipartEntity.addPart("vehicle", new StringBody(params[1]));
+                multipartEntity.addPart("phone", new StringBody("9533222116"));
+                multipartEntity.addPart("start_lat", new StringBody(String.valueOf(latitue)));
+                multipartEntity.addPart("start_long", new StringBody(String.valueOf(longitude)));
+                multipartEntity.addPart("place", new StringBody(String.valueOf(address)));
+                //multipartEntity.addPart("vehicle", new StringBody(String.valueOf("AP07 2478")));
+                Log.d("Multipar", "" + multipartEntity);
+                postRequest.setEntity(multipartEntity);
+                HttpResponse responsePOST = client.execute(postRequest);
+                HttpEntity resEntity = responsePOST.getEntity();
+                String _response = EntityUtils.toString(resEntity); // content will be consume only once
+                return (_response != null) ? _response : null;
+
+
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            } catch (ClientProtocolException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            Log.d("Execute String", s);
+            dialog.dismiss();
+            try {
+                JSONObject serverData = new JSONObject(s);
+                String status = serverData.getString("message");
+                Log.d("Server Data", s);
+                if (status.equals("successfully Device Track")) {
+                    showDialog(status, "success");
+                } else {
+                    showDialog(status, "fail");
+                    System.out.print("login failled");
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 
 

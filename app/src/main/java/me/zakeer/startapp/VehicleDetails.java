@@ -1,13 +1,16 @@
 package me.zakeer.startapp;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.Display;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
@@ -34,6 +37,7 @@ public class VehicleDetails extends Fragment {
         return inflater.inflate(R.layout.fragment_vehicle_details, container, false);
     }
 
+
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -47,8 +51,11 @@ public class VehicleDetails extends Fragment {
                 @Override
                 public void onClick(View v) {
                     if (input.getText() != null) {
-                        Intent intent = new Intent(getActivity(), VehicleReport.class);
-                        startActivity(intent);
+                        Intent resultIntent = new Intent(getActivity(), ResultActivity.class);
+                        resultIntent.putExtra("activity", "view_vehicle");
+                        startActivityForResult(resultIntent, 1);
+                        /*Intent intent = new Intent(getActivity(), VehicleReport.class);
+                        startActivity(intent);*/
                     } else {
                         Toast.makeText(getActivity(), "All Fields Required", Toast.LENGTH_SHORT).show();
                     }
@@ -68,6 +75,15 @@ public class VehicleDetails extends Fragment {
 
             /*ServerCal serverCal = new ServerCal();
             serverCal.execute("http://citizen.turpymobileapps.com/gettracks.php");*/
+
+            view.setOnTouchListener(new View.OnTouchListener() {
+                public boolean onTouch(View v, MotionEvent event) {
+                    InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.
+                            INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+                    return true;
+                }
+            });
         }
 
     }

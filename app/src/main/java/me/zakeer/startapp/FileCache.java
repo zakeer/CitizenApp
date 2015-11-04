@@ -1,7 +1,8 @@
 package me.zakeer.startapp;
 
-import java.io.File;
 import android.content.Context;
+
+import java.io.File;
 
 public class FileCache {
     
@@ -10,7 +11,7 @@ public class FileCache {
     public FileCache(Context context){
         //Find the dir to save cached images
         if (android.os.Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED))
-            cacheDir=new File(android.os.Environment.getExternalStorageDirectory(),"LazyList");
+            cacheDir = new File(android.os.Environment.getExternalStorageDirectory(), "CitizenCache");
         else
             cacheDir=context.getCacheDir();
         if(!cacheDir.exists())

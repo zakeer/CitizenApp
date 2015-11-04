@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.ThumbnailUtils;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -46,14 +47,14 @@ import java.io.UnsupportedEncodingException;
 
 public class Report extends Fragment implements View.OnClickListener {
 
-    static final int REQUEST_IMAGE_CAPTURE = 1;
-    File imageFile;
+    static final int REQUEST_IMAGE_CAPTURE = 1, REQUEST_VIDEO_CAPTURE = 3;
+    File imageFile, videoFile;
     Double latitue, longitude;
     String address = "";
     EditText etTitle, etDescription;
     Button btnSubmit;
 
-    ImageView btnGetPhoto;
+    ImageView btnGetPhoto, btnGetVideo;
     View view;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -80,6 +81,9 @@ public class Report extends Fragment implements View.OnClickListener {
 
             btnGetPhoto = (ImageView) view.findViewById(R.id.btnGetPhoto);
             btnGetPhoto.setOnClickListener(this);
+
+            btnGetVideo = (ImageView) view.findViewById(R.id.btnGetVideo);
+            btnGetVideo.setOnClickListener(this);
 
             btnSubmit = (Button) view.findViewById(R.id.btnSubmit);
             btnSubmit.setOnClickListener(this);
@@ -116,14 +120,53 @@ public class Report extends Fragment implements View.OnClickListener {
             ad.show();
         }
 
+        if (v.getId() == R.id.btnGetVideo) {
+            System.out.print(v.toString());
+            final String[] items = {"Record Video", "Choose from Gallery"};
+            AlertDialog.Builder ad = new AlertDialog.Builder(getActivity());
+            ad.setTitle("Get Image From");
+            ad.setItems(items, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    if (items[which].equals("Record Video")) {
+                        Intent takeVideo = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
+                        String fName = "VideoFileName.mp4";
+                        File f = new File(fName);
+                        takeVideo.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(f));
+                        startActivityForResult(takeVideo, REQUEST_VIDEO_CAPTURE);
+                    } else if (items[which].equals("Choose from Gallery")) {
+                        Intent takePicture = new Intent(Intent.ACTION_PICK, MediaStore.Video.Media.EXTERNAL_CONTENT_URI);
+
+                        startActivityForResult(takePicture, 4);
+                    }
+                }
+            });
+            ad.show();
+        }
+
         if(v.getId() == R.id.btnSubmit) {
             String title = etTitle.getText().toString();
             String description = etDescription.getText().toString();
-            if(title.equals("") && description.equals("") && imageFile == null) {
-                Toast.makeText(getActivity(), "All Fields Required", Toast.LENGTH_SHORT).show();
+            if (title.equals("") || description.equals("") || (imageFile == null && videoFile == null)) {
+                if (title.equals("")) {
+                    Toast.makeText(getActivity(), "Title Must be Required", Toast.LENGTH_SHORT).show();
+                } else if (description.equals("")) {
+                    Toast.makeText(getActivity(), "Password Must be Required", Toast.LENGTH_SHORT).show();
+                } else if (imageFile == null && videoFile == null) {
+                    Toast.makeText(getActivity(), "Attach Image or Video File", Toast.LENGTH_SHORT).show();
+                }
+
             } else {
                 ServerCal serverCal = new ServerCal();
-                serverCal.execute("http://citizen.turpymobileapps.com/report.php", title, description, address);
+
+                if (imageFile != null && videoFile != null) {
+                    serverCal.execute("http://citizen.turpymobileapps.com/report.php", title, description, address, "image/video");
+                } else if (imageFile != null) {
+                    serverCal.execute("http://citizen.turpymobileapps.com/report.php", title, description, address, "image");
+                } else if (videoFile != null) {
+                    serverCal.execute("http://citizen.turpymobileapps.com/report.php", title, description, address, "video");
+                }
+                //serverCal.execute("http://citizen.turpymobileapps.com/report.php", title, description, address);
             }
         }
     }
@@ -137,11 +180,30 @@ public class Report extends Fragment implements View.OnClickListener {
             Uri tempUri = getImageUri(getActivity(), imageBitmap);
             setImage(getRealPathFromURI(tempUri));
         }
+
+        if (requestCode == REQUEST_VIDEO_CAPTURE) {
+            String filePath = getVideoRealPathFromURI(data.getData());
+            Bitmap tempUri = ThumbnailUtils.createVideoThumbnail(filePath, MediaStore.Video.Thumbnails.MICRO_KIND);
+            setVideoThumbnail(tempUri);
+            //Log.i("BitMap : ", String.valueOf(tempUri));
+        }
+
+        if (requestCode == 4) {
+            Uri vid = data.getData();
+            String videoPath = getVideoRealPathFromURI(vid);
+            Bitmap bitmap = ThumbnailUtils.createVideoThumbnail(videoPath, MediaStore.Video.Thumbnails.MICRO_KIND);
+            setVideoThumbnail(bitmap);
+            // Log.i("Video id", String.valueOf(videoFile));
+
+
+        }
+
         if(requestCode == 2) {
             Uri selectedImageUri = data.getData();
             setImage(getRealPathFromURI(selectedImageUri));
         }
     }
+
 
     public Uri getImageUri(Context inContext, Bitmap inImage) {
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
@@ -155,6 +217,50 @@ public class Report extends Fragment implements View.OnClickListener {
         cursor.moveToFirst();
         int idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
         return cursor.getString(idx);
+    }
+
+    public String getVideoRealPathFromURI(Uri uri) {
+        /*Log.i("Video id", String.valueOf(uri));
+        String[] STAR = { "*" };
+        Cursor videoCursor = getActivity().managedQuery(MediaStore.Video.Media.EXTERNAL_CONTENT_URI, STAR, null, null, null);
+        if (videoCursor != null)
+        {
+            if (videoCursor.moveToFirst())
+            {
+                do
+                {
+                    String path = videoCursor.getString(videoCursor.getColumnIndex(MediaStore.Images.Media.DATA));
+                    //controller.videoWrapper.add(new MediaWrapper(new File(path).getName(), path, "Video",false,color_string));
+                    Log.i("Video Path",path);
+                }while (videoCursor.moveToNext());
+
+            }
+//            videoCursor.close();
+        }
+        return null;*/
+
+        Cursor cursor = null;
+        try {
+            String[] proj = {MediaStore.Images.Media.DATA};
+            cursor = getActivity().getContentResolver().query(uri, proj, null, null, null);
+            int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+            cursor.moveToFirst();
+            String path = cursor.getString(column_index);
+            if (path != null) {
+                videoFile = new File(path).getAbsoluteFile();
+            }
+            Log.i("Video Path", String.valueOf(videoFile));
+            return path;
+        } finally {
+            if (cursor != null) {
+                cursor.close();
+            }
+        }
+    }
+
+    public void setVideoThumbnail(Bitmap thumbnail) {
+        btnGetVideo = (ImageView) view.findViewById(R.id.btnGetVideo);
+        btnGetVideo.setImageBitmap(thumbnail);
     }
 
     public void setImage(String image) {
@@ -198,6 +304,7 @@ public class Report extends Fragment implements View.OnClickListener {
                     etDescription.setText("");
                     btnGetPhoto.setImageDrawable(getResources().getDrawable(R.drawable.photo_button));
                     imageFile = null;
+                    videoFile = null;
                     dialog.dismiss();
                 }
             });
@@ -231,7 +338,15 @@ public class Report extends Fragment implements View.OnClickListener {
                 multipartEntity.addPart("lat", new StringBody(String.valueOf(latitue)));
                 multipartEntity.addPart("long", new StringBody(String.valueOf(longitude)));
                 multipartEntity.addPart("addr", new StringBody(String.valueOf(params[3])));
-                multipartEntity.addPart("image", new FileBody(imageFile));
+                if (params[4].equals("image/video")) {
+                    multipartEntity.addPart("image", new FileBody(imageFile));
+                    multipartEntity.addPart("video", new FileBody(videoFile));
+                } else if (params[4].equals("image")) {
+                    multipartEntity.addPart("image", new FileBody(imageFile));
+                } else if (params[4].equals("video")) {
+                    multipartEntity.addPart("video", new FileBody(videoFile));
+                }
+
                 Log.d("Multipar", "" + multipartEntity);
                 postRequest.setEntity(multipartEntity);
                 HttpResponse responsePOST = client.execute(postRequest);
