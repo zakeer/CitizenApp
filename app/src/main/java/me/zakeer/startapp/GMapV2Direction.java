@@ -42,7 +42,7 @@ public class GMapV2Direction {
         String url = "http://maps.googleapis.com/maps/api/directions/xml?"
                 + "origin=" + start.latitude + "," + start.longitude
                 + "&destination=" + end.latitude + "," + end.longitude
-                + "&sensor=false&units=metric&mode=" + mode;
+                + "&sensor=true&units=metric&mode=" + mode;
 
         GetDirectionData getDirectionData = new GetDirectionData();
         getDirectionData.execute(url);
@@ -235,7 +235,7 @@ public class GMapV2Direction {
             if(delegate!=null) {
                 if(s.equals("Success")) {
                     Log.d("Status" , s);
-                    delegate.postResult(document);
+                    delegate.postResult(document, "blue");
                 }
             }
             else {

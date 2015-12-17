@@ -53,8 +53,14 @@ public class TravelTracking extends Fragment {
     double latitude, longitude;
     LatLng latLng;
 
-    Button btnSubmit;
+    int reportLoads = 0;
+    String[] reportsData = new String[reportLoads + 10];
+
+    Button btnSubmit, btnLoadMore;
+
     String reports = "";
+
+
 
     public TravelTracking() {
         // Required empty public constructor
@@ -87,6 +93,9 @@ public class TravelTracking extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        reportLoads = 0;
+        reportsData = new String[reportLoads + 10];
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_travel_tracking, container, false);
     }
@@ -95,6 +104,8 @@ public class TravelTracking extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         view = getView();
+        reportLoads = 0;
+        reportsData = new String[reportLoads + 10];
         if(view != null) {
             OfficialActivity activity = (OfficialActivity)getActivity();
             btnSubmit = (Button) view.findViewById(R.id.btnSubmit);
@@ -109,6 +120,8 @@ public class TravelTracking extends Fragment {
                     }
                 }
             });
+
+
 
             listView = (ListView) view.findViewById(R.id.viewTravelList);
 
@@ -125,11 +138,20 @@ public class TravelTracking extends Fragment {
             linearLayout.requestLayout();
             listView.setPadding(0, 0, 0, (int) (activity.h * 1.5));
 
+            /*btnLoadMore = (Button) view.findViewById(R.id.btnLoadMore);
+            btnLoadMore.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    reportLoads += 10;
+                }
+            });*/
+
             ServerCal serverCal = new ServerCal();
             serverCal.execute("GET", "http://citizen.turpymobileapps.com/gettracks.php");
         }
 
     }
+
 
     public class ServerCal extends AsyncTask<String, String, String> {
 
@@ -311,6 +333,7 @@ public class TravelTracking extends Fragment {
                         Intent resultIntent = new Intent(context, ResultActivity.class);
                         resultIntent.putExtra("activity", "view_travel");
                         resultIntent.putExtra("server_data", singleRowData.toString());
+                        resultIntent.putExtra("currentLocation", latLng);
                         startActivityForResult(resultIntent, 1);
                     }
                 });

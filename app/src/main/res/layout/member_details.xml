@@ -1,6 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="100">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15sp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:background="@drawable/input_bg"
+            android:padding="10sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:src="@drawable/ic_launcher"
+                android:layout_weight="25"
+                android:layout_width="0sp"
+                android:layout_height="100sp" />
+            <RelativeLayout
+                android:paddingLeft="10sp"
+                android:layout_weight="80"
+                android:layout_width="0sp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/title"
+                    android:text="Title Name"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginTop="5sp"
+                    android:layout_below="@id/title"
+                    android:id="@+id/designation"
+                    android:text="Title designation"
+                    android:textSize="12sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_above="@id/callBtns"
+                    android:layout_marginBottom="5sp"
+                    android:background="@color/background_floating_material_dark"
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp" />
+
+                <LinearLayout
+                    android:id="@+id/callBtns"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="100">
+                    <Button
+                        android:textSize="10sp"
+                        android:text="+9194949499494"
+                        android:layout_weight="50"
+                        android:layout_width="0sp"
+                        android:layout_height="30sp" />
+                    <Button
+                        android:textSize="10sp"
+                        android:text="+9194949499494"
+                        android:layout_weight="50"
+                        android:layout_width="0sp"
+                        android:layout_height="30sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_centerVertical="true"
+                android:background="@color/background_floating_material_dark"
+                android:layout_width="match_parent"
+                android:layout_height="1sp" />
+            <TextView
+                android:text="SOCIAL NETWORK"
+                android:layout_centerHorizontal="true"
+                android:paddingRight="15sp"
+                android:paddingLeft="15sp"
+                android:background="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5sp"
+            android:background="#CC000000"
+            android:padding="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:background="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:paddingTop="10sp"
+                    android:paddingBottom="10sp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="90"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:src="@drawable/ic_launcher"
+                        android:layout_weight="30"
+                        android:layout_width="0sp"
+                        android:layout_height="30sp" />
+                    <ImageView
+                        android:src="@drawable/ic_launcher"
+                        android:layout_weight="30"
+                        android:layout_width="0sp"
+                        android:layout_height="30sp" />
+                    <ImageView
+                        android:src="@drawable/ic_launcher"
+                        android:layout_weight="30"
+                        android:layout_width="0sp"
+                        android:layout_height="30sp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+>
+                    <TextView
+                        android:layout_alignParentTop="true"
+                        android:background="@color/background_floating_material_dark"
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp" />
+                    <TextView
+                        android:text="SOCIAL NETWORK"
+                        android:textSize="10sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="2sp"
+                        android:padding="5sp"
+                        android:background="#fff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10sp"
+            android:paddingBottom="10sp">
+            <TextView
+                android:layout_centerVertical="true"
+                android:background="@color/background_floating_material_dark"
+                android:layout_width="match_parent"
+                android:layout_height="1sp" />
+            <TextView
+                android:text="BIOGRAPHY"
+                android:layout_centerHorizontal="true"
+                android:paddingRight="15sp"
+                android:paddingLeft="15sp"
+                android:background="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <TextView
+            android:text="@string/lorem"
+            android:padding="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
 
 </LinearLayout>

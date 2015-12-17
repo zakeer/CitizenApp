@@ -25,6 +25,7 @@ public class VehicleDetails extends Fragment {
     View view;
     RelativeLayout relativeLayout;
 
+
     public VehicleDetails() {
         // Required empty public constructor
     }

@@ -207,7 +207,7 @@ public class Report extends Fragment implements View.OnClickListener {
 
     public Uri getImageUri(Context inContext, Bitmap inImage) {
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-        inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+        //inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
         String path = MediaStore.Images.Media.insertImage(inContext.getContentResolver(), inImage, "Title", null);
         return Uri.parse(path);
     }
@@ -220,24 +220,6 @@ public class Report extends Fragment implements View.OnClickListener {
     }
 
     public String getVideoRealPathFromURI(Uri uri) {
-        /*Log.i("Video id", String.valueOf(uri));
-        String[] STAR = { "*" };
-        Cursor videoCursor = getActivity().managedQuery(MediaStore.Video.Media.EXTERNAL_CONTENT_URI, STAR, null, null, null);
-        if (videoCursor != null)
-        {
-            if (videoCursor.moveToFirst())
-            {
-                do
-                {
-                    String path = videoCursor.getString(videoCursor.getColumnIndex(MediaStore.Images.Media.DATA));
-                    //controller.videoWrapper.add(new MediaWrapper(new File(path).getName(), path, "Video",false,color_string));
-                    Log.i("Video Path",path);
-                }while (videoCursor.moveToNext());
-
-            }
-//            videoCursor.close();
-        }
-        return null;*/
 
         Cursor cursor = null;
         try {

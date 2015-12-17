@@ -52,7 +52,10 @@ public class ViewReports extends Fragment {
     LatLng latLng;
     String reports = "";
 
-    Button btnSubmit;
+    int reportLoads = 0;
+    String[] reportsData = new String[reportLoads + 10];
+
+    Button btnSubmit, btnLoadMore;
 
     public ViewReports() {
         // Required empty public constructor
@@ -90,6 +93,8 @@ public class ViewReports extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        reportLoads = 0;
+        reportsData = new String[reportLoads + 10];
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_view_reports, container, false);
     }
@@ -105,6 +110,8 @@ public class ViewReports extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         view = getView();
+        reportLoads = 0;
+        reportsData = new String[reportLoads + 10];
         if(view != null) {
             OfficialActivity activity = (OfficialActivity)getActivity();
             btnSubmit = (Button) view.findViewById(R.id.btnSubmit);
@@ -115,8 +122,18 @@ public class ViewReports extends Fragment {
                 public void onClick(View v) {
                     if (!reports.equals("")) {
                         ServerCal saveReports = new ServerCal();
-                        saveReports.execute("POST", "http://citizen.turpymobileapps.com/report.php");
+                        saveReports.execute("POST", "http://citizen.turpymobileapps.com/report.php?");
                     }
+                }
+            });
+
+            btnLoadMore = (Button) view.findViewById(R.id.btnLoadMore);
+            btnLoadMore.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    reportLoads += 10;
+                    ServerCal loadReports = new ServerCal();
+                    loadReports .execute("GET", "http://citizen.turpymobileapps.com/getreports.php?start=" + reportLoads);
                 }
             });
 
@@ -136,8 +153,17 @@ public class ViewReports extends Fragment {
             listView.setPadding(0, 0, 0, (int) (activity.h * 1.5));
 
             ServerCal serverCal = new ServerCal();
-            serverCal.execute("GET", "http://citizen.turpymobileapps.com/getreports.php");
+            serverCal.execute("GET", "http://citizen.turpymobileapps.com/getreports.php?start=" + reportLoads);
         }
+    }
+
+
+
+    @Override
+    public void onPause() {
+        reportLoads = 0;
+        reportsData = new String[reportLoads + 10];
+        super.onPause();
     }
 
     public class ServerCal extends AsyncTask<String, String, String> {
@@ -158,6 +184,7 @@ public class ViewReports extends Fragment {
             HttpPost postRequest = new HttpPost(params[1]);
             HttpResponse responseGET = null;
             MultipartEntity multipartEntity = new MultipartEntity(HttpMultipartMode.BROWSER_COMPATIBLE);
+            Log.d("URl:", params[1]);
 
 
             try {
@@ -212,18 +239,38 @@ public class ViewReports extends Fragment {
                 try {
                     JSONArray serverData = new JSONArray(s);
                     int dataCount = serverData.length();
+                    Log.d("Server Data", dataCount+"");
 
-                    //Log.d("Server Data", serverData.getString(0));
-                    String[] data = new String[dataCount];
-
-                    for (int i = 0; i < serverData.length(); i++) {
-                        data[i] = serverData.getString(i);
+                    String[] oldData = new String[reportLoads];
+                    for (int i = 0; i < oldData.length; i++) {
+                        oldData[i] = reportsData[i];
                     }
+                    reportsData = new String[reportLoads + dataCount];
+                    Log.d("reports Data", reportsData.length +"");
+
+                    if(oldData.length > 0) {
+                        for (int i = 0; i < oldData.length; i++) {
+                            reportsData[i] = oldData[i];
+                        }
+                    }
+
+                    if(reportLoads == 0) {
+                        for (int j = reportLoads; j < serverData.length(); j++) {
+                            reportsData[j] = serverData.getString(j);
+                        }
+                    } else {
+                        for (int j = reportLoads; j < reportLoads + dataCount; j++) {
+                            //Log.d("J : -- ", String.valueOf(j));
+                            reportsData[j] = serverData.getString(j - reportLoads);
+                        }
+                    }
+
+
                     //String status = serverData.getString("message");
                     //Log.d("Data", String.valueOf(data.length));
 
-                    if (data.length > 0 && latLng != null) {
-                        listView.setAdapter(new ReportAdapter((OfficialActivity) getActivity(), data, latLng));
+                    if (reportsData.length > 0 && latLng != null) {
+                        listView.setAdapter(new ReportAdapter((OfficialActivity) getActivity(), reportsData, latLng));
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();

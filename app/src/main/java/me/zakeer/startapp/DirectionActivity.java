@@ -45,7 +45,13 @@ public class DirectionActivity extends FragmentActivity implements
 
         Bundle resultBunlde = getIntent().getExtras();
         if(resultBunlde != null) {
-            GPSTracker gps = new GPSTracker(this);
+            GPSTracker gps = new GPSTracker(this, new TravelTrackingUpdate() {
+
+                @Override
+                public void updateLocation(Location location, String from) {
+
+                }
+            });
             if(gps.canGetLocation()){
                 latitue = gps.getLatitude();
                 longitude = gps.getLongitude();
@@ -99,7 +105,7 @@ public class DirectionActivity extends FragmentActivity implements
     }
 
     @Override
-    public void postResult(Document asyncresult) {
+    public void postResult(Document asyncresult, String color) {
         ArrayList<LatLng> directionPoint = md.getDirection(asyncresult);
         PolylineOptions rectLine = new PolylineOptions().width(20).color(Color.BLUE);
 

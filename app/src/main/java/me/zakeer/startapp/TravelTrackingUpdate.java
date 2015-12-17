@@ -1,7 +1,8 @@
 package me.zakeer.startapp;
 
-/**
- * Created by Zakeer on 11/13/2015.
- */
+
+import android.location.Location;
+
 public interface TravelTrackingUpdate {
+    void updateLocation(Location location ,String from);
 }

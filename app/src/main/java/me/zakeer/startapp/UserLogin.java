@@ -180,6 +180,8 @@ public class UserLogin extends Activity {
             @Override
             public void onClick(View v) {
                 changeForm(true);
+                loginState = 1;
+                changeLayout();
             }
         });
 
@@ -312,9 +314,12 @@ public class UserLogin extends Activity {
             loginBtn.setVisibility(View.GONE);
             logo.setVisibility(View.GONE);
             fbLoginButton.setVisibility(View.GONE);
-
+            userName.setText("");
+            password.setText("");
             tvLoginText.setText("User Registration Form");
             loginWithPhonebtn.setVisibility(View.VISIBLE);
+            userName.setHint("Enter Phone Number");
+            userName.setInputType(InputType.TYPE_CLASS_PHONE);
         } else {
             if (user == 0 && !checkBtn) {
                 if (username.equals("") && paswrd.equals("") && paswrd.equals("")) {
@@ -333,7 +338,7 @@ public class UserLogin extends Activity {
                 rePassword.setVisibility(View.GONE);
                 loginBtn.setVisibility(View.VISIBLE);
                 logo.setVisibility(View.VISIBLE);
-
+                fbLoginButton.setVisibility(View.VISIBLE);
                 tvLoginText.setText("User Login");
                 loginWithPhonebtn.setVisibility(View.GONE);
             }
@@ -344,13 +349,19 @@ public class UserLogin extends Activity {
         String username = userName.getText().toString();
         if (fb == 0) {
             fb = 1;
+            userName.setText("");
+            userName.setHint("Enter Phone Number");
+            userName.setInputType(InputType.TYPE_CLASS_PHONE);
             fbLoginButton.setVisibility(View.VISIBLE);
             password.setVisibility(View.GONE);
             rePassword.setVisibility(View.GONE);
             btLayout.setVisibility(View.GONE);
             userBtns.setVisibility(View.GONE);
             tvRef.setVisibility(View.GONE);
-            tvLoginText.setText("Login with Facebook");
+            tvLoginText.setText("Login with Phone");
+            logo.setVisibility(View.VISIBLE);
+            Drawable image = getResources().getDrawable(R.drawable.citizen_logo);
+            logo.setImageDrawable(image);
         } else {
             fb = 0;
             fbLoginButton.setVisibility(View.GONE);
@@ -360,17 +371,18 @@ public class UserLogin extends Activity {
             userBtns.setVisibility(View.VISIBLE);
             btLayout.setVisibility(View.VISIBLE);
             tvRef.setVisibility(View.VISIBLE);
-
             tvLoginText.setText("User Login");
             loginWithPhonebtn.setVisibility(View.GONE);
-
-
         }
     }
 
     public void changeLayout(){
         loginState = (loginState == 1) ? 0 : 1;
+        fb = 1;
+        fbLayout();
         if(loginState == 1) {
+            user = 0;
+            changeForm(true);
             tvLoginText.setText("Official Login");
             Drawable image = getResources().getDrawable(R.drawable.police_login);
             logo.setImageDrawable(image);
@@ -391,7 +403,10 @@ public class UserLogin extends Activity {
             registerBtn.setVisibility(View.VISIBLE);
             userName.setText("7898");
             password.setText("123");
+            rePassword.setVisibility(View.GONE);
             userName.setInputType(InputType.TYPE_CLASS_PHONE);
+            userName.setHint("Enter Phone Number");
+            fbLoginButton.setVisibility(View.GONE);
             fbLoginBtn.setVisibility(View.VISIBLE);
             tvRef.setVisibility(View.VISIBLE);
         }
@@ -400,6 +415,7 @@ public class UserLogin extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
+        finish();
     }
 
     public void showDialog(String msg, String type){
@@ -419,8 +435,16 @@ public class UserLogin extends Activity {
             dialog.setPositiveButton("Enabled Network", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    Intent intent=new Intent(Settings.ACTION_WIRELESS_SETTINGS);
+                    Intent intent = new Intent(Settings.ACTION_WIRELESS_SETTINGS);
                     startActivity(intent);
+                }
+            });
+        } else if(type.equals("success")){
+            dialog.setCancelable(true);
+            dialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
                 }
             });
         } else {
@@ -463,6 +487,7 @@ public class UserLogin extends Activity {
                     param.add(new BasicNameValuePair("phone", params[1]));
                     param.add(new BasicNameValuePair("userid", params[2]));
                     param.add(new BasicNameValuePair("fb", "1"));
+                    Log.i("Phone, userid" ,  params[1] + " " +params[2]);
                 }
 
             } else {
@@ -498,28 +523,37 @@ public class UserLogin extends Activity {
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
             dialog.dismiss();
-            Log.d("Server Data : ", s);
-            try {
-                JSONObject serverData = new JSONObject(s);
-                String status = serverData.getString("message");
+            if(s != null) {
+                Log.d("Server Data : ", s);
+                try {
+                    JSONObject serverData = new JSONObject(s);
+                    String status = serverData.getString("message");
 
-                if (status.equals("login successful") || status.equals("User Register successful")) {
-                    userName.setText("");
-                    password.setText("");
-                    if (loginState == 1) {
-                        Intent intent = new Intent(getApplicationContext(), OfficialActivity.class);
-                        startActivity(intent);
+                    if(status.equals("User Register successful")) {
+                        userName.setText("");
+                        password.setText("");
+                        rePassword.setText("");
+                        loginState = 1;
+                        showDialog(status, "success");
+                        changeLayout();
+                    }else if (status.equals("login successful")) {
+                        userName.setText("");
+                        password.setText("");
+                        if (loginState == 1) {
+                            Intent intent = new Intent(getApplicationContext(), OfficialActivity.class);
+                            startActivity(intent);
+                        } else {
+                            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                            startActivity(intent);
+                        }
+
                     } else {
-                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                        startActivity(intent);
+                        showDialog(status, "fail");
+                        System.out.print("login failled");
                     }
-
-                } else {
-                    showDialog(status, "fail");
-                    System.out.print("login failled");
+                } catch (JSONException e) {
+                    e.printStackTrace();
                 }
-            } catch (JSONException e) {
-                e.printStackTrace();
             }
 
         }

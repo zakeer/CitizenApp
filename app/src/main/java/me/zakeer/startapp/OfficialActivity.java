@@ -78,7 +78,12 @@ public class OfficialActivity extends FragmentActivity implements
 
         //buildGoogleApiClient();
 
-        GPSTracker gps = new GPSTracker(this);
+        GPSTracker gps = new GPSTracker(this, new TravelTrackingUpdate() {
+            @Override
+            public void updateLocation(Location location, String from) {
+
+            }
+        });
         if(gps.canGetLocation()){
             latitue = gps.getLatitude();
             longitude = gps.getLongitude();

@@ -1,15 +1,21 @@
 package me.zakeer.startapp;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.Display;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -25,10 +31,28 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.mime.HttpMultipartMode;
+import org.apache.http.entity.mime.MultipartEntity;
+import org.apache.http.entity.mime.content.StringBody;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.util.List;
+import java.util.Locale;
+
 
 public class MainActivity extends FragmentActivity implements
         GoogleApiClient.ConnectionCallbacks,
-        GoogleApiClient.OnConnectionFailedListener, LocationListener {
+        GoogleApiClient.OnConnectionFailedListener, LocationListener, TravelTrackingUpdate {
 
     public double latitue, longitude;
     public String address;
@@ -39,16 +63,20 @@ public class MainActivity extends FragmentActivity implements
     GoogleApiClient googleApiClient;
     Location lastLocation;
 
+    Geocoder geocoder;
+
+    Boolean isTracking = false;
+    int trackId = 0;
 
     AlertDialog.Builder alertDialog;
 
-//    protected synchronized void buildGoogleApiClient() {
-//        googleApiClient = new GoogleApiClient.Builder(getApplicationContext())
-//                .addConnectionCallbacks(this)
-//                .addOnConnectionFailedListener(this)
-//                .addApi(LocationServices.API)
-//                .build();
-//    }
+    protected synchronized void buildGoogleApiClient() {
+        googleApiClient = new GoogleApiClient.Builder(getApplicationContext())
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .addApi(LocationServices.API)
+                .build();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,10 +87,40 @@ public class MainActivity extends FragmentActivity implements
         viewPager = (ViewPager) findViewById(R.id.layout_container);
         final PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager(), getApplicationContext(), 0);
         viewPager.setAdapter(pagerAdapter);
+        geocoder = new Geocoder(getApplicationContext(), Locale.getDefault());
 
-        //buildGoogleApiClient();
+        buildGoogleApiClient();
 
-        GPSTracker gps = new GPSTracker(this);
+        GPSTracker gps = new GPSTracker(this, new TravelTrackingUpdate() {
+            @Override
+            public void updateLocation(Location location, String from) {
+                Toast.makeText(getApplicationContext(), "Location Changed From "+from, Toast.LENGTH_LONG).show();
+                if(isTracking && trackId != 0) {
+                    Toast.makeText(MainActivity.this, "Tracking True -- "+location.getLatitude(), Toast.LENGTH_SHORT).show();
+                    if (location != null) {
+                        latitue = location.getLatitude();
+                        longitude = location.getLongitude();
+                        address = "";
+                        try {
+                            List<Address> addresses = geocoder.getFromLocation(latitue, longitude, 1);
+                            if(addresses != null) {
+                                for(int i=0; i < addresses.get(0).getMaxAddressLineIndex(); i++) {
+                                    address += addresses.get(0).getAddressLine(i) + "\n";
+                                }
+                            }
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    ServerCal serverCal = new ServerCal();
+                    serverCal.execute("http://citizen.turpymobileapps.com/uptrack.php");
+                } else {
+                    //Toast.makeText(MainActivity.this, "Not Tracking", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+        });
+
         if(gps.canGetLocation()){
             latitue = gps.getLatitude();
             longitude = gps.getLongitude();
@@ -175,11 +233,33 @@ public class MainActivity extends FragmentActivity implements
         }
     }
 
-    public void showDialog(){
-        System.out.println("ShowDialog...");
-        alertDialog = new AlertDialog.Builder(getApplicationContext());
-        alertDialog.setMessage("Nothing to Show");
-        alertDialog.show();
+    public void showDialog(String msg, String type) {
+        AlertDialog.Builder dialog;
+        String title = msg;
+        dialog = new AlertDialog.Builder(MainActivity.this);
+        dialog.setTitle(title);
+
+        if (type.equals("fail")) {
+            dialog.setIcon(R.drawable.alert);
+            dialog.setCancelable(false);
+            dialog.setNegativeButton("Retry", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                }
+            });
+        } else {
+            dialog.setIcon(R.drawable.success);
+            dialog.setCancelable(true);
+            dialog.setPositiveButton("Success", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+        }
+
+        dialog.show();
     }
 
 
@@ -194,6 +274,8 @@ public class MainActivity extends FragmentActivity implements
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.official_logout) {
+            Intent userIntent = new Intent(getApplicationContext(), UserLogin.class);
+            startActivity(userIntent);
             finish();
         }
 
@@ -242,11 +324,78 @@ public class MainActivity extends FragmentActivity implements
     @Override
     public void onProviderDisabled(String provider) {
         Toast.makeText(getApplicationContext(), provider, Toast.LENGTH_SHORT).show();
-        showDialog();
+        //showDialog();
     }
 
+    @Override
+    public void updateLocation(Location location, String from) {
+
+    }
+
+    public class ServerCal extends AsyncTask<String, String, String> {
+
+        private ProgressDialog dialog = new ProgressDialog(MainActivity.this);
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            dialog.setMessage("Loading");
+            dialog.show();
+
+        }
+
+        @Override
+        protected String doInBackground(String... params) {
+            HttpClient client = new DefaultHttpClient();
+            HttpPost postRequest = new HttpPost(params[0]);
+            HttpResponse response = null;
+
+            MultipartEntity multipartEntity = new MultipartEntity(HttpMultipartMode.BROWSER_COMPATIBLE);
+            try {
+                multipartEntity.addPart("id", new StringBody(trackId+""));
+                multipartEntity.addPart("phone", new StringBody("9533222116"));
+                multipartEntity.addPart("updated_lat", new StringBody(String.valueOf(latitue)));
+                multipartEntity.addPart("updated_long", new StringBody(String.valueOf(longitude)));
+                multipartEntity.addPart("place", new StringBody(String.valueOf(address)));
+                //multipartEntity.addPart("vehicle", new StringBody(String.valueOf("AP07 2478")));
+                postRequest.setEntity(multipartEntity);
+                HttpResponse responsePOST = client.execute(postRequest);
+                HttpEntity resEntity = responsePOST.getEntity();
+                String _response = EntityUtils.toString(resEntity); // content will be consume only once
+                return (_response != null) ? _response : null;
 
 
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            } catch (ClientProtocolException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            Log.d("Execute String", s);
+            dialog.dismiss();
+            try {
+                JSONObject serverData = new JSONObject(s);
+                String status = serverData.getString("message");
+                Log.d("Server Data", s);
+                if (status.equals("successfully Device Track Update")) {
+                    showDialog(status, "success");
+                } else {
+                    showDialog(status, "fail");
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
 }
 
 

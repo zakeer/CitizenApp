@@ -5,6 +5,8 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.drawable.Drawable;
+import android.location.Location;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -57,9 +59,10 @@ public class SafeTravel extends SupportMapFragment implements OnMapReadyCallback
     SupportMapFragment supportMapFragment;
     Double latitue, longitude;
     String address = "";
-    Button btnSubmit;
+    Button btnSubmit, btnStop;
     EditText editText;
-    private FragmentActivity myContext;
+    FragmentActivity myContext;
+    Boolean isTracking = false;
 
     public SafeTravel() {
         // Required empty public constructor
@@ -114,7 +117,6 @@ public class SafeTravel extends SupportMapFragment implements OnMapReadyCallback
         }
         googleMap = ((SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map)).getMap();
         supportMapFragment.getMapAsync(this);
-
     }
 
     @Override
@@ -129,10 +131,12 @@ public class SafeTravel extends SupportMapFragment implements OnMapReadyCallback
         super.onActivityCreated(savedInstanceState);
         //this.view = getView();
         if (view != null) {
-            MainActivity activity = (MainActivity) getActivity();
+            final MainActivity activity = (MainActivity) getActivity();
             latitue = activity.latitue;
             longitude = activity.longitude;
             address = activity.address.trim();
+            isTracking = activity.isTracking;
+
 
             editText = (EditText) view.findViewById(R.id.etText);
             btnSubmit = (Button) view.findViewById(R.id.saveButton);
@@ -150,32 +154,56 @@ public class SafeTravel extends SupportMapFragment implements OnMapReadyCallback
                 }
             });
 
+            btnStop = (Button) view.findViewById(R.id.stopButton);
+            btnStop.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    isTracking = false;
+                    activity.isTracking = false;
+                    changeButtons();
+                }
+            });
+            changeButtons();
+
+            LatLng latLng = new LatLng(latitue, longitude);
+            googleMap.addMarker(new MarkerOptions().position(latLng).title(address));
+            googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+            googleMap.animateCamera(CameraUpdateFactory.zoomTo(15));
 
         }
 
     }
 
+    public void changeButtons() {
+        if(isTracking) {
+            btnStop.setClickable(true);
+            Drawable image = getResources().getDrawable(R.drawable.bg_report);
+            btnStop.setBackground(image);
+
+            Drawable imageDisable = getResources().getDrawable(R.drawable.disable_bg);
+            btnSubmit.setBackground(imageDisable);
+            btnSubmit.setClickable(false);
+        } else {
+            btnSubmit.setClickable(true);
+            Drawable image = getResources().getDrawable(R.drawable.bg_report);
+            btnSubmit.setBackground(image);
+
+            Drawable imageDisable = getResources().getDrawable(R.drawable.disable_bg);
+            btnStop.setBackground(imageDisable);
+            btnStop.setClickable(false);
+        }
+    }
+
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        /*Fragment fragment = (getFragmentManager().findFragmentById(R.id.map));
-        FragmentTransaction ft = getActivity().getFragmentManager().beginTransaction();
-        ft.remove(fragment);
-        ft.commit();
-
-        getFragmentManager().beginTransaction().remove(fragment).commit();*/
     }
 
 
     @Override
     public void onPause() {
         super.onPause();
-        /*Fragment fragment = (getFragmentManager().findFragmentById(R.id.map));
-        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-        ft.remove(fragment);
-        ft.commit();
 
-        getFragmentManager().beginTransaction().remove(fragment).commit();*/
     }
 
     @Override
@@ -271,6 +299,11 @@ public class SafeTravel extends SupportMapFragment implements OnMapReadyCallback
                 Log.d("Server Data", s);
                 if (status.equals("successfully Device Track")) {
                     showDialog(status, "success");
+                    MainActivity activity = (MainActivity) getActivity();
+                    activity.isTracking = true;
+                    isTracking = true;
+                    changeButtons();
+                    activity.trackId = serverData.getInt("id");
                 } else {
                     showDialog(status, "fail");
                     System.out.print("login failled");

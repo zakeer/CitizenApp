@@ -21,9 +21,10 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
 
-public class GPSTracker extends Service implements LocationListener {
+public class GPSTracker extends Service implements LocationListener, TravelTrackingUpdate {
 
     private final Context mContext;
+    TravelTrackingUpdate listener;
 
     // flag for GPS status
     boolean isGPSEnabled = false;
@@ -42,15 +43,16 @@ public class GPSTracker extends Service implements LocationListener {
     String address = "";
 
     // The minimum distance to change Updates in meters
-    private static final long MIN_DISTANCE_CHANGE_FOR_UPDATES = 10; // 10 meters
+    private static final long MIN_DISTANCE_CHANGE_FOR_UPDATES = 5; // 10 meters
 
     // The minimum time between updates in milliseconds
-    private static final long MIN_TIME_BW_UPDATES = 1000 * 60 * 1; // 1 minute
+    private static final long MIN_TIME_BW_UPDATES = (1000 * 60 * 1) / 3; // 1 minute
 
     // Declaring a Location Manager
     protected LocationManager locationManager;
 
-    public GPSTracker(Context context) {
+    public GPSTracker(Context context, TravelTrackingUpdate listener) {
+        this.listener = listener;
         this.mContext = context;
         geocoder = new Geocoder(context, Locale.getDefault());
         getLocation();
@@ -90,7 +92,7 @@ public class GPSTracker extends Service implements LocationListener {
                                 List<Address> addresses = geocoder.getFromLocation(latitude, longitude, 1);
                                 if(addresses != null) {
                                     for(int i=0; i < addresses.get(0).getMaxAddressLineIndex(); i++) {
-                                        address += addresses.get(0).getAddressLine(i) + "\n";
+                                        address += addresses.get(0).getAddressLine(i) + ",\t";
                                     }
                                 }
                             } catch (IOException e) {
@@ -206,8 +208,10 @@ public class GPSTracker extends Service implements LocationListener {
         alertDialog.show();
     }
 
+
     @Override
     public void onLocationChanged(Location location) {
+        listener.updateLocation(location, "Location");
     }
 
     @Override
@@ -227,4 +231,10 @@ public class GPSTracker extends Service implements LocationListener {
         return null;
     }
 
+
+
+    @Override
+    public void updateLocation(Location location, String from) {
+        listener.updateLocation(location, "Update..");
+    }
 }
