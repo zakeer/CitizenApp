@@ -16,6 +16,6 @@
     <string name="title_activity_direction">DirectionActivity</string>
 
     <string name="app_id">1560412754225904</string>
-
+    <string name="citizen_details">CitiZen is a Mobile Application, an initiative to put an end to crime in your city, It Cmpowers every common man to be a powerful citizen and join hands with police force to stop crime in the city. It helps you in reporting a crime by just capturing an image and send it to local police force. It bring security to your finger tips by giving facility to call for urgent help. By the help of Location service, it will help you to send instat help SMS to local police force</string>
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur mollitia nemo, qui, fugit saepe quam deserunt delectus id. Commodi pariatur nisi debitis nostrum accusantium itaque praesentium, voluptatem voluptates dignissimos minima.</string>
 </resources>

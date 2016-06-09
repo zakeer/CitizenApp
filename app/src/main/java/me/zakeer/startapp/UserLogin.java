@@ -543,7 +543,7 @@ public class UserLogin extends Activity {
                             Intent intent = new Intent(getApplicationContext(), OfficialActivity.class);
                             startActivity(intent);
                         } else {
-                            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                            Intent intent = new Intent(getApplicationContext(), MainScreen.class);
                             startActivity(intent);
                         }
 

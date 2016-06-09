@@ -88,13 +88,21 @@ public class MainActivity extends FragmentActivity implements
         final PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager(), getApplicationContext(), 0);
         viewPager.setAdapter(pagerAdapter);
         geocoder = new Geocoder(getApplicationContext(), Locale.getDefault());
-
         buildGoogleApiClient();
+
+        Bundle intentData = getIntent().getExtras();
+        if(intentData != null) {
+            int position = intentData.getInt("position");
+            viewPager.setCurrentItem(position, true);
+            setMenuActive(null, position);
+
+
+        }
 
         GPSTracker gps = new GPSTracker(this, new TravelTrackingUpdate() {
             @Override
             public void updateLocation(Location location, String from) {
-                Toast.makeText(getApplicationContext(), "Location Changed From "+from, Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), "Location Changed From "+from, Toast.LENGTH_LONG).show();
                 if(isTracking && trackId != 0) {
                     Toast.makeText(MainActivity.this, "Tracking True -- "+location.getLatitude(), Toast.LENGTH_SHORT).show();
                     if (location != null) {
@@ -308,7 +316,7 @@ public class MainActivity extends FragmentActivity implements
 
     @Override
     public void onLocationChanged(Location location) {
-        Toast.makeText(getApplicationContext(), "onLocationChanged " + location.getLatitude() + " : " + location.getLongitude(), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "onLocationChanged " + location.getLatitude() + " : " + location.getLongitude(), Toast.LENGTH_SHORT).show();
     }
 
     @Override

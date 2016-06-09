@@ -44,7 +44,6 @@ public class OfficialActivity extends FragmentActivity implements
             Bundle result = data.getExtras();
             int p = result.getInt("PAGE_POSITON");
             viewPager.setCurrentItem(p, true);
-            //Toast.makeText(getApplicationContext(), "Got it : " + p, Toast.LENGTH_LONG).show();
         }
     }
 
@@ -58,13 +57,6 @@ public class OfficialActivity extends FragmentActivity implements
         }
     }
 
-//    protected synchronized void buildGoogleApiClient() {
-//        googleApiClient = new GoogleApiClient.Builder(getApplicationContext())
-//                .addConnectionCallbacks(this)
-//                .addOnConnectionFailedListener(this)
-//                .addApi(LocationServices.API)
-//                .build();
-//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

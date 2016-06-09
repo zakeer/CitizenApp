@@ -264,7 +264,7 @@ public class Report extends Fragment implements View.OnClickListener {
     public void showDialog(String msg, String type){
         AlertDialog.Builder dialog;
         String title = msg;
-        dialog = new AlertDialog.Builder(getActivity());
+        dialog = new AlertDialog.Builder((Report.this).getActivity());
         dialog.setTitle(title);
 
         if(type.equals("fail")) {
@@ -297,7 +297,7 @@ public class Report extends Fragment implements View.OnClickListener {
 
     public class ServerCal extends AsyncTask<String, String, String> {
 
-        private ProgressDialog dialog = new ProgressDialog(getActivity());
+        private ProgressDialog dialog = new ProgressDialog((Report.this).getActivity());
 
         @Override
         protected void onPreExecute() {

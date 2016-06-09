@@ -86,7 +86,6 @@ public class SafeTravel extends SupportMapFragment implements OnMapReadyCallback
             if (parent != null)
                 parent.removeView(view);
         }
-
         try {
             view = inflater.inflate(R.layout.fragment_safe_travel, container, false);
         } catch (InflateException e) {
@@ -134,7 +133,7 @@ public class SafeTravel extends SupportMapFragment implements OnMapReadyCallback
             final MainActivity activity = (MainActivity) getActivity();
             latitue = activity.latitue;
             longitude = activity.longitude;
-            address = activity.address.trim();
+            address = (address != null) ? activity.address : "";
             isTracking = activity.isTracking;
 
 
